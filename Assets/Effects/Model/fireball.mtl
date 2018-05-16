@@ -1,0 +1,36 @@
+#
+# mtl file for fireball.obj obj file
+#
+
+newmtl world_expansion03_doodads_firelands_sky_fireball_firelandssky_fireball01.m2_Geoset_000_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd fireball_firelandsfireball01.png
+newmtl world_expansion03_doodads_firelands_sky_fireball_firelandssky_fireball01.m2_Geoset_001_Lum_Dbl
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.937255 0.474510 0.098039
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd fireball_t_vfx_fire_anim02_128_full_desat.png
+newmtl world_expansion03_doodads_firelands_sky_fireball_firelandssky_fireball01.m2_Geoset_002_Lum_Dbl
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.937255 0.474510 0.098039
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd fireball_t_vfx_fire_anim02_128_full_desat.png
+newmtl world_expansion03_doodads_firelands_sky_fireball_firelandssky_fireball01.m2_Geoset_003_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd fireball_deepholm_lavaglow01.png

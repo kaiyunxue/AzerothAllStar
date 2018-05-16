@@ -1,0 +1,20 @@
+#
+# mtl file for firewind.obj obj file
+#
+
+newmtl world/expansion03/doodads/skywall/skywall_wind_drafteffect_03.m2_Geoset_000_Lum_Dbl
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firewind_vj_waterrift_02.png
+newmtl world/expansion03/doodads/skywall/skywall_wind_drafteffect_03.m2_Geoset_001_Lum_Dbl
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firewind_vj_waterrift_01.png

@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 6a6bdf319cbef1543b9cac22b7e39a9c
+timeCreated: 1492112340
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: firelands_roots
+    100002: firelands_roots 1
+    100004: firelands_roots_bone_0
+    100006: firelands_roots_bone_1
+    100008: firelands_roots_bone_10
+    100010: firelands_roots_bone_11
+    100012: firelands_roots_bone_12
+    100014: firelands_roots_bone_13
+    100016: firelands_roots_bone_14
+    100018: firelands_roots_bone_15
+    100020: firelands_roots_bone_16
+    100022: firelands_roots_bone_17
+    100024: firelands_roots_bone_18
+    100026: firelands_roots_bone_19
+    100028: firelands_roots_bone_2
+    100030: firelands_roots_bone_20
+    100032: firelands_roots_bone_21
+    100034: firelands_roots_bone_22
+    100036: firelands_roots_bone_23
+    100038: firelands_roots_bone_24
+    100040: firelands_roots_bone_25
+    100042: firelands_roots_bone_26
+    100044: firelands_roots_bone_27
+    100046: firelands_roots_bone_28
+    100048: firelands_roots_bone_29
+    100050: firelands_roots_bone_3
+    100052: firelands_roots_bone_30
+    100054: firelands_roots_bone_31
+    100056: firelands_roots_bone_32
+    100058: firelands_roots_bone_33
+    100060: firelands_roots_bone_34
+    100062: firelands_roots_bone_35
+    100064: firelands_roots_bone_36
+    100066: firelands_roots_bone_37
+    100068: firelands_roots_bone_38
+    100070: firelands_roots_bone_39
+    100072: firelands_roots_bone_4
+    100074: firelands_roots_bone_5
+    100076: firelands_roots_bone_6
+    100078: firelands_roots_bone_7
+    100080: firelands_roots_bone_8
+    100082: firelands_roots_bone_9
+    100084: //RootNode
+    400000: firelands_roots
+    400002: firelands_roots 1
+    400004: firelands_roots_bone_0
+    400006: firelands_roots_bone_1
+    400008: firelands_roots_bone_10
+    400010: firelands_roots_bone_11
+    400012: firelands_roots_bone_12
+    400014: firelands_roots_bone_13
+    400016: firelands_roots_bone_14
+    400018: firelands_roots_bone_15
+    400020: firelands_roots_bone_16
+    400022: firelands_roots_bone_17
+    400024: firelands_roots_bone_18
+    400026: firelands_roots_bone_19
+    400028: firelands_roots_bone_2
+    400030: firelands_roots_bone_20
+    400032: firelands_roots_bone_21
+    400034: firelands_roots_bone_22
+    400036: firelands_roots_bone_23
+    400038: firelands_roots_bone_24
+    400040: firelands_roots_bone_25
+    400042: firelands_roots_bone_26
+    400044: firelands_roots_bone_27
+    400046: firelands_roots_bone_28
+    400048: firelands_roots_bone_29
+    400050: firelands_roots_bone_3
+    400052: firelands_roots_bone_30
+    400054: firelands_roots_bone_31
+    400056: firelands_roots_bone_32
+    400058: firelands_roots_bone_33
+    400060: firelands_roots_bone_34
+    400062: firelands_roots_bone_35
+    400064: firelands_roots_bone_36
+    400066: firelands_roots_bone_37
+    400068: firelands_roots_bone_38
+    400070: firelands_roots_bone_39
+    400072: firelands_roots_bone_4
+    400074: firelands_roots_bone_5
+    400076: firelands_roots_bone_6
+    400078: firelands_roots_bone_7
+    400080: firelands_roots_bone_8
+    400082: firelands_roots_bone_9
+    400084: //RootNode
+    4300000: firelands_roots
+    7400000: Stand [0]
+    7400002: Hold [1]
+    7400004: Decay [2]
+    9500000: //RootNode
+    13700000: firelands_roots
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

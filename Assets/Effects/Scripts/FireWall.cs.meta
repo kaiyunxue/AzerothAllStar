@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2d765cb451ba72a4786d99570f134aa5
+timeCreated: 1495335282
+licenseType: Pro
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _go: {fileID: 1444967318842762, guid: 322b089bf22a09a4b85173874ea23b8c, type: 2}
+  - state: {instanceID: 0}
+  - Target: {instanceID: 0}
+  - firewall: {instanceID: 0}
+  - MarkMaterial: {instanceID: 0}
+  - FirewallMaterial: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

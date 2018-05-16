@@ -1,0 +1,12 @@
+#
+# mtl file for trap.obj obj file
+#
+
+newmtl world_expansion03_doodads_firelands_roots_firelands_roots.m2_Geoset_000
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 0.733333 0.501961 0.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd trap_roots_01.png
