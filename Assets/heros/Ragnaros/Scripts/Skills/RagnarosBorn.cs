@@ -10,7 +10,7 @@ public class RagnarosBorn : HeroSkill
     public Projector rune;
     public Transform firePool;
     public Material poolM;
-    public GameObject fireCylinder;
+    public RagnarosFlame fireCylinder;
     Vector3 aimPosition;
     protected override void Awake()
     {
@@ -20,10 +20,7 @@ public class RagnarosBorn : HeroSkill
     }
     public override void StartSkill(Animator animator)
     {
-        foreach (ParticleSystem p in fireCylinder.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Play();
-        }
+        fireCylinder.Play();
         StartCoroutine(RuneEnlarge(0));
         StartCoroutine(PoolApear(0));
     }
@@ -45,10 +42,7 @@ public class RagnarosBorn : HeroSkill
     public override void StopSkill(Animator animator)
     {
         StopAllCoroutines();
-        foreach(ParticleSystem p in fireCylinder.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Stop();
-        }
+        fireCylinder.Stop();
     }
     public override bool TryStartSkill(Animator animator)
     {

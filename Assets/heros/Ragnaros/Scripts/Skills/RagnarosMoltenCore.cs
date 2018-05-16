@@ -5,18 +5,17 @@ using UnityEngine;
 
 public class RagnarosMoltenCore : HeroSkill, ISkill
 {
-    public GameObject fire;
+    public RagnarosFlame fire;
     public GameObject pool;
+    public ParticleSystem skinFire;
     private float contTime;
     public GameObject materialGO;
     public AnimationCurve materialCurve;
     public AnimationCurve materialCurveBack;
     public override void StartSkill(Animator animator)
     {
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Play();
-        }
+        skinFire.gameObject.SetActive(true);
+        fire.Play();
         pool.SetActive(false);
         contTime = hero.state.Mana * 3;
         hero.state.Mana = 0;
@@ -53,11 +52,9 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     IEnumerator WaitForBack(float time)
     {
         yield return new WaitForSecondsRealtime(contTime);
+        skinFire.Stop();
         StartCoroutine(MaterialChaneBack());
-        foreach (var effect in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            effect.Play();
-        }
+        fire.Play();
         yield return new WaitForSeconds(1.5f);
         hero.state.Stage = 0;
         hero.transform.localScale /= 3;
@@ -65,10 +62,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         fire.transform.localScale *= 3;
         pool.SetActive(true);
         yield return new WaitForSeconds(1f);
-        foreach (var effect in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            effect.Stop();
-        }
+        fire.Stop();
         yield return new WaitForSeconds(5f);
         fire.transform.localScale /= 3;
         StartCdColding();
@@ -77,10 +71,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     {
         StartCoroutine(MaterialChane());
         yield return new WaitForSeconds(1f);
-        foreach(var effect in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            effect.Stop();
-        }
+        fire.Stop();
         yield return new WaitForSeconds(2f);
     }
     public override void StopSkill(Animator animator)

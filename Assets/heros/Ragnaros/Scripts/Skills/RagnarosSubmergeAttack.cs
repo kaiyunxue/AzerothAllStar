@@ -12,7 +12,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public GameObject sf;
     public GameObject Hand_sf;
     public GameObject sf_copy;
-    public GameObject fire;
+    public RagnarosFlame fire;
 
     public AnimationCurve curve;
     public AnimationCurve curve2;
@@ -36,10 +36,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public override void StartSkill(Animator animator)
     {
         hero.state.Mana -= manaCost;
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Play();
-        }
+        fire.Play();
         StartCoroutine(SkillBehave(animator));
 
     }
@@ -110,10 +107,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     }
     IEnumerator WaitAndDisable()
     {
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Stop();
-        }
+        fire.Stop();
         yield return new WaitForSeconds(1.5f);
     }
     IEnumerator FloatDirectly(Animator animator)

@@ -6,7 +6,7 @@ public class RFX4_AudioCurves : MonoBehaviour
     public AnimationCurve AudioCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
     public float GraphTimeMultiplier = 1;
     public bool IsLoop;
-
+    public ulong audioBeginTime;
     private bool canUpdate;
     private float startTime;
     private AudioSource audioSource;

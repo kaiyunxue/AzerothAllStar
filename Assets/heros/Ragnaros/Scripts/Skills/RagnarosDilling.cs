@@ -9,16 +9,13 @@ public class RagnarosDilling : HeroSkill, ISkill
     public AnimationCurve curve;
     public AnimationCurve curve2;
     public Material pool;
-    public GameObject fire;
+    public RagnarosFlame fire;
     public override void StartSkill(Animator animator)
     {
         t = 0;
         StartCoroutine(Dilling(0));
         StartCoroutine(Dilling(animator));
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Play();
-        }
+        fire.Play();
     }
     public override void StopSkill(Animator animator)
     {
@@ -78,10 +75,7 @@ public class RagnarosDilling : HeroSkill, ISkill
     IEnumerator WaitAndDisable()
     {
         yield return new WaitForSeconds(2f);
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Stop();
-        }
+        fire.Stop();
     }
 }
 

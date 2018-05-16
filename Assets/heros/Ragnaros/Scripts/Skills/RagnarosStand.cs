@@ -9,7 +9,7 @@ public class RagnarosStand : HeroSkill, ISkill
     public GameObject fireStand;
     public GameObject rune;
     public GameObject firePool;
-    public GameObject fire;
+    public RagnarosFlame fire;
 
     public new bool IsReady()
     {
@@ -18,10 +18,7 @@ public class RagnarosStand : HeroSkill, ISkill
 
     public override void StartSkill(Animator animator)
     {
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Play();
-        }
+        fire.Play();
         StartCoroutine(FirePoolSink());
         StartCoroutine(RuneDispare(0));
     }
@@ -53,10 +50,7 @@ public class RagnarosStand : HeroSkill, ISkill
     }
     IEnumerator WaitAndDisable()
     {
-        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
-        {
-            p.Stop();
-        }
+        fire.Stop();
         yield return new WaitForSeconds(1.5f);
         Destroy(fire);
     }
