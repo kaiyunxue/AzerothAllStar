@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sulfuars : SkillItemsBehaviourController
 {
+    public ParticleSystem trail;
     public ParticleSystem particles;
     [SerializeField]
     private float flameDamageVal;
@@ -14,6 +15,7 @@ public class Sulfuars : SkillItemsBehaviourController
     public string colliderName;
     public bool isCollide;
     public GameObject Effect;
+    public Ragnaros hero;
 
     public void FromMana2Attack()
     {
@@ -21,12 +23,20 @@ public class Sulfuars : SkillItemsBehaviourController
         Effect.SetActive(true);
         FlameDamageVal += 10;
     }
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        trail.Stop();
+    }
 
     public float FlameDamageVal
     {
         get
         {
-            return flameDamageVal;
+            if (hero.state.Stage != 3)
+                return flameDamageVal;
+            else
+                return flameDamageVal / 5;
         }
 
         set
@@ -41,7 +51,10 @@ public class Sulfuars : SkillItemsBehaviourController
     {
         get
         {
-            return phyDamageVal;
+            if (hero.state.Stage != 3)
+                return phyDamageVal;
+            else
+                return phyDamageVal / 5;
         }
 
         set
@@ -55,7 +68,6 @@ public class Sulfuars : SkillItemsBehaviourController
         StopAllCoroutines();
         isPhyAttack = true;
         StartCoroutine(TurnOnPhyAttack_(0.7f));
-
     }
     public bool IsPhyAttack()
     {
@@ -64,8 +76,12 @@ public class Sulfuars : SkillItemsBehaviourController
 
     IEnumerator TurnOnPhyAttack_(float time)
     {
+        if(flameDamageVal != 0)
+            trail.Play();
         yield return new WaitForSeconds(time);
         isPhyAttack = false;
+        trail.Stop();
+        yield return new WaitForSeconds(5);
     }
 
     protected void Start()
@@ -73,6 +89,7 @@ public class Sulfuars : SkillItemsBehaviourController
         isCollide = false;
         FlameDamageVal = 0;
         Effect.SetActive(false);
+        trail.Stop();
     }
     private void OnTriggerEnter(Collider other)
     {

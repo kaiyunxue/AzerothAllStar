@@ -10,7 +10,7 @@ public class RagnarosFlyStand : HeroSkill, ISkill
     protected override void Awake()
     {
         base.Awake();
-        List < HeroSkill > skills = nextSkills.ToList();
+        List<HeroSkill> skills = nextSkills.ToList();
         nextSkills = skills.OrderByDescending(skill => skill.Priority).ToArray();
     }
     public override void StartSkill(Animator animator)
@@ -30,11 +30,6 @@ public class RagnarosFlyStand : HeroSkill, ISkill
         }
         yield return new WaitForEndOfFrame();
         StartCoroutine(SkillUpdate(animator));
-    }
-
-    public bool TryStartSkill()
-    {
-        return true;
     }
 
     public override bool TryStartSkill(Animator animator)

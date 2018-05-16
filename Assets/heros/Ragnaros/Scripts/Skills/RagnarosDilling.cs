@@ -15,7 +15,10 @@ public class RagnarosDilling : HeroSkill, ISkill
         t = 0;
         StartCoroutine(Dilling(0));
         StartCoroutine(Dilling(animator));
-        fire.SetActive(true);
+        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
     }
     public override void StopSkill(Animator animator)
     {
@@ -36,6 +39,8 @@ public class RagnarosDilling : HeroSkill, ISkill
     public override bool IsReady()
     {
         if (!Lock)
+            return false;
+        if (hero.state.Stage != 0)
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;
@@ -77,8 +82,6 @@ public class RagnarosDilling : HeroSkill, ISkill
         {
             p.Stop();
         }
-        yield return new WaitForSeconds(1.5f);
-        fire.SetActive(false);
     }
 }
 

@@ -7,7 +7,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
 {
     public GameObject leftHand;
     public FireHighBall fireBall;
-    FireHighBall fireBallInstance;
+    List<FireHighBall> fireBallInstance = new List<FireHighBall>();
     public float initialForce;
     float Force_high = 1;
 
@@ -19,9 +19,14 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
 
     public override void StartSkill(Animator animator)
     {
-        if(fireBallInstance == null)
+        if(fireBallInstance.Count == 0)
         {
-            fireBallInstance = KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer);
+            fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
+            if (hero.state.Stage == 3)
+            {
+                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
+                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
+            }
             StartCoroutine(HighFireBalls(animator));
         }
     }
@@ -29,14 +34,17 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     {
         if (Input.GetKeyUp(KeyCode.K) || Force_high >= 500)
         {
-            fireBallInstance.transform.SetParent(GameController.instance.transform);
-            fireBallInstance.GetComponent<Rigidbody>().useGravity = true;
-            fireBallInstance.GetComponent<Rigidbody>().AddForce(-Force_high, 100, 0);
-            animator.SetBool("Fireball_high",false);
-            fireBallInstance.GetComponent<FireHighBall>().damage = new RagnarosDamage(damageVal, damageType, gameObject.layer);
-            yield return null;
+            foreach (var instance in fireBallInstance)
+            {
+                instance.transform.SetParent(GameController.instance.transform);
+                instance.GetComponent<Rigidbody>().useGravity = true;
+                instance.GetComponent<Rigidbody>().AddForce(-UnityEngine.Random.Range(2 * Force_high / 3, 4 * Force_high / 3), 100, 0);
+                animator.SetBool("Fireball_high", false);
+                instance.GetComponent<FireHighBall>().damage = new RagnarosDamage(damageVal, damageType, gameObject.layer);
+            }
+            yield return new WaitForEndOfFrame();
             Force_high = 10;
-            fireBallInstance = null;
+            fireBallInstance.Clear();
         }
         else
         {

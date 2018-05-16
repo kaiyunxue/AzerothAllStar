@@ -9,8 +9,9 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
     public int spellTime;
 
     public Vector3 speed;
+    public FireBlower fireBlower;
     public FireRuneBoom runeBoom;
-    public FireRuneBoom runeBoomInstance;
+    FireRuneBoom runeBoomInstance;
     public Vector3 initialLocalPosition;
     public float maxTime;
     float time;
@@ -20,8 +21,17 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
         time = 0;
         spellTime++;
         hero.state.Mana -= manaCost;
-        runeBoomInstance = KOFItem.InstantiateByPool(runeBoom, initialLocalPosition ,Quaternion.Euler(90,0,0), GameController.instance.transform, gameObject.layer);
-        StartCoroutine(Behave(animator));
+        if(hero.state.Stage == 0)
+        {
+            runeBoomInstance = KOFItem.InstantiateByPool(runeBoom, initialLocalPosition, Quaternion.Euler(90, 0, 0), GameController.instance.transform, gameObject.layer);
+            StartCoroutine(Behave(animator));
+        }
+        else if(hero.state.Stage == 3)
+        {
+            var instance = KOFItem.InstantiateByPool(fireBlower, GameController.instance.transform, gameObject.layer);
+            instance.damage = new RagnarosDamage(50, DamageType.Fire, gameObject.layer);
+            animator.SetBool("RuneBoob", false);
+        }
     }
 
     public override void StopSkill(Animator animator)
@@ -37,6 +47,8 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
     public override bool IsReady()
     {
         if (!Lock)
+            return false;
+        if (hero.state.Stage == 0 && hero.state.Mana < manaCost)
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;

@@ -20,7 +20,10 @@ public class RagnarosBorn : HeroSkill
     }
     public override void StartSkill(Animator animator)
     {
-        fireCylinder.SetActive(true);
+        foreach (ParticleSystem p in fireCylinder.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
         StartCoroutine(RuneEnlarge(0));
         StartCoroutine(PoolApear(0));
     }
@@ -46,12 +49,6 @@ public class RagnarosBorn : HeroSkill
         {
             p.Stop();
         }
-        StartCoroutine(WaitAndDisable());
-    }
-    IEnumerator WaitAndDisable()
-    {
-        yield return new WaitForSeconds(1.5f);
-        fireCylinder.SetActive(false);
     }
     public override bool TryStartSkill(Animator animator)
     {

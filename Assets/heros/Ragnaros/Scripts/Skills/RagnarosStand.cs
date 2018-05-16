@@ -18,7 +18,10 @@ public class RagnarosStand : HeroSkill, ISkill
 
     public override void StartSkill(Animator animator)
     {
-        fire.SetActive(true);
+        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
         StartCoroutine(FirePoolSink());
         StartCoroutine(RuneDispare(0));
     }

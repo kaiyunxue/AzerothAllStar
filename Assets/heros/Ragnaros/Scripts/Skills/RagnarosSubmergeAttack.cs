@@ -36,7 +36,10 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public override void StartSkill(Animator animator)
     {
         hero.state.Mana -= manaCost;
-        fire.SetActive(true);
+        foreach (ParticleSystem p in fire.GetComponentsInChildren<ParticleSystem>())
+        {
+            p.Play();
+        }
         StartCoroutine(SkillBehave(animator));
 
     }
@@ -72,12 +75,13 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     {
         yield return new WaitForSeconds(1f);
         sf_copy = Instantiate(sf, Hand_sf.transform, true);
+        sf_copy.transform.localScale *= 1.5f;
         sf_copy.transform.SetParent(Hand_sf.transform);
         sf.SetActive(false);
         sf_copy.transform.localRotation = Quaternion.Euler(0, 70, 0);
         yield return new WaitForSeconds(0.25f);
         sf_copy.transform.SetParent(GameController.instance.transform);
-        sf_copy.transform.position += new Vector3(0, 0.3f, 0);
+        sf_copy.transform.position += new Vector3(0, 0.7f, 0);
         Vector3 pos = transform.position;
         pos.y = 10;
         for (int i = 0; i < 7; i++)
@@ -111,7 +115,6 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
             p.Stop();
         }
         yield return new WaitForSeconds(1.5f);
-        fire.SetActive(false);
     }
     IEnumerator FloatDirectly(Animator animator)
     {
