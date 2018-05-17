@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FireBoom : SkillItemsBehaviourController
 {
-    public RagnarosDamage damage;
+    new public RagnarosDamage damage;
     public FireTrap fireTrap;
     public FireTrap fireTrapInstance;
     public Vector3 forceDir;
@@ -15,9 +15,10 @@ public class FireBoom : SkillItemsBehaviourController
         base.Awake();
         damage = new RagnarosDamage(10, DamageType.Fire, gameObject.layer);
     }
-    protected void Start()
+    protected override void OnEnable()
     {
         t = 0;
+        fireTrapInstance = null;
         isTriggerEnter = false;
         if (livingTime > 0)
         {
@@ -59,9 +60,9 @@ public class FireBoom : SkillItemsBehaviourController
             {
                 Vector3 pos = transform.position;
                 pos.y = 0.05f;
-                fireTrapInstance = KOFItem.InstantiateByPool(fireTrap, pos, Quaternion.Euler(0, 0, 0), GameController.instance.transform, gameObject.layer, true);
+                fireTrapInstance = InstantiateByPool(fireTrap, pos, Quaternion.Euler(0, 0, 0), GameController.instance.transform, gameObject.layer, true);
             }
-            this.enabled = false;
+            //this.enabled = false;
         }
     }
 }
