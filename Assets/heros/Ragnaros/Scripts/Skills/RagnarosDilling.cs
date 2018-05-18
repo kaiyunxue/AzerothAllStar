@@ -6,13 +6,16 @@ using UnityEngine;
 public class RagnarosDilling : HeroSkill, ISkill
 {
     private float t;
+    public AudioClip clip;
     public AnimationCurve curve;
     public AnimationCurve curve2;
     public Material pool;
     public RagnarosFlame fire;
     public override void StartSkill(Animator animator)
     {
+
         t = 0;
+        hero.audioCtrler.PlaySound(clip);
         StartCdColding();
         hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         StartCoroutine(Dilling(0));

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosFireLowBalls : HeroSkill, ISkill
 {
+    public AudioClip word;
     public GameObject leftHand;
     public FireBall fireBall;    
     public FireBall fireBallInstance;
@@ -48,6 +49,8 @@ public class RagnarosFireLowBalls : HeroSkill, ISkill
         }
         else
         {
+            if(force <= 150)
+                hero.audioCtrler.PlaySound(word);
             fireBallInstance.GetComponent<FireBall>().damage = new RagnarosDamage((int)damageVal, damageType,gameObject.layer); 
             animator.SetBool("Fireball_low", false);
             yield return new WaitForSeconds(0.5f);

@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class RagnarosWorldinFlame : HeroSkill, ISkill
 {
+    public AudioClip clip;
     public FlameOfFlameWorld flame;
     public float RadiusInterval;
     List<ISkill> nextSkills = new List<ISkill>();
 
     public override void StartSkill(Animator animator)
     {
+        hero.audioCtrler.PlaySound(clip);
         hero.state.Mana -= manaCost;
         StartCoroutine(SkillBehave(1));
     }

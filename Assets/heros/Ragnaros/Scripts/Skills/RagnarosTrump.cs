@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class RagnarosTrump : HeroSkill, ISkill
 {
+    public AudioClip trumpWord;
     public GameObject sulfuras;
     public FireWall fireWall;
     public TrumpStamp fireStamp;
 
     public override void StartSkill(Animator animator)
     {
+        hero.audioCtrler.PlaySound(trumpWord);
         StartCoroutine(Trump());
         StartCoroutine(isAttackGround(0));
     }

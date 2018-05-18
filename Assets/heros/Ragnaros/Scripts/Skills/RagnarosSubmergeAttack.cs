@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosSubmergeAttack : HeroSkill, ISkill
 {
+    public AudioClip submergeWord;
     public AudioClip comeToMe;
     public AudioClip beCrashed;
     public float waitingTime;
@@ -37,6 +38,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
 
     public override void StartSkill(Animator animator)
     {
+        hero.audioCtrler.ForcePlaySound(submergeWord);
         hero.state.Mana -= manaCost;
         StartCdColding();
         hero.statusBox.cdBar.StartCooling(skillIcon, cd);
@@ -101,12 +103,12 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     IEnumerator Step2(Animator animator)
     {
         yield return new WaitForSeconds(1.5f);
-        hero.audioCtrler.PlaySound(comeToMe);
+        hero.audioCtrler.ForcePlaySound(comeToMe);
         yield return new WaitForSeconds(waitingTime - 1.5f);
         animator.SetBool("SubmergeAttack", false);
         StartCoroutine(FloatUp(0));
         yield return new WaitForSeconds(waitingTime2);
-        hero.audioCtrler.PlaySound(beCrashed);
+        hero.audioCtrler.ForcePlaySound(beCrashed);
         Destroy(sf_copy);
         sf.SetActive(true);
         StartCoroutine(WaitAndDisable());

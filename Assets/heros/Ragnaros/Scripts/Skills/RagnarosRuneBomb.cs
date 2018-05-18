@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosRuneBomb : HeroSkill, ISkill
 {
+    public AudioClip clip;
     public int maxSpellTime;
     public int spellTime;
 
@@ -28,6 +29,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
         }
         else if(hero.state.Stage == 3)
         {
+            hero.audioCtrler.PlaySound(clip);
             var instance = KOFItem.InstantiateByPool(fireBlower, GameController.instance.transform, gameObject.layer);
             instance.damage = new RagnarosDamage(50, DamageType.Fire, gameObject.layer);
             animator.SetBool("RuneBoob", false);
@@ -72,6 +74,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
         {
             yield return null;
             animator.SetBool("RuneBoob", false);
+            hero.audioCtrler.PlaySound(clip, 0.7f);
             runeBoomInstance.StartSkill();
         }
         else
