@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,10 @@ public class FireWind : SkillItemsBehaviourController
     float t = 0;
     protected override void OnEnable()
     {
+        this.transform.localScale = new Vector3(1, 1, -1);
         base.OnEnable();
+        t = 0;
+        f = 0;
         W = transform.GetChild(0).GetComponent<MeshRenderer>().material;
         w = transform.GetChild(1).GetComponent<MeshRenderer>().material;
         W.SetColor("_TintColor", C);

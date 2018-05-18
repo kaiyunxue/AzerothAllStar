@@ -11,6 +11,7 @@ public class RagnarosStomp : HeroSkill, ISkill
     Transform foot;
     public override void StartSkill(Animator animator)
     {
+        hero.state.Mana--;
         animator.SetBool("Run", false);
         animator.SetBool("Back", false);
         StartCoroutine(Stomp());
@@ -23,6 +24,8 @@ public class RagnarosStomp : HeroSkill, ISkill
     public override bool IsReady()
     {
         if (!Lock)
+            return false;
+        if (hero.state.Mana < manaCost)
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;

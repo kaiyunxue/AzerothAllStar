@@ -13,13 +13,14 @@ public class RagnarosDilling : HeroSkill, ISkill
     public override void StartSkill(Animator animator)
     {
         t = 0;
+        StartCdColding();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         StartCoroutine(Dilling(0));
         StartCoroutine(Dilling(animator));
         fire.Play();
     }
     public override void StopSkill(Animator animator)
     {
-        StartCdColding();
     }
     IEnumerator Dilling(float time)
     {

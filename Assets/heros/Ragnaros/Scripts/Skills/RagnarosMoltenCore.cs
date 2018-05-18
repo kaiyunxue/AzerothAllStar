@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosMoltenCore : HeroSkill, ISkill
 {
+    public AudioClip word;
     public RagnarosFlame fire;
     public GameObject pool;
     public ParticleSystem skinFire;
@@ -16,6 +17,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     {
         skinFire.gameObject.SetActive(true);
         fire.Play();
+        hero.audioCtrler.PlaySound(word);
         pool.SetActive(false);
         contTime = hero.state.Mana * 3;
         hero.state.Mana = 0;
@@ -24,6 +26,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         hero.transform.localPosition += new Vector3(0, 3, 0);
         StartCoroutine(SkillBehave());
         StartCoroutine(WaitForBack(contTime));
+        hero.statusBox.cdBar.StartCooling(skillIcon, contTime);
     }
     IEnumerator MaterialChane(float time = 0)
     {

@@ -29,6 +29,7 @@ public class RagnarosFireTrap : HeroSkill, ISkill
 
     public override void StopSkill(Animator animator)
     {
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         StartCdColding();
     }
 

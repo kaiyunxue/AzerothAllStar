@@ -21,11 +21,11 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     {
         if(fireBallInstance.Count == 0)
         {
-            fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
+            fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero ,gameObject.layer));
             if (hero.state.Stage == 3)
             {
-                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
-                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, gameObject.layer));
+                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero,gameObject.layer));
+                fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero,gameObject.layer));
             }
             StartCoroutine(HighFireBalls(animator));
         }
@@ -56,6 +56,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     public override void StopSkill(Animator animator)
     {
         StartCdColding();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
 
     public override bool IsReady()

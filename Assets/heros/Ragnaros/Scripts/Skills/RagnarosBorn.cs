@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosBorn : HeroSkill
 {
+    public AudioClip word;
     public AnimationCurve curve1;
     public AnimationCurve curve2;
     public Projector rune;
@@ -14,6 +15,7 @@ public class RagnarosBorn : HeroSkill
     Vector3 aimPosition;
     protected override void Awake()
     {
+        base.Awake();
         aimPosition = firePool.position;
         firePool.localPosition = new Vector3(0, -2, 0);
         poolM.SetFloat("_CutOff", 0);
@@ -21,8 +23,10 @@ public class RagnarosBorn : HeroSkill
     public override void StartSkill(Animator animator)
     {
         fireCylinder.Play();
+        hero.audioCtrler.PlaySound(word);
         StartCoroutine(RuneEnlarge(0));
         StartCoroutine(PoolApear(0));
+
     }
     IEnumerator PoolApear(float time)
     {

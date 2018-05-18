@@ -9,6 +9,7 @@ public abstract class StatusBox : MonoBehaviour {
     public Image health_o;
     public Image health_i;
     public float heath;
+    public CDBar cdBar;
     public virtual void ShowHealth(float h)
     {
         if (h < health_o.fillAmount)

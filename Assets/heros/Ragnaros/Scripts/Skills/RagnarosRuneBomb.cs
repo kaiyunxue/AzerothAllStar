@@ -41,6 +41,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
         {
             spellTime = 0;
             StartCdColding();
+            hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         }
     }
 

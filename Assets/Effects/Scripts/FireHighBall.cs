@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.Events;
 
 public class FireHighBall : SkillItemsBehaviourController
 {
@@ -12,6 +12,7 @@ public class FireHighBall : SkillItemsBehaviourController
     public FireTrap fireTrap;
     public GameObject FireBall;
     public GameObject FireExplosion;
+    public AudioClip dieInsect;
     public RagnarosDamage damage;
     bool IsTrap;
 
@@ -29,7 +30,9 @@ public class FireHighBall : SkillItemsBehaviourController
         {
             if (col.gameObject.layer == 9)
             {
-                col.GetComponent<State>().TakeSkillContent(damage);
+                Ragnaros r = speller as Ragnaros;
+                r.audioCtrler.PlaySound(dieInsect);
+                col.GetComponent<State>().TakeSkillContent(damage);              
             }
             StopEmission(FireBall);
             FireExplosion.SetActive(true);

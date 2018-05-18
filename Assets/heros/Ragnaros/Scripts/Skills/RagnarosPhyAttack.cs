@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class RagnarosPhyAttack : HeroSkill, ISkill
 {
+    public AudioClip die;
     bool isDoubleAttack;
     public Sulfuars sulfuars;
     public override void StartSkill(Animator animator)
     {
+        hero.audioCtrler.PlaySound(die, 0.5f);
         isDoubleAttack = false;
         sulfuars.TurnOnPhyAttack();
         StartCoroutine(WatchDog(animator));

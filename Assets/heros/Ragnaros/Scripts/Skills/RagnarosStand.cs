@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RagnarosStand : HeroSkill, ISkill
 {
+    public AudioClip standWord;
     public AnimationCurve valCurve;
     public GameObject fireStand;
     public GameObject rune;
@@ -19,6 +20,7 @@ public class RagnarosStand : HeroSkill, ISkill
     public override void StartSkill(Animator animator)
     {
         fire.Play();
+        hero.audioCtrler.ForcePlaySound(standWord);
         StartCoroutine(FirePoolSink());
         StartCoroutine(RuneDispare(0));
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SkillItemsBehaviourController : KOFItem {
+    public KOFItem speller;
     public Damage damage;
     public GameObject target;
     public virtual void SetTarget(GameObject target)

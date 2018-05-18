@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Sulfuars : SkillItemsBehaviourController
 {
+    AudioSource audioSource;
     public ParticleSystem trail;
     public ParticleSystem particles;
     [SerializeField]
@@ -26,6 +27,8 @@ public class Sulfuars : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         base.OnEnable();
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Stop();
         trail.Stop();
     }
 
@@ -65,6 +68,7 @@ public class Sulfuars : SkillItemsBehaviourController
 
     public void TurnOnPhyAttack()
     {
+        audioSource.Play();
         StopAllCoroutines();
         isPhyAttack = true;
         StartCoroutine(TurnOnPhyAttack_(0.7f));

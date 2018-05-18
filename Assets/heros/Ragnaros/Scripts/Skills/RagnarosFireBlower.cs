@@ -18,6 +18,7 @@ public class RagnarosFireBlower : HeroSkill {
         var instance = KOFItem.InstantiateByPool(fireBlower,GameController.instance.transform, gameObject.layer);
         instance.damage = new RagnarosDamage(damageVal, damageType, gameObject.layer);
         StartCdColding();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
     public override void StopSkill(Animator animator)
     {

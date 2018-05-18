@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RagnarosFireStorm : HeroSkill, ISkill
 {
+    public AudioClip word;
     public FireWind fireStormParticle;
     public Vector3 pos;
     public Vector3 rot;
@@ -13,6 +14,7 @@ public class RagnarosFireStorm : HeroSkill, ISkill
         hero.state.Mana -= manaCost;
         KOFItem.InstantiateByPool(fireStormParticle, pos, rot, Camera.main.transform, gameObject.layer);
         StartCdColding();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
 
     public override void StopSkill(Animator animator)
@@ -26,6 +28,7 @@ public class RagnarosFireStorm : HeroSkill, ISkill
             return false;
         if (hero.state.Mana < manaCost)
             return false;
+        hero.audioCtrler.PlaySound(word);
         return true;
     }
     public override bool TryStartSkill(Animator animator)

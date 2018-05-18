@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class RagnarosMoltenSeed : HeroSkill, ISkill
 {
+    public AudioClip word;
     public GameObject[] traps;
     public MoltenSeed moltenSeed;
     MoltenSeed moltenseedInstance;
     public GameObject LeftHand;
     public override void StartSkill(Animator animator)
     {
+        hero.audioCtrler.PlaySound(word);
         StartBehave(animator);
     }
 
@@ -55,9 +57,12 @@ public class RagnarosMoltenSeed : HeroSkill, ISkill
             return false;
         if (!Lock)
             return false;
+        if (hero.state.Mana < manaCost)
+            return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;
 
+        hero.state.Mana -= manaCost;
         return true;
     }
     public override bool TryStartSkill(Animator animator)

@@ -86,6 +86,16 @@ public class KOFItem : MonoBehaviour
         instance.gameObject.SetActive(true);
         return instance;
     }
+    public static T InstantiateByPool<T>(T item, Transform parent, KOFItem speller, int layer) where T : SkillItemsBehaviourController
+    {
+        T instance = InstantiateByPool(item);
+        instance.speller = speller;
+        instance.gameObject.layer = layer;
+        instance.transform.SetParent(parent, false);
+        instance.gameObject.transform.localPosition = Vector3.zero;
+        instance.gameObject.SetActive(true);
+        return instance;
+    }
     public static T InstantiateByPool<T>(T item, Vector3 pos, Transform parent, int layer) where T : KOFItem
     {
         T instance = InstantiateByPool(item);

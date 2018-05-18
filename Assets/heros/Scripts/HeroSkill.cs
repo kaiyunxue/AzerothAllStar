@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public abstract class HeroSkill : Skill, ISkill
 {
+    
+    public Sprite skillIcon;
     protected Hero hero;
     protected ISkillManager skillManager;
     public float manaCost;

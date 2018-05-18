@@ -17,6 +17,7 @@ public class RagnarosTrump : HeroSkill, ISkill
 
     public override void StopSkill(Animator animator)
     {
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         StartCdColding();
     }
     public override bool IsReady()

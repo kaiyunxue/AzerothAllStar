@@ -6,13 +6,13 @@ using System;
 
 public class HeroState : State
 {
-    [SerializeField]
     protected StatusBox statusBox;
     [SerializeField]
     protected Hero hero;
     protected virtual void Awake()
     {
         hero = gameObject.GetComponent<Hero>();
+        statusBox = hero.statusBox;
     }
     public override void TakeSkillContent(Damage damage)
     {
