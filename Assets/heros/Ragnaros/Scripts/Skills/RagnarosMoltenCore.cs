@@ -17,7 +17,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     {
         skinFire.gameObject.SetActive(true);
         fire.Play();
-        hero.audioCtrler.PlaySound(word);
+        hero.audioCtrler.ForcePlaySound(word);
         pool.SetActive(false);
         contTime = hero.state.Mana * 3;
         hero.state.Mana = 0;

@@ -75,7 +75,7 @@ Material:
     - SrcMode: 5
     - _BumpAmt: 10
     - _BumpScale: 1
-    - _CutOff: 0
+    - _CutOff: -0.0024902057
     - _Cutoff: 0
     - _Cutout: 1.06
     - _CutoutThickness: 0

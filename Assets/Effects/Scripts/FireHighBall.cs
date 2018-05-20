@@ -4,6 +4,10 @@ using UnityEngine.Events;
 
 public class FireHighBall : SkillItemsBehaviourController
 {
+    public GameObject spellAudio;
+    public GameObject collisionAudio;
+    public GameObject releaseAudio;
+
     static int maxInstanceNum = 5;
     protected override void Awake()
     {
@@ -19,15 +23,22 @@ public class FireHighBall : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         IsTrap = false;
+        releaseAudio.SetActive(false);
+        spellAudio.SetActive(true);
         FireExplosion.SetActive(false);
         gameObject.GetComponent<Rigidbody>().isKinematic = false;
         gameObject.GetComponent<Rigidbody>().useGravity = false;
         base.OnEnable();
     }
+    public void PlaySoundWhenBeReleased()
+    {
+        releaseAudio.SetActive(true);
+    }
     void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.layer != 8)
         {
+            spellAudio.SetActive(false);
             if (col.gameObject.layer == 9)
             {
                 Ragnaros r = speller as Ragnaros;

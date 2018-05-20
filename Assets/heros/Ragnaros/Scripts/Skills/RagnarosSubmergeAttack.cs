@@ -82,6 +82,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
         sf.SetActive(false);
         sf_copy.transform.localRotation = Quaternion.Euler(0, 70, 0);
         yield return new WaitForSeconds(0.25f);
+        StartCoroutine(Dilling(0));
         sf_copy.transform.SetParent(GameController.instance.transform);
         sf_copy.transform.position += new Vector3(0, 0.7f, 0);
         Vector3 pos = transform.position;
@@ -97,7 +98,6 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
             }
             yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 0.3f));
         }
-        StartCoroutine(Dilling(0));
         StartCoroutine(Step2(animator));
     }
     IEnumerator Step2(Animator animator)

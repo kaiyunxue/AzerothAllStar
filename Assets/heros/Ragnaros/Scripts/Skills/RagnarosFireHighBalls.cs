@@ -36,6 +36,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
         {
             foreach (var instance in fireBallInstance)
             {
+                instance.PlaySoundWhenBeReleased();
                 instance.transform.SetParent(GameController.instance.transform);
                 instance.GetComponent<Rigidbody>().useGravity = true;
                 instance.GetComponent<Rigidbody>().AddForce(-UnityEngine.Random.Range(2 * Force_high / 3, 4 * Force_high / 3), 100, 0);

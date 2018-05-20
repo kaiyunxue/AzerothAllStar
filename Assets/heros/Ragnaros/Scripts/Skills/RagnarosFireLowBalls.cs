@@ -43,12 +43,14 @@ public class RagnarosFireLowBalls : HeroSkill, ISkill
         if (Input.GetKey(KeyCode.K) && force >= 50)
         {
             force -= 1;
+            fireBallInstance.UpdateVols((initialForce - force) / (initialForce - 50));
             yield return new WaitForEndOfFrame();
             damageVal += 0.5f;
             StartCoroutine(SkillUpdate(animator));
         }
         else
         {
+            fireBallInstance.WhenBeReleased();
             if(force <= 150)
                 hero.audioCtrler.PlaySound(word);
             fireBallInstance.GetComponent<FireBall>().damage = new RagnarosDamage((int)damageVal, damageType,gameObject.layer); 
