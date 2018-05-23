@@ -6,6 +6,8 @@ using UnityEngine;
 public class RagnarosMoltenCore : HeroSkill, ISkill
 {
     public AudioClip word;
+    public TitanFlame titantFlame;
+    TitanFlame flameInstance;
     public RagnarosFlame fire;
     public GameObject pool;
     public ParticleSystem skinFire;
@@ -20,13 +22,14 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         hero.audioCtrler.ForcePlaySound(word);
         pool.SetActive(false);
         contTime = hero.state.Mana * 3;
+        flameInstance = KOFItem.InstantiateByPool(titantFlame,hero.transform.localPosition , GameController.instance.transform, gameObject.layer);
         hero.state.Mana = 0;
         hero.state.Stage = 3;
         hero.transform.localScale *= 3;
         hero.transform.localPosition += new Vector3(0, 3, 0);
         StartCoroutine(SkillBehave());
         StartCoroutine(WaitForBack(contTime));
-        hero.statusBox.cdBar.StartCooling(skillIcon, contTime);
+        hero.statusBox.cdBar.StartCoolingHighlight(skillIcon, contTime);
     }
     IEnumerator MaterialChane(float time = 0)
     {
@@ -57,18 +60,21 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         yield return new WaitForSecondsRealtime(contTime);
         skinFire.Stop();
         StartCoroutine(MaterialChaneBack());
+        StartCdColding();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         fire.Play();
         yield return new WaitForSeconds(1.5f);
         hero.state.Stage = 0;
         hero.transform.localScale /= 3;
         hero.transform.localPosition -= new Vector3(0, 3, 0);
+        flameInstance.Stop();
         fire.transform.localScale *= 3;
         pool.SetActive(true);
         yield return new WaitForSeconds(1f);
         fire.Stop();
         yield return new WaitForSeconds(5f);
         fire.transform.localScale /= 3;
-        StartCdColding();
+        KOFItem.DestoryByPool(flameInstance);
     }
     IEnumerator SkillBehave()
     {
@@ -79,7 +85,6 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     }
     public override void StopSkill(Animator animator)
     {
-        StartCdColding();
     }
 
     public override bool TryStartSkill(Animator animator)
@@ -100,7 +105,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;
-        if (hero.state.Mana == 0)
+        if (hero.state.Mana < 1)
             return false;
         return true;
     }

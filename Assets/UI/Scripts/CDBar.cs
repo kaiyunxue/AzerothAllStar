@@ -32,6 +32,17 @@ public class CDBar : MonoBehaviour {
         Vector3 speed = (endPos.position - startPos.position) / time * Time.fixedDeltaTime;
         StartCoroutine(CoolingBehave(instance, speed, time));
     }
+    public virtual void StartCoolingHighlight(Sprite logo, float time)
+    {
+        if (instances.Count == 0)
+            Debug.LogError("No enough space for frame!");
+        SpriteFrame instance = instances.Dequeue();
+        instance.gameObject.SetActive(true);
+        instance.transform.localScale *= 1.5f;
+        instance.SetSprite(logo);
+        Vector3 speed = (endPos.position - startPos.position) / time * Time.fixedDeltaTime;
+        StartCoroutine(CoolingBehave(instance, speed, time));
+    }
     IEnumerator CoolingBehave(SpriteFrame frame, Vector3 speed, float maxTime, float time = 0)
     {
         frame.transform.position += speed;
@@ -39,6 +50,7 @@ public class CDBar : MonoBehaviour {
         if (time >= maxTime)
         {
             frame.gameObject.SetActive(false);
+            frame.transform.localScale = new Vector3(1, 1, 1);
             frame.transform.position = startPos.position;
             instances.Enqueue(frame);
             yield return null;
