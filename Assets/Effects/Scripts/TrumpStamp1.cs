@@ -32,4 +32,16 @@ public class TrumpStamp1 : SkillItemsBehaviourController
     public void LetStun(State state)
     {
     }
+    public IEnumerator StopEffect(float time)
+    {
+        var tmp = gameObject.GetComponentInChildren<RFX4_ShaderFloatCurve>();
+        yield return new WaitForSeconds(time * tmp.GraphTimeMultiplier);
+        tmp.enabled = false;
+    }
+    public void StartEffect(float time)
+    {
+        var tmp = gameObject.GetComponentInChildren<RFX4_ShaderFloatCurve>();
+        tmp.enabled = true;
+        tmp.setStartTime(Time.time - time);
+    }
 }

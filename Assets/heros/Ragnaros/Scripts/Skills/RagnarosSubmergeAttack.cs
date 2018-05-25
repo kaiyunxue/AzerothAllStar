@@ -16,11 +16,15 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public GameObject Hand_sf;
     public GameObject sf_copy;
     public RagnarosFlame fire;
+    public TrumpStamp1 stamp;
+    public ParticleSystem sfEffect;
 
     public AnimationCurve curve;
     public AnimationCurve curve2;
     public Material pool;
-    IEnumerator Dilling(float time)
+
+    Coroutine step2;
+IEnumerator Dilling(float time)
     {
         pool.SetFloat("_CutOff", curve.Evaluate(time));
         yield return new WaitForEndOfFrame();
@@ -40,9 +44,11 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     {
         hero.audioCtrler.ForcePlaySound(submergeWord);
         hero.state.Mana -= manaCost;
-        StartCdColding();
         hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         fire.Play();
+        sfEffect = Instantiate(sfEffect, sf.transform);
+        var s = sfEffect.shape;
+        s.meshRenderer = sf.GetComponentInChildren<MeshRenderer>();
         StartCoroutine(SkillBehave(animator));
 
     }
@@ -81,11 +87,15 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
         sf_copy.transform.SetParent(Hand_sf.transform);
         sf.SetActive(false);
         sf_copy.transform.localRotation = Quaternion.Euler(0, 70, 0);
+        Vector3 pos = sf_copy.transform.localPosition;
+
+        stamp = KOFItem.InstantiateByPool(stamp, sf_copy.transform.localPosition, GameController.instance.transform, gameObject.layer);
+        StartCoroutine(stamp.StopEffect(0.5f));
         yield return new WaitForSeconds(0.25f);
         StartCoroutine(Dilling(0));
         sf_copy.transform.SetParent(GameController.instance.transform);
         sf_copy.transform.position += new Vector3(0, 0.7f, 0);
-        Vector3 pos = transform.position;
+        pos = transform.position;
         pos.y = 10;
         for (int i = 0; i < 7; i++)
         {
@@ -98,19 +108,23 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
             }
             yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 0.3f));
         }
-        StartCoroutine(Step2(animator));
+        step2 = StartCoroutine(Step2(animator));
     }
     IEnumerator Step2(Animator animator)
     {
         yield return new WaitForSeconds(1.5f);
+        fire.Stop();
         hero.audioCtrler.ForcePlaySound(comeToMe);
         yield return new WaitForSeconds(waitingTime - 1.5f);
+        fire.Play();
         animator.SetBool("SubmergeAttack", false);
         StartCoroutine(FloatUp(0));
-        yield return new WaitForSeconds(waitingTime2);
+        yield return new WaitForSecondsRealtime(waitingTime2);
+        sf.SetActive(true);
         hero.audioCtrler.ForcePlaySound(beCrashed);
         Destroy(sf_copy);
-        sf.SetActive(true);
+        Destroy(sfEffect);
+        stamp.StartEffect(1.5f);
         StartCoroutine(WaitAndDisable());
     }
     IEnumerator WaitAndDisable()
@@ -120,11 +134,16 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     }
     IEnumerator FloatDirectly(Animator animator)
     {
+        StopCoroutine(step2);
+        fire.Play();
         animator.SetBool("SubmergeAttack", false);
         StartCoroutine(FloatUp(0));
-        yield return new WaitForSeconds(waitingTime2);
-        Destroy(sf_copy);
+        yield return new WaitForSecondsRealtime(waitingTime2);
         sf.SetActive(true);
+        hero.audioCtrler.ForcePlaySound(beCrashed);
+        Destroy(sf_copy);
+        stamp.StartEffect(1.5f);
+        fire.Stop();
     }
     public void Float(Animator animator)
     {

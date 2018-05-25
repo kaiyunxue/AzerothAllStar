@@ -93,4 +93,8 @@ public class RFX4_ShaderFloatCurve : MonoBehaviour {
             mat = null;
         }
     }
+    public void setStartTime(float time)
+    {
+        startTime = time;
+    }
 }
