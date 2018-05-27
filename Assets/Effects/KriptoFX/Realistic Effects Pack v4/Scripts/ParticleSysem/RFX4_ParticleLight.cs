@@ -46,7 +46,7 @@ public class RFX4_ParticleLight : MonoBehaviour
         for (int i = 0; i < count; i++)
         {
             lights[i].gameObject.SetActive(true);
-            lights[i].transform.position = particles[i].position;
+            lights[i].transform.localPosition = particles[i].position;
             lights[i].color = particles[i].GetCurrentColor(ps);
             lights[i].range = particles[i].GetCurrentSize(ps);
             lights[i].intensity = particles[i].GetCurrentColor(ps).a / 255f * LightIntencityMultiplayer;

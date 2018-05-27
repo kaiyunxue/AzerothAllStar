@@ -38,6 +38,8 @@ public class RagnarosFireTrap : HeroSkill, ISkill
     {
         if (!Lock)
             return false;
+        if (hero.state.Stage != 0)
+            return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;
         if (hero.state.Mana < manaCost)

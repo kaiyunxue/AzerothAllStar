@@ -58,6 +58,8 @@ IEnumerator Dilling(float time)
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;
+        if (hero.state.Stage != 0)
+            return false;
         if (hero.state.Mana < manaCost)
             return false;
         return true;
@@ -108,25 +110,6 @@ IEnumerator Dilling(float time)
             yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 0.3f));
         }
     }
-    //IEnumerator Step2(Animator animator)
-    //{
-    //    yield return new WaitForSeconds(1.5f);
-    //    fire.Stop();
-    //    hero.audioCtrler.ForcePlaySound(comeToMe);
-    //    yield return new WaitForSeconds(waitingTime - 1.5f);
-    //    fire.Play();
-    //    animator.SetBool("SubmergeAttack", false);
-    //    StartCoroutine(FloatUp(0));
-    //    yield return new WaitForSecondsRealtime(waitingTime2);
-    //    sf.SetActive(true);
-    //    hero.audioCtrler.ForcePlaySound(beCrashed);
-    //    Destroy(sf_copy);
-    //    Destroy(sfEffect);
-    //    stamp.StartEffect(1.5f);
-    //    StartCoroutine(WaitAndDisable());
-    //    hero.statusBox.cdBar.StartCooling(skillIcon, cd);
-    //    StartCdColding();
-    //}
     IEnumerator WaitAndDisable()
     {
         fire.Stop();

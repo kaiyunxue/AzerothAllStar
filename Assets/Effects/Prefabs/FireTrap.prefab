@@ -113,22 +113,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1496310209283394
-GameObject:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4523118382522902}
-  - component: {fileID: 114963708334929526}
-  m_Layer: 0
-  m_Name: CamShake
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1552969531127788
 GameObject:
   m_ObjectHideFlags: 1
@@ -349,19 +333,6 @@ Transform:
   m_Father: {fileID: 4760458822169276}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!4 &4523118382522902
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496310209283394}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4530703794218778}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4528419199734684
 Transform:
   m_ObjectHideFlags: 1
@@ -373,7 +344,7 @@ Transform:
   m_LocalScale: {x: 2.5955565, y: 2.5955544, z: 2.5955544}
   m_Children: []
   m_Father: {fileID: 4530703794218778}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!4 &4530703794218778
 Transform:
@@ -387,7 +358,6 @@ Transform:
   m_Children:
   - {fileID: 4772831811539370}
   - {fileID: 4961852159663318}
-  - {fileID: 4523118382522902}
   - {fileID: 4528419199734684}
   m_Father: {fileID: 4291048807721420}
   m_RootOrder: 1
@@ -932,54 +902,6 @@ MonoBehaviour:
   GraphTimeMultiplier: 1.5
   GraphIntensityMultiplier: 1.5
   IsLoop: 0
-  canUpdate: 0
---- !u!114 &114963708334929526
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1496310209283394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92d823863b34e4648afb042b39991109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShakeCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 7.0203147
-      outSlope: 7.0203147
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.061838463
-      value: 0.9978678
-      inSlope: -0.038008716
-      outSlope: -0.038008716
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 0.23835821
-      value: 0.4172902
-      inSlope: -1.6209341
-      outSlope: -1.6209341
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: -0.15367037
-      outSlope: -0.15367037
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  Duration: 2.8
-  Speed: 15
-  Magnitude: 0.8
-  DistanceForce: 50
-  RotationDamper: 2
-  IsEnabled: 1
   canUpdate: 0
 --- !u!166 &166448360189087096
 AudioChorusFilter:

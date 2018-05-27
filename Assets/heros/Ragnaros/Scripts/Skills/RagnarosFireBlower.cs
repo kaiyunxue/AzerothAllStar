@@ -29,6 +29,8 @@ public class RagnarosFireBlower : HeroSkill {
             return false;
         if (!Lock)
             return false;
+        if (hero.state.Stage != 0)
+            return false;
         if (hero.state.Mana < manaCost)
             return false;
         return true;
