@@ -18,12 +18,11 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public RagnarosFlame fire;
     public TrumpStamp1 stamp;
     public ParticleSystem sfEffect;
-
+    ParticleSystem sfEffect_;
     public AnimationCurve curve;
     public AnimationCurve curve2;
     public Material pool;
 
-    Coroutine step2;
 IEnumerator Dilling(float time)
     {
         pool.SetFloat("_CutOff", curve.Evaluate(time));
@@ -44,9 +43,8 @@ IEnumerator Dilling(float time)
     {
         hero.audioCtrler.ForcePlaySound(submergeWord);
         hero.state.Mana -= manaCost;
-        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
         fire.Play();
-        sfEffect = Instantiate(sfEffect, sf.transform);
+        sfEffect_ = Instantiate(sfEffect, sf.transform);
         var s = sfEffect.shape;
         s.meshRenderer = sf.GetComponentInChildren<MeshRenderer>();
         StartCoroutine(SkillBehave(animator));
@@ -105,28 +103,30 @@ IEnumerator Dilling(float time)
             if(i == 3)
             {
                 go.GetComponent<FireAerolite>().isSeed = true;
+                go.speller = this.hero;
             }
             yield return new WaitForSeconds(UnityEngine.Random.Range(0.1f, 0.3f));
         }
-        step2 = StartCoroutine(Step2(animator));
     }
-    IEnumerator Step2(Animator animator)
-    {
-        yield return new WaitForSeconds(1.5f);
-        fire.Stop();
-        hero.audioCtrler.ForcePlaySound(comeToMe);
-        yield return new WaitForSeconds(waitingTime - 1.5f);
-        fire.Play();
-        animator.SetBool("SubmergeAttack", false);
-        StartCoroutine(FloatUp(0));
-        yield return new WaitForSecondsRealtime(waitingTime2);
-        sf.SetActive(true);
-        hero.audioCtrler.ForcePlaySound(beCrashed);
-        Destroy(sf_copy);
-        Destroy(sfEffect);
-        stamp.StartEffect(1.5f);
-        StartCoroutine(WaitAndDisable());
-    }
+    //IEnumerator Step2(Animator animator)
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    fire.Stop();
+    //    hero.audioCtrler.ForcePlaySound(comeToMe);
+    //    yield return new WaitForSeconds(waitingTime - 1.5f);
+    //    fire.Play();
+    //    animator.SetBool("SubmergeAttack", false);
+    //    StartCoroutine(FloatUp(0));
+    //    yield return new WaitForSecondsRealtime(waitingTime2);
+    //    sf.SetActive(true);
+    //    hero.audioCtrler.ForcePlaySound(beCrashed);
+    //    Destroy(sf_copy);
+    //    Destroy(sfEffect);
+    //    stamp.StartEffect(1.5f);
+    //    StartCoroutine(WaitAndDisable());
+    //    hero.statusBox.cdBar.StartCooling(skillIcon, cd);
+    //    StartCdColding();
+    //}
     IEnumerator WaitAndDisable()
     {
         fire.Stop();
@@ -134,16 +134,17 @@ IEnumerator Dilling(float time)
     }
     IEnumerator FloatDirectly(Animator animator)
     {
-        StopCoroutine(step2);
-        fire.Play();
         animator.SetBool("SubmergeAttack", false);
         StartCoroutine(FloatUp(0));
         yield return new WaitForSecondsRealtime(waitingTime2);
         sf.SetActive(true);
         hero.audioCtrler.ForcePlaySound(beCrashed);
         Destroy(sf_copy);
+        Destroy(sfEffect_);  
         stamp.StartEffect(1.5f);
         fire.Stop();
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
+        StartCdColding();
     }
     public void Float(Animator animator)
     {

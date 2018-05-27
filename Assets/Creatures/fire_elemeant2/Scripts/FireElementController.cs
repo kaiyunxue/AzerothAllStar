@@ -12,6 +12,8 @@ public class FireElementController : CreatureBehavuourController
     public GameObject explosion;
     public float maxspeed;
     public Animator AC;
+    [SerializeField]
+    SkinnedMeshRenderer renderer;
     protected override void Awake()
     {
         base.Awake();
@@ -27,6 +29,7 @@ public class FireElementController : CreatureBehavuourController
     protected override void OnEnable()
     {
         base.OnEnable();
+        renderer.enabled = true;
         state = gameObject.GetComponent<State>();
         AC = gameObject.GetComponent<Animator>();
         Vector3 pos;
@@ -64,7 +67,11 @@ public class FireElementController : CreatureBehavuourController
         }
         else
         {
+            GetComponent<AudioSource>().Play();
+            RagnarosSubmergeAttack skill = ((Ragnaros)speller).skillManager.GetSkillByName("RagnarosSubmergeAttack") as RagnarosSubmergeAttack;
+            skill.Float(((Ragnaros)speller).animator);
             GameObject go = Instantiate(Explosion, null);
+            renderer.enabled = false;
             GameObject[] objects = GameController.Register.RightHero.HeroRegister.GetAllGameItems();
             int num = 0;
             foreach (GameObject gObject in objects)
@@ -86,6 +93,7 @@ public class FireElementController : CreatureBehavuourController
             }
             go.transform.position = target.transform.position + new Vector3(0, 0.3f, 0);
             go.GetComponent<ParticleSystemMultiplier>().multiplier = 1f;
+            yield return new WaitForSeconds(1.2f);
             DestoryByPool(this);
         }
     }
@@ -97,8 +105,8 @@ public class FireElementController : CreatureBehavuourController
     }
     public override IEnumerator Die()
     {
-        RagnarosSubmergeAttack skill = GameController.Register.LeftHero.skillManager.GetSkillByName("RagnarosSubmergeAttack") as RagnarosSubmergeAttack;
-        skill.Float(GameController.Register.LeftHero.animator);
+        RagnarosSubmergeAttack skill = ((Ragnaros)speller).skillManager.GetSkillByName("RagnarosSubmergeAttack") as RagnarosSubmergeAttack;
+        skill.Float(((Ragnaros)speller).animator);
         AC.CrossFade("Death [12] 0", 0.1f);
         yield return new WaitForSeconds(2);
         GameObject[] objects = GameController.Register.RightHero.HeroRegister.GetAllGameItems();

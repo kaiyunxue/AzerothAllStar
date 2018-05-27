@@ -7,7 +7,7 @@ public class TrumpStamp1 : SkillItemsBehaviourController
     public RagnarosDamage fireDamage;
     public Damage phyDamage;
 
-    protected void Start()
+    protected override void OnEnable()
     {
         Sulfuars sul = (Sulfuars)GameController.Register.FindHeroByLayer(gameObject.layer).weapon;
         fireDamage = new RagnarosDamage(3 * sul.FlameDamageVal, DamageType.Fire, gameObject.layer);

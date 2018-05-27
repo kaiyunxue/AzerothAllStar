@@ -7,6 +7,8 @@ public class FireAerolite : SkillItemsBehaviourController
     float startHeight;
     public FireElementController fe;
     public Projector projector;
+    [SerializeField]
+    AudioSource fallingSound;
     Material material;
     public bool isSeed = false;
     public GameObject fireExplosion;
@@ -44,6 +46,8 @@ public class FireAerolite : SkillItemsBehaviourController
     }
     private void OnTriggerEnter(Collider collision)
     {
+        if(!fallingSound.isPlaying)
+            fallingSound.Play();
         isCollideEarth = true;
         Debug.Log(collision.gameObject.name);
         fireball.SetActive(false);
@@ -54,6 +58,7 @@ public class FireAerolite : SkillItemsBehaviourController
             Vector3 v = gameObject.transform.position;
             v.y = 1f;
             FireElementController e = FireElementController.InstantiateByPool(fe, v, Quaternion.Euler(0, 0, 0), GameController.instance.transform, gameObject.layer,  target);
+            fe.speller = this.speller;
             isSeed = false;
         }
         if (collision.gameObject.layer == 9 && collision.gameObject.GetComponent<State>() != null)
