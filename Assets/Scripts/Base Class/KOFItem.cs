@@ -157,4 +157,18 @@ public class KOFItem : MonoBehaviour
             PoolManager.instance.PushToPool(item);
         }
     }
+    public static void DestoryByPool(GameObject item, string name)
+    {
+        if (PoolManager.instance == null)
+        {
+            Debug.LogWarning("No pool manager in scene!");
+            Destroy(item);
+        }
+        else
+        {
+            item.gameObject.SetActive(false);
+            item.AddComponent<KOFItem>();
+            PoolManager.instance.PushToPool(item, name);
+        }
+    }
 }

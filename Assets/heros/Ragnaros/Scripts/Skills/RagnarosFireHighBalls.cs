@@ -21,6 +21,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     {
         if(fireBallInstance.Count == 0)
         {
+            fireBall.speller = hero;
             fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero ,gameObject.layer));
             if (hero.state.Stage == 3)
             {

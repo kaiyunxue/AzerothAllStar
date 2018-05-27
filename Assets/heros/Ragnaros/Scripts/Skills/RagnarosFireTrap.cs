@@ -19,6 +19,7 @@ public class RagnarosFireTrap : HeroSkill, ISkill
         float x = UnityEngine.Random.Range(-6f, 2f);
         Vector3 RandomPosition = new Vector3(x, 0.2f, 0);
         instance = KOFItem.InstantiateByPool(trap,RandomPosition, GameController.instance.transform, gameObject.layer);
+        instance.speller = hero;
     }
 
     public override void StartSkill(Animator animator)

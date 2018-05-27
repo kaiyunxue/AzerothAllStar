@@ -88,9 +88,6 @@ public class FireTrap : SkillItemsBehaviourController
     IEnumerator selfDestroy(float waitingtime)
     {
         yield return new WaitForSeconds(1);
-        flame.GetComponent<Animator>().CrossFade("Hold [1]", 0.1f);
-        yield return new WaitForSeconds(waitingtime - 1);
-        flame.GetComponent<Animator>().CrossFade("Decay [2]", 0.1f);
         trap.GetComponent<ParticleSystem>().Stop();
         yield return new WaitForSeconds(2f);
         gameObject.SetActive(false);
@@ -100,12 +97,13 @@ public class FireTrap : SkillItemsBehaviourController
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (fts_ != firetrapState.trapping && collision.gameObject.layer == 9)//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!this should be added that the collision's tag is the enemy.
+        int enemyLayer = gameObject.layer == 8 ? 9 : 8;
+        if (fts_ != firetrapState.trapping && collision.gameObject.layer == enemyLayer)
         {
             collision.GetComponent<State>().TakeSkillContent(damage);
-            flame.transform.SetParent(collision.gameObject.transform, false);
+            collision.gameObject.GetComponent<Hero>().state.Stun(0.6f);//!!!!!!!!!!!!!!!!not only hero!!!!!!
             if (collision.tag == "Heros")
-                GameController.Register.FindHeroByLayer(gameObject.layer).state.Mana++;
+               ((Ragnaros)speller).state.Mana++;
             selfDestroy();
         }
     }
@@ -113,10 +111,6 @@ public class FireTrap : SkillItemsBehaviourController
     {
         fts_ = firetrapState.trapping;
         flame.SetActive(true);
-        if (flame.transform.parent == transform)
-        {
-            flame.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f);
-        }
         StartCoroutine(selfDestroy(5));
     }
     public void BeTrumped()

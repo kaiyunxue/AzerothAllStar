@@ -52,6 +52,7 @@ public class FireAerolite : SkillItemsBehaviourController
         Debug.Log(collision.gameObject.name);
         fireball.SetActive(false);
         StartCoroutine(StampDisappear());
+        fireExplosion.transform.SetParent(GameController.instance.transform);
         fireExplosion.SetActive(true);
         if (isSeed)
         {
@@ -65,6 +66,15 @@ public class FireAerolite : SkillItemsBehaviourController
         {
             collision.gameObject.GetComponent<State>().TakeSkillContent(damage);
         }
+        StartCoroutine(DelayDisable(2));
+    }
+    IEnumerator DelayDisable(float time)
+    {
+        yield return new WaitForSeconds(time);
+        fireExplosion.transform.SetParent(transform);
+        fireExplosion.transform.localPosition = Vector3.zero;
+        fireExplosion.transform.localRotation = Quaternion.Euler(Vector3.zero);
+        fireExplosion.SetActive(false);
     }
     IEnumerator StampDisappear()
     {

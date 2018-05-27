@@ -67,6 +67,7 @@ public class FireHighBall : SkillItemsBehaviourController
             Vector3 p = transform.localPosition;
             p = new Vector3(p.x, 0.1f, p.z);
             FireTrap go = InstantiateByPool(fireTrap,p, GameController.instance.transform, gameObject.layer);
+            go.speller = speller;
             IsTrap = true;
         }
     }
