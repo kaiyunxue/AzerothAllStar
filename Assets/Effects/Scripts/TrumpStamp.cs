@@ -9,6 +9,7 @@ public class TrumpStamp : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         base.OnEnable();
+        gameObject.GetComponent<Collider>().enabled = true;
         debuff = new Debuff(LetStun);
         damage = new Damage(50, DamageType.Physical);
         StartCoroutine(ValidTrigger());

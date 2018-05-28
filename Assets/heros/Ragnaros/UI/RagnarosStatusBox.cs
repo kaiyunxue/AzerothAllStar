@@ -75,4 +75,5 @@ public class RagnarosStatusBox : StatusBox {
             yield return null;
         }
     }
+
 }

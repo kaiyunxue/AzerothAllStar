@@ -21,7 +21,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         fire.Play();
         hero.audioCtrler.ForcePlaySound(word);
         pool.SetActive(false);
-        contTime = hero.state.Mana * 3;
+        contTime = hero.state.Mana * 1.5f;
         flameInstance = KOFItem.InstantiateByPool(titantFlame,hero.transform.localPosition , GameController.instance.transform, gameObject.layer);
         hero.state.Mana = 0;
         hero.state.Stage = 3;

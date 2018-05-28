@@ -12,6 +12,7 @@ public class TrumpStamp1 : SkillItemsBehaviourController
         Sulfuars sul = (Sulfuars)GameController.Register.FindHeroByLayer(gameObject.layer).weapon;
         fireDamage = new RagnarosDamage(3 * sul.FlameDamageVal, DamageType.Fire, gameObject.layer);
         phyDamage = new Damage(3 * sul.PhyDamageVal, DamageType.Physical);
+        gameObject.GetComponent<Collider>().enabled = true;
         StartCoroutine(ValidTrigger());
     }
     IEnumerator ValidTrigger()
