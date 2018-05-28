@@ -32,6 +32,10 @@ public class FireElementController : CreatureBehavuourController
         renderer.enabled = true;
         state = gameObject.GetComponent<State>();
         AC = gameObject.GetComponent<Animator>();
+    }
+    public override void SetTarget(GameObject target)
+    {
+        base.SetTarget(target);
         Vector3 pos;
         pos.x = target.transform.position.x;
         pos.z = target.transform.position.z;

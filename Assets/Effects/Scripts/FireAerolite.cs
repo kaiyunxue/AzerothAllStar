@@ -59,7 +59,8 @@ public class FireAerolite : SkillItemsBehaviourController
             Vector3 v = gameObject.transform.position;
             v.y = 1f;
             FireElementController e = FireElementController.InstantiateByPool(fe, v, Quaternion.Euler(0, 0, 0), GameController.instance.transform, gameObject.layer,  target);
-            fe.speller = this.speller;
+            e.SetTarget(target);
+            e.speller = this.speller;
             isSeed = false;
         }
         if (collision.gameObject.layer == 9 && collision.gameObject.GetComponent<State>() != null)

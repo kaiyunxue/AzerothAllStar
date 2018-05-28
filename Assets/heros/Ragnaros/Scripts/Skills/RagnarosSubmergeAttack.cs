@@ -44,9 +44,6 @@ IEnumerator Dilling(float time)
         hero.audioCtrler.ForcePlaySound(submergeWord);
         hero.state.Mana -= manaCost;
         fire.Play();
-        sfEffect_ = Instantiate(sfEffect, sf.transform);
-        var s = sfEffect.shape;
-        s.meshRenderer = sf.GetComponentInChildren<MeshRenderer>();
         StartCoroutine(SkillBehave(animator));
 
     }
@@ -85,6 +82,9 @@ IEnumerator Dilling(float time)
         sf_copy = Instantiate(sf, Hand_sf.transform, true);
         sf_copy.transform.localScale *= 1.5f;
         sf_copy.transform.SetParent(Hand_sf.transform);
+        sfEffect_ = Instantiate(sfEffect, sf_copy.transform);
+        var s = sfEffect_.shape;
+        s.meshRenderer = sf_copy.GetComponentInChildren<MeshRenderer>();
         sf.SetActive(false);
         sf_copy.transform.localRotation = Quaternion.Euler(0, 70, 0);
         Vector3 pos = sf_copy.transform.localPosition;
