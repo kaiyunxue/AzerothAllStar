@@ -9,7 +9,22 @@ public class FireBall : SkillItemsBehaviourController
     public GameObject collisionAudio;
     public GameObject releaseAudio;
     public GameObject fireball;
+    public Vector2 zPosRange;
     static int maxInstanceNum = 15;
+    private void Update()
+    {
+        if(transform.parent == GameController.instance.transform)
+        {
+            if(transform.localPosition.z < zPosRange.x)
+            {
+                transform.localPosition += new Vector3(0, 0, 0.01f);
+            }
+            else if (transform.localPosition.z > zPosRange.y)
+            {
+                transform.localPosition -= new Vector3(0, 0, 0.01f);
+            }
+        }
+    }
     // Use this for initialization
     protected override void Awake()
     {

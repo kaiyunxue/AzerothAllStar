@@ -1424,6 +1424,7 @@ MonoBehaviour:
   collisionAudio: {fileID: 1664718124459146}
   releaseAudio: {fileID: 1992226922729026}
   fireball: {fileID: 1268054927083796}
+  zPosRange: {x: -0.18, y: 0}
 --- !u!114 &114921526871056338
 MonoBehaviour:
   m_ObjectHideFlags: 1
