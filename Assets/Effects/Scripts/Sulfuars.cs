@@ -80,8 +80,7 @@ public class Sulfuars : SkillItemsBehaviourController
 
     IEnumerator TurnOnPhyAttack_(float time)
     {
-        if(flameDamageVal != 0)
-            trail.Play();
+        trail.Play();
         yield return new WaitForSeconds(time);
         isPhyAttack = false;
         trail.Stop();
