@@ -16,7 +16,7 @@ public class RagnarosState : HeroState
         var val = base.SetHealth(value);
         statusBox.ShowHealth(val / MaxHealth);
         //Debug.Log(health);
-        if(Stage == 0 && health <= 300)
+        if(Stage == 0 && health <= 250)
         {
             Stage++;
             hero.animator.SetTrigger("TurnToStandStage");

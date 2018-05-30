@@ -27,8 +27,8 @@ public class State : MonoBehaviour
 
         set
         {
-            value = SetHealth(value);
             health = value;
+            value = SetHealth(value);
         }
     }
     public float Mana

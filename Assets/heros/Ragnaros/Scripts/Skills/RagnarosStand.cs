@@ -11,11 +11,16 @@ public class RagnarosStand : HeroSkill, ISkill
     public GameObject rune;
     public GameObject firePool;
     public RagnarosFlame fire;
-
+ 
     public new bool IsReady()
     {
         return true;
     }
+    private void Start()
+    {
+        
+    }
+
 
     public override void StartSkill(Animator animator)
     {
