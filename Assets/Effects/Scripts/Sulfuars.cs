@@ -22,7 +22,7 @@ public class Sulfuars : SkillItemsBehaviourController
     {
         Effect.SetActive(false);
         Effect.SetActive(true);
-        FlameDamageVal += 10;
+        FlameDamageVal += 5;
     }
     protected override void OnEnable()
     {
@@ -39,7 +39,7 @@ public class Sulfuars : SkillItemsBehaviourController
             if (hero.state.Stage != 3)
                 return flameDamageVal;
             else
-                return flameDamageVal / 5;
+                return flameDamageVal / 2;
         }
 
         set
@@ -57,7 +57,7 @@ public class Sulfuars : SkillItemsBehaviourController
             if (hero.state.Stage != 3)
                 return phyDamageVal;
             else
-                return phyDamageVal / 5;
+                return phyDamageVal;
         }
 
         set
@@ -105,7 +105,7 @@ public class Sulfuars : SkillItemsBehaviourController
             StartCoroutine(WaitingthenDelete());
             if(other.gameObject.layer == 9 && isPhyAttack)
             {
-                FlameDamageVal += 2f;
+                FlameDamageVal += 0.7f;
                 RagnarosDamage flameDamage = new RagnarosDamage(FlameDamageVal, DamageType.Fire, gameObject.layer);
                 Damage phyDamage = new Damage(PhyDamageVal, DamageType.Physical);
                 other.GetComponent<Rigidbody>().AddForce(-150,0,0);
