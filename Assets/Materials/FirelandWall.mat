@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: FirelandWall
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _METALLICGLOSSMAP
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -43,7 +43,7 @@ Material:
         m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: ea92754bd29a7084d8b975b21a18ba10, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -59,10 +59,10 @@ Material:
     - _Cutoff: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.092
-    - _Glossiness: 0
+    - _GlossMapScale: 0.761
+    - _Glossiness: 0.074
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.111
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
