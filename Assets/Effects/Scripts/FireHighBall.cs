@@ -7,6 +7,7 @@ public class FireHighBall : SkillItemsBehaviourController
     public GameObject spellAudio;
     public GameObject collisionAudio;
     public GameObject releaseAudio;
+    public new GameObject light;
 
     static int maxInstanceNum = 5;
     protected override void Awake()
@@ -23,6 +24,7 @@ public class FireHighBall : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         IsTrap = false;
+        light.SetActive(true);
         releaseAudio.SetActive(false);
         spellAudio.SetActive(true);
         FireExplosion.SetActive(false);
@@ -38,6 +40,7 @@ public class FireHighBall : SkillItemsBehaviourController
     {
         if (col.gameObject.layer != 8)
         {
+            light.SetActive(false);
             spellAudio.SetActive(false);
             if (col.gameObject.layer == 9)
             {

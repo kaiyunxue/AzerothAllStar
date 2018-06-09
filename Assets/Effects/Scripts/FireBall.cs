@@ -5,6 +5,7 @@ public class FireBall : SkillItemsBehaviourController
 {
     public new RagnarosDamage damage;
     public GameObject fireExplosion;
+    public new GameObject light;
     public GameObject spellAudio;
     public GameObject collisionAudio;
     public GameObject releaseAudio;
@@ -43,6 +44,7 @@ public class FireBall : SkillItemsBehaviourController
     }
     protected override void OnEnable()
     {
+        light.SetActive(true);
         spellAudio.GetComponent<AudioSource>().volume = 0.1f;
         collisionAudio.GetComponent<AudioSource>().volume = 0.1f;
         fireExplosion.SetActive(false);
@@ -69,6 +71,7 @@ public class FireBall : SkillItemsBehaviourController
             {
             spellAudio.SetActive(false);
             StopEmission(fireball);
+            light.SetActive(false);
                 fireExplosion.SetActive(true);
              //damage.RunContent(col.GetComponent<State>());
                 col.GetComponent<State>().TakeSkillContent(damage);
