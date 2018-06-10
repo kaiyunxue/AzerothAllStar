@@ -35,6 +35,8 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     {
         if (Input.GetKeyUp(KeyCode.K) || Force_high >= 500)
         {
+            StartCdColding();
+            hero.statusBox.cdBar.StartCooling(skillIcon, cd);
             foreach (var instance in fireBallInstance)
             {
                 instance.PlaySoundWhenBeReleased();
@@ -57,8 +59,6 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
     }
     public override void StopSkill(Animator animator)
     {
-        StartCdColding();
-        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
 
     public override bool IsReady()
@@ -74,6 +74,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
         if (IsReady())
         {
             animator.SetBool("Fireball_high", true);
+            StartSkill(animator);
             return true;
         }
         else

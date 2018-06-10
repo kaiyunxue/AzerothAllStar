@@ -19,8 +19,6 @@ public class RagnarosTrump : HeroSkill, ISkill
 
     public override void StopSkill(Animator animator)
     {
-        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
-        StartCdColding();
     }
     public override bool IsReady()
     {
@@ -36,6 +34,7 @@ public class RagnarosTrump : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetTrigger("Trump");
             return true;
         }
@@ -46,9 +45,10 @@ public class RagnarosTrump : HeroSkill, ISkill
     {
         yield return new WaitForSeconds(0.9f);
         sulfuras.transform.localRotation = Quaternion.Euler(0, 70, 0);
-        yield return null;
         yield return new WaitForSeconds(0.9f);
         sulfuras.transform.localRotation = Quaternion.Euler(0, 0, 0);
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
+        StartCdColding();
     }
     IEnumerator isAttackGround(float time)
     {

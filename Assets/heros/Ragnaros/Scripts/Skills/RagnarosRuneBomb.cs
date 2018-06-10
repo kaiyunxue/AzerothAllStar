@@ -38,13 +38,6 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
 
     public override void StopSkill(Animator animator)
     {
-        StopAllCoroutines();
-        if (spellTime == maxSpellTime)
-        {
-            spellTime = 0;
-            StartCdColding();
-            hero.statusBox.cdBar.StartCooling(skillIcon, cd);
-        }
     }
 
     public override bool IsReady()
@@ -61,6 +54,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("RuneBoob", true);
             return true;
         }
@@ -76,6 +70,14 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
             animator.SetBool("RuneBoob", false);
             hero.audioCtrler.PlaySound(clip, 0.7f);
             runeBoomInstance.StartSkill();
+
+            if (spellTime == maxSpellTime)
+            {
+                spellTime = 0;
+                StartCdColding();
+                hero.statusBox.cdBar.StartCooling(skillIcon, cd);
+            }
+            StopAllCoroutines();
         }
         else
         {

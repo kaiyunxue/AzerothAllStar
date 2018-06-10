@@ -34,6 +34,7 @@ public class RagnarosStandAttack : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetTrigger("PhyAttack");
             return true;
         }

@@ -35,6 +35,7 @@ public class RagnarosFireDebuff : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetTrigger("FireDebuff");
             return true;
         }

@@ -3,13 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RagnarosSkillsManager : MonoBehaviour , ISkillManager
+public class SkillsManager : MonoBehaviour , ISkillManager
 {
     public GameObject skillsContainer;
+    public ISkill currentSkill;
     Dictionary<string,ISkill> skills = new Dictionary<string, ISkill>();
 
     void Awake()
     {
+        StateBehaveInterface[] behaveInterfaces = GetComponent<Animator>().GetBehaviours<StateBehaveInterface>();
+        if(gameObject.layer == 8)
+        {
+            foreach(var i in behaveInterfaces)
+            {
+                i.isLeft = true;
+            }
+        }
+        else
+        {
+            foreach (var i in behaveInterfaces)
+            {
+                i.isLeft = false;
+            }
+        }
         var skillPrefabs = skillsContainer.GetComponents<ISkill>();
         foreach(ISkill skill in skillPrefabs)
         {
@@ -26,6 +42,7 @@ public class RagnarosSkillsManager : MonoBehaviour , ISkillManager
     public void StartSkill(Animator animator , string name)
     {
         ISkill skill = GetSkillByName(name);
+        currentSkill = skill;
         if(skill == null)
         {
             Debug.LogWarning("Skill unfound!!!Insert the skill script first!");

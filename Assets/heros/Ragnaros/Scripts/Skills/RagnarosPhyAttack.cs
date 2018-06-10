@@ -19,6 +19,7 @@ public class RagnarosPhyAttack : HeroSkill, ISkill
         if (GameController.LeftInputListener.GetSkill(formula))
         {
             isDoubleAttack = true;
+            sulfuars.TurnOnPhyAttack();
             animator.SetTrigger("PhyAttack");
         }
         else

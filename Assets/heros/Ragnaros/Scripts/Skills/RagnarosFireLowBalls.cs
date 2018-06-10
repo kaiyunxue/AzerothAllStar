@@ -78,6 +78,7 @@ public class RagnarosFireLowBalls : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("Fireball_low", true);
             return true;
         }

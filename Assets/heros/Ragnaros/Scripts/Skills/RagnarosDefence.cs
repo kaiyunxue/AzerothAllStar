@@ -24,7 +24,6 @@ public class RagnarosDefence : HeroSkill, ISkill
     }
     public override void StopSkill(Animator animator)
     {
-        StopAllCoroutines();
     }
 
     public override bool IsReady()
@@ -40,6 +39,7 @@ public class RagnarosDefence : HeroSkill, ISkill
         if (IsReady())
         {
             animator.SetTrigger("Defence");
+            StartSkill(animator);
             return true;
         }
         else

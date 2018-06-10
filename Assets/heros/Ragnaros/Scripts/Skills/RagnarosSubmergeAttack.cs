@@ -23,7 +23,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
     public AnimationCurve curve2;
     public Material pool;
 
-IEnumerator Dilling(float time)
+    IEnumerator Dilling(float time)
     {
         pool.SetFloat("_CutOff", curve.Evaluate(time));
         yield return new WaitForEndOfFrame();
@@ -66,6 +66,7 @@ IEnumerator Dilling(float time)
         //Debug.Log("bp");
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("SubmergeAttack", true);
             return true;
         }

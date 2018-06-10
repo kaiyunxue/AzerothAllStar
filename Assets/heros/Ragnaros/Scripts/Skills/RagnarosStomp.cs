@@ -41,6 +41,7 @@ public class RagnarosStomp : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetTrigger("Stomp");
             return true;
         }

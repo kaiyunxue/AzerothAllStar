@@ -51,6 +51,7 @@ public class RagnarosDilling : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("Dilling", true);
             return true;
         }

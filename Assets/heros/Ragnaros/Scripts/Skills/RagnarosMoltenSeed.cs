@@ -71,6 +71,7 @@ public class RagnarosMoltenSeed : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("MoltenSeed",true);
             return true;
         }

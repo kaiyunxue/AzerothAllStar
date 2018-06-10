@@ -19,8 +19,6 @@ public class RagnarosWorldinFlame : HeroSkill, ISkill
 
     public override void StopSkill(Animator animator)
     {
-        StartCdColding();
-        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
 
     public override bool IsReady()
@@ -39,7 +37,10 @@ public class RagnarosWorldinFlame : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("WorldInFlame", true);
+            StartCdColding();
+            hero.statusBox.cdBar.StartCooling(skillIcon, cd);
             return true;
         }
         else

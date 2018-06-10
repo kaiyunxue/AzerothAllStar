@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class StateBehaveInterface : StateMachineBehaviour {
 
+    public bool isLeft;
     public string skillName;
     ISkillManager skillManager;
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        skillManager = GameController.Register.LeftHero.skillManager;
+        if(isLeft)
+        {
+            skillManager = GameController.Register.LeftHero.skillManager;
+        }
+        else
+        {
+            skillManager = GameController.Register.RightHero.skillManager;
+        }
         skillManager.StartSkill(animator, skillName);
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

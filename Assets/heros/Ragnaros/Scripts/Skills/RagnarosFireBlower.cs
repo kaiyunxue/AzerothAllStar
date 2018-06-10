@@ -39,6 +39,7 @@ public class RagnarosFireBlower : HeroSkill {
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetBool("FireBlower", true);
             return true;
         }

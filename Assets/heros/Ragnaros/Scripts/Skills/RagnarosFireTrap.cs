@@ -25,13 +25,14 @@ public class RagnarosFireTrap : HeroSkill, ISkill
     public override void StartSkill(Animator animator)
     {
         hero.state.Mana -= manaCost;
+        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
+        StartCdColding();
         StartBehave();
     }
 
     public override void StopSkill(Animator animator)
     {
-        hero.statusBox.cdBar.StartCooling(skillIcon, cd);
-        StartCdColding();
+
     }
 
     public override bool IsReady()
@@ -50,6 +51,7 @@ public class RagnarosFireTrap : HeroSkill, ISkill
     {
         if (IsReady())
         {
+            StartSkill(animator);
             animator.SetTrigger("FireTrap");
             return true;
         }
