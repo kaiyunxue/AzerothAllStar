@@ -28,6 +28,7 @@ public class RagnarosFireLowBalls : HeroSkill, ISkill
 
     public override void StartSkill(Animator animator)
     {
+        StartCdColding();
         if(fireBallInstance == null)
         {
             damageVal = initialDamage;
