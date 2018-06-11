@@ -10,6 +10,7 @@ public class MenuBar : MonoBehaviour
     Coroutine currentCoroutine;
     private void Awake()
     {
+        a = 1;
         graphics = GetComponentsInChildren<Graphic>();
     }
     public void ShowUI()
@@ -26,7 +27,7 @@ public class MenuBar : MonoBehaviour
     }
     IEnumerator showUI()
     {
-        if(a <= 1)
+        if(a >= 1)
         {
             a = 1;
             currentCoroutine = null;
@@ -34,20 +35,20 @@ public class MenuBar : MonoBehaviour
         }
         else
         {
-            a += 0.01f;
+            a += 0.1f;
             foreach (var v in graphics)
             {
                 Color c = v.color;
                 c.a = a;
                 v.color = c;
             }
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
             currentCoroutine = StartCoroutine(showUI());
         }
     }
     IEnumerator hideUI()
     {
-        if (a >= 0)
+        if (a <= 0)
         {
             a = 0;
             currentCoroutine = null;
@@ -55,14 +56,14 @@ public class MenuBar : MonoBehaviour
         }
         else
         {
-            a += 0.01f;
+            a -= 0.1f;
             foreach (var v in graphics)
             {
                 Color c = v.color;
                 c.a = a;
                 v.color = c;
             }
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForFixedUpdate();
             currentCoroutine = StartCoroutine(hideUI());
         }
     }
