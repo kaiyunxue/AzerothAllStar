@@ -11,31 +11,35 @@ public class SinglePlayerUI : MonoBehaviour {
     {
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
-        currentCoroutine = StartCoroutine(Out());
+        currentCoroutine = StartCoroutine(zoomIn());
     }
-    public void ZoomOut()
+    public void Out()
     {
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
         currentCoroutine = StartCoroutine(zoomOut());
 
     }
-    IEnumerator Out()
+    IEnumerator zoomIn()
     {
-        if (t >= 4)
+        if (t >= 1)
         {
-            t = 4;
+            t = 1;
             yield return null;
         }
         else
         {
             float tmp = curve.Evaluate(t);
-            var c = GetComponent<Image>().color;
-            c.a = tmp;
-            t += 0.03f;
-            GetComponent<Image>().color = c;
+            Graphic[] tmps = GetComponentsInChildren<Graphic>();
+            foreach(var v in tmps)
+            {
+                var c = v.color;
+                c.a = tmp;
+                t += 0.005f;
+                v.color = c;
+            }
             yield return new WaitForFixedUpdate();
-            currentCoroutine = StartCoroutine(Out());
+            currentCoroutine = StartCoroutine(zoomIn());
         }
     }
     IEnumerator zoomOut()
@@ -48,12 +52,16 @@ public class SinglePlayerUI : MonoBehaviour {
         else
         {
             float tmp = curve.Evaluate(t);
-            var c = GetComponent<Image>().color;
-            c.a = tmp;
-            t -= 0.03f;
-            GetComponent<Image>().color = c;
+            Graphic[] tmps = GetComponentsInChildren<Graphic>();
+            foreach (var v in tmps)
+            {
+                var c = v.color;
+                c.a = tmp;
+                t -= 0.005f;
+                v.color = c;
+            }
             yield return new WaitForFixedUpdate();
-            currentCoroutine = StartCoroutine(Out());
+            currentCoroutine = StartCoroutine(zoomIn());
         }
     }
 }
