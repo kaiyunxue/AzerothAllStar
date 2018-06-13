@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba11f6b437ad30742b6ca569d41d8a53, type: 3}
+  m_Name: Ragnaros
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 8400000, guid: c460dd6b8951a514db84033a7df0de12, type: 2}
+  background: {fileID: 21300000, guid: a06c6ace38cd35f4f9ac655daa40f6fe, type: 3}
+  material: {fileID: 2100000, guid: 08c2309ce820887498dd7468f925fbcc, type: 2}
+  heroName: Ragnaros

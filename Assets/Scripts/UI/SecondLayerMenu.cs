@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SinglePlayerUI : MonoBehaviour {
+public class SecondLayerMenu : MonoBehaviour {
     public AnimationCurve curve;
+    public MainMenu mainMenu;
     Coroutine currentCoroutine;
     float t = 0;
     public void In()
@@ -18,13 +19,21 @@ public class SinglePlayerUI : MonoBehaviour {
         if (currentCoroutine != null)
             StopCoroutine(currentCoroutine);
         currentCoroutine = StartCoroutine(zoomOut());
-
+    }
+    public void ReturnMain()
+    {
+        Out();
+        mainMenu.In();
     }
     IEnumerator zoomIn()
     {
         if (t >= 1)
         {
             t = 1;
+            foreach (var b in GetComponentsInChildren<Button>())
+            {
+                b.interactable = true;
+            }
             yield return null;
         }
         else
@@ -47,10 +56,15 @@ public class SinglePlayerUI : MonoBehaviour {
         if (t <= 0)
         {
             t = 0;
+            gameObject.SetActive(false);
             yield return null;
         }
         else
         {
+            foreach(var b in GetComponentsInChildren<Button>())
+            {
+                b.interactable = false;
+            }
             float tmp = curve.Evaluate(t);
             Graphic[] tmps = GetComponentsInChildren<Graphic>();
             foreach (var v in tmps)
@@ -61,7 +75,14 @@ public class SinglePlayerUI : MonoBehaviour {
                 v.color = c;
             }
             yield return new WaitForFixedUpdate();
-            currentCoroutine = StartCoroutine(zoomIn());
+            currentCoroutine = StartCoroutine(zoomOut());
+        }
+    }
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            ReturnMain();
         }
     }
 }

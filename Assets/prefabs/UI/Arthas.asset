@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba11f6b437ad30742b6ca569d41d8a53, type: 3}
+  m_Name: Arthas
+  m_EditorClassIdentifier: 
+  avatar: {fileID: 8400000, guid: 3ebce4aea1424e147b1b4f23017e9e5b, type: 2}
+  background: {fileID: 21300000, guid: cac6e267dbd7bc149bacb992dd06a9f1, type: 3}
+  material: {fileID: 2100000, guid: 9d6d1d9aaea119f45bcc61665ea71993, type: 2}
+  heroName: The Lich King

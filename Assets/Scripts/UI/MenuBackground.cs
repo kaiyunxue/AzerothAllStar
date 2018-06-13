@@ -21,9 +21,9 @@ public class MenuBackground : MonoBehaviour {
     }
     IEnumerator zoomIn()
     {
-        if(t >= 4)
+        if(t >= 1)
         {
-            t = 4;
+            t = 1;
             yield return null;
         }
         else
