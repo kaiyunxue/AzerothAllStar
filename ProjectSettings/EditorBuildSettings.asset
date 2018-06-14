@@ -4,4 +4,19 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scene/MainTitle.unity
+    guid: d01c8b1926be4d345be69400df19c3b6
+  - enabled: 1
+    path: Assets/Scene/Attention.unity
+    guid: 4cfb9fb8ad8a0ef41858d229e11b5835
+  - enabled: 1
+    path: Assets/Scene/FightingScene/firelandDemo.unity
+    guid: d08b9eb6e9ced64409575450def1c177
+  - enabled: 1
+    path: Assets/Scene/FightingScene/TeachingScene.unity
+    guid: 2070bc55c734b7f449f71939c915707c
+  - enabled: 1
+    path: Assets/Scene/ChoseHero.unity
+    guid: acf7d9f94161f224aab226e997111c98

@@ -6,7 +6,7 @@ public class RagnarosState : HeroState
 {
     public float extraMana;
     public Sulfuars sulfuars;
-    private void Start()
+    public void InitialState()
     {
         Health = MaxHealth;
         Mana = mana;

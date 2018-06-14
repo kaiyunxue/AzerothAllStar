@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public UnityEvent myEvent;
     public Component currentUI;
     public MenuBackground background;
     public SecondLayerMenu singleUI;
@@ -51,6 +52,12 @@ public class MainMenu : MonoBehaviour
     }
     public void Turn2ChosingHero()
     {
-        SceneManager.LoadScene(4, LoadSceneMode.Additive);
+        StartCoroutine(loadChosingHero());
+
+    }
+    public IEnumerator loadChosingHero()
+    {
+        yield return SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+        SceneManager.GetSceneByName("ChoseHero").GetRootGameObjects()[0].GetComponent<ChoseHeroPage>().returnEvent = myEvent;
     }
 }
