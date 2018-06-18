@@ -6,7 +6,8 @@ using UnityEngine;
 public class SkillInstruction : ScriptableObject
 {
     public Sprite skillIcon;
-    public string nameAndFormula;
+    public string skillname;
+    public string formula;
     public float cd;
     public float mana;
     public string instruction;
