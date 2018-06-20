@@ -17,6 +17,7 @@ public class HeroPacket : ScriptableObject {
     public int summon;
     public int defence;
     public int move;
+    public int control;
     public string instruction;
     public SkillInstruction[] skillInstructions;
 }

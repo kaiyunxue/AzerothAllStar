@@ -17,7 +17,7 @@ public class HeroInstructor : MonoBehaviour {
     public Text spell;
     public Text summon;
     public Text move;
-
+    public Text control;
     public Text instruction;
 
     public SkillInstructorRect skills;
@@ -33,6 +33,7 @@ public class HeroInstructor : MonoBehaviour {
         spell.text = DrawStar(hero.spell);
         summon.text = DrawStar(hero.summon);
         move.text = DrawStar(hero.move);
+        control.text = DrawStar(hero.control);
         skills.Load(hero.skillInstructions);
     }
     private string DrawStar(int n)

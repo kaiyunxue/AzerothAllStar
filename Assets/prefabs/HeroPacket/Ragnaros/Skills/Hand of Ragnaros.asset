@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Hand of Ragnaros
+  m_EditorClassIdentifier: Assembly-CSharp::SkillInstruction
+  skillIcon: {fileID: 21300000, guid: f71f1d46482e7f94aac9c7372f77a0eb, type: 3}
+  skillname: Hand of Ragnaros
+  formula: SDSA + K
+  cd: 40
+  mana: 2
+  instruction: ' Ragnaros inflicts 5484 to 5766 Fire damage to all enemies within
+    55 yards, knocking them back.'

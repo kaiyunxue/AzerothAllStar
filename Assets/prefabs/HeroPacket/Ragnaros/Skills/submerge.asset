@@ -9,11 +9,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Attack
+  m_Name: submerge
   m_EditorClassIdentifier: Assembly-CSharp::SkillInstruction
-  skillIcon: {fileID: 21300000, guid: 8f76d3ed093890b43a813dfc0b8e28b9, type: 3}
-  skillname: Attack
-  formula: J / J+J
+  skillIcon: {fileID: 21300000, guid: c51bfec943a92584f84e12b7e61e0377, type: 3}
+  skillname: submerge
+  formula: S+ L
   cd: 0
-  mana: 0
-  instruction: "\u5C4C\u70B8\u5929"
+  mana: 60
+  instruction: 
