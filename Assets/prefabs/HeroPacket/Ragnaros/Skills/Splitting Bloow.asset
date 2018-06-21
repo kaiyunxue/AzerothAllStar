@@ -14,8 +14,10 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 6754c7ba3364cb947a386f9067771ed8, type: 3}
   skillname: Splitting Bloow
   formula: SDSA + J
-  cd: 50
-  mana: 5
-  instruction: ' Ragnaros buries Sulfuras within the platform, inflicting 17062 to
-    17938 Fire damage every 1 second to players within 6 yards and creating eight
-    Sons of Flame that attempt to reach the mighty hammer.'
+  cd: 
+  mana: 
+  instruction: '  Ragnaros buries Sulfuras within the platform, inflicting the Physical
+    Damage to the nearby enemies and stuning them. Then Ragnaros submerges into lava
+    and casts 10 Meteors. Every Meteor inflicts a great deal of Fire Damage. Then
+    the Sun of Flame will born and attempt to reform with Sulfuras. A Son of Flame
+    that reaches Sulfuras causes a Supernova.'

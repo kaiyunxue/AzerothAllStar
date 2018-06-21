@@ -14,6 +14,9 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 7bc9733504c91244a82d05fedf6755c4, type: 3}
   skillname: Molten Core
   formula: SDSD + K
-  cd: 60
-  mana: 0
-  instruction: 
+  cd: 
+  mana: 
+  instruction: Ragnaros becomes the TRUE FIRELOAD. The Molten Core will take away
+    ALL the Lava Ash Ragnaros current has. Every Lava Ash will add 3 more seconds
+    lasting the Fireload status. The Attack, Living Meteor and Rune Bomb will be enhanced
+    during this time and all the other skills will not be available.

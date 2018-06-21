@@ -14,8 +14,10 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: 6754c7ba3364cb947a386f9067771ed8, type: 3}
   skillname: Sulfuras Smash
   formula: S + J
-  cd: 15
-  mana: 0
-  instruction: Ragnaros smashes the Sulfuras on the platform and inflicts large damage
-    to the enemies nearby the impact. If the Sulfuras impacts the Magma Trap, it creates
-    a Lava Wave which moves out from the point of impact.
+  cd: 
+  mana: 
+  instruction: Ragnaros smashes the Sulfuras on the platform. The hit inflicts large
+    damage to the enemies nearby the impact, makes enemies stun for 2 seconds and
+    inflicts the Physical Damage to all the other enemies and stuns them for 1.5 second.
+    If the Sulfuras impacts the Magma Trap, it creates a Lava Wave which moves out
+    from the point of impact.

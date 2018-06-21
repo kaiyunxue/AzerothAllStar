@@ -14,8 +14,8 @@ MonoBehaviour:
   skillIcon: {fileID: 21300000, guid: efc57e9ee0ac52b478660b809c31fe61, type: 3}
   skillname: Molten Seed
   formula: WASD + K
-  cd: 0
-  mana: 2
-  instruction: Ragnaros creates Molten Seed at the location of 10 random players from
-    the nearby lava, inflicting 10054 to 10571 Fire damage to all players within 6
-    yards of a seed. After 10 sec the Molten Seed bursts into a Molten Inferno.
+  cd: 
+  mana: 
+  instruction: Ragnaros creates Molten Seeds at the locations of all the  Magma Traps.
+    Every Molten Seed will create the Molten Elemental which will attack the random
+    enemy, inflictiing the Fire Damage.

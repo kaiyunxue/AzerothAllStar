@@ -13,7 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillInstruction
   skillIcon: {fileID: 21300000, guid: c51bfec943a92584f84e12b7e61e0377, type: 3}
   skillname: submerge
-  formula: S+ L
-  cd: 0
-  mana: 60
-  instruction: 
+  formula: S+ L(hold)
+  cd: 
+  mana: 
+  instruction: Ragnaros submerges into lava. Ragnaros will be out of the battle platform
+    and get healing temporarily. The longer you hold, the longer Ragnaros will submerge.
