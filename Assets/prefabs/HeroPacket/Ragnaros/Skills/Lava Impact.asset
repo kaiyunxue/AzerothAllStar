@@ -16,4 +16,5 @@ MonoBehaviour:
   formula: WWW + K
   cd: 1
   mana: 15
-  instruction: 
+  instruction: Ragnaros casts a fire wave moving through the platform. The fire wave
+    inflicts the fire damage and knocks all the enemies into air.

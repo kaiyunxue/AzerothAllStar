@@ -16,4 +16,6 @@ MonoBehaviour:
   formula: K / K(hold)
   cd: 0
   mana: 0
-  instruction: 
+  instruction: Ragnaros casts a fireball which moves out through the platform. The
+    fireball will blast when it hits the enemy. The longer you hold, the higher fire
+    damage the fireball will inflict, but the lower speed the fireball will move.

@@ -16,4 +16,7 @@ MonoBehaviour:
   formula: ASD + K/K(hold)
   cd: 4
   mana: 0
-  instruction: ' The Living Meteor fixates on a random player and chases them.'
+  instruction: Ragnaros casts a Living Meteor. The longer you hold, the longer the
+    meteor will go. If the meteor hits the enemy or the ground, it will blast and
+    inflict the fire damage. When the Living Meteor blasts, it will leave a Magma
+    Trap on the ground.

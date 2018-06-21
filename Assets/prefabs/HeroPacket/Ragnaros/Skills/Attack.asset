@@ -16,4 +16,5 @@ MonoBehaviour:
   formula: J / J+J
   cd: 0
   mana: 0
-  instruction: 
+  instruction: Ragnaros waves the Sulfuras, inflicting the physical damage and pushing
+    the enemy back.

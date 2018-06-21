@@ -16,7 +16,6 @@ MonoBehaviour:
   formula: SD + K
   cd: 1
   mana: 4
-  instruction: Ragnaros launches a Magma Trap at a random player's location. When
-    the Magma Trap reaches the platform, it inflicts 14625 to 15375 Fire damage and
-    knocks back players within 8 yards. The active Magma Trap persists for the duration
-    of the encounter and triggers when stepped on, causing a Magma Trap Eruption.
+  instruction: Ragnaros launches a Magma Trap at a random location on the platform.
+    When the enemy steps  on the trap, it inflicts the Fire damage and stuns the enemy
+    for 0.8 second and will increase one Lava Ash.

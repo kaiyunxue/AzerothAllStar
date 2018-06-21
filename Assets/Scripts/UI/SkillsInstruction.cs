@@ -8,7 +8,7 @@ public class SkillInstruction : ScriptableObject
     public Sprite skillIcon;
     public string skillname;
     public string formula;
-    public float cd;
-    public float mana;
+    public string cd;
+    public string mana;
     public string instruction;
 }

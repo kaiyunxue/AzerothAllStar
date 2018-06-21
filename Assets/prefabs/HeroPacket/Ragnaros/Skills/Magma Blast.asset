@@ -16,6 +16,5 @@ MonoBehaviour:
   formula: D + K
   cd: 0
   mana: 1
-  instruction: Ragnaros blasts magma at his current target if he cannot reach and
-    melee them, inflicting 18281 to 19219 Fire damage and increasing Fire damage taken
-    by 50% for 6 sec.
+  instruction: Ragnaros blasts magma at the enemy hero. Every 3 seconds the Magma
+    Blast inflicts the tiny fire damage. The Magma Blast will last forever.

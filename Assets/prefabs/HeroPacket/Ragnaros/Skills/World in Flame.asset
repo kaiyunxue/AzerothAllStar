@@ -16,5 +16,5 @@ MonoBehaviour:
   formula: ADAD + K
   cd: 40
   mana: 4
-  instruction: Ragnaros periodically casts Engulfing Flames on a random section of
-    the platform every 3 sec for 9 sec.
+  instruction: Ragnaros casts Engulfing Flames on 6 directions for 6 times. Each flame
+    inflicts a great deal of fire damage to the nearby enemies.
