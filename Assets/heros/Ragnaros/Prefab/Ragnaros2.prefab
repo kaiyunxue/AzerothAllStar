@@ -5275,7 +5275,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 46c28e9d61ffed946b960d3fd8e85bae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6008,7 +6008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skillName: 
-  cd: 0
+  cd: 1
   skillIcon: {fileID: 21300000, guid: cbed8b3634925794694b73d2658f5ce3, type: 3}
   manaCost: 0
   formula: K
@@ -6372,7 +6372,7 @@ MonoBehaviour:
   manaCost: 0
   formula: 
   Priority: 0
-  word: {fileID: 8300000, guid: 46c28e9d61ffed946b960d3fd8e85bae, type: 3}
+  word: {fileID: 8300000, guid: 72122c55d0c25cf4aaba776ae29700af, type: 3}
   curve1:
     serializedVersion: 2
     m_Curve:
