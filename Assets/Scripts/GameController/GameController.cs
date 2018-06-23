@@ -9,6 +9,7 @@ public class GameController : MonoBehaviour {
     static Registrar register;
     static GameObject battleZone;
     static InputListener[] inputListener = new InputListener[2];
+    public bool a;
 
     void Awake()
     {

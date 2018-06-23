@@ -38,19 +38,5 @@ public abstract class Skill : MonoBehaviour
         yield return new WaitForSeconds(cd);
         Lock = true;
         yield return null;
-        // Debug.Log("Imcoder"+ timer);
-        //timer = timer - Time.deltaTime;
-        //if (timer <= 0)
-        //{
-        //    Lock = true;
-        //    timer = cd;
-        //    yield return null;
-        //}
-        //else
-        //{
-        //    Lock = false;
-        //    yield return null;
-        //    StartCoroutine(CDColder());
-        //}
     }
 }
