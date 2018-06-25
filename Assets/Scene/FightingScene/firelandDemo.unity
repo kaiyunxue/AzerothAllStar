@@ -4317,54 +4317,25 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114518089712091874, guid: 7d69198bdef841144ac3d27d584535c0,
-        type: 2}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1501361736}
     - target: {fileID: 114262143011689580, guid: 7d69198bdef841144ac3d27d584535c0,
         type: 2}
       propertyPath: statusBox
       value: 
       objectReference: {fileID: 123751196}
-    - target: {fileID: 114405743623470328, guid: 7d69198bdef841144ac3d27d584535c0,
+    - target: {fileID: 114518089712091874, guid: 7d69198bdef841144ac3d27d584535c0,
         type: 2}
-      propertyPath: cd
-      value: 1
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1501361736}
+    - target: {fileID: 82593495365385110, guid: 7d69198bdef841144ac3d27d584535c0,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 114668288896977590, guid: 7d69198bdef841144ac3d27d584535c0,
         type: 2}
       propertyPath: word
       value: 
-      objectReference: {fileID: 8300000, guid: 72122c55d0c25cf4aaba776ae29700af, type: 3}
-    - target: {fileID: 82593495365385110, guid: 7d69198bdef841144ac3d27d584535c0,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 46c28e9d61ffed946b960d3fd8e85bae, type: 3}
-    - target: {fileID: 1466202450485078, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1061618110186206, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1247925172805874, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1504238389931732, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1045109026273958, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295687345444700, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7d69198bdef841144ac3d27d584535c0, type: 2}
@@ -53907,7 +53878,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.13930485, y: 1}
-  m_AnchoredPosition: {x: 1171.3243, y: -0.015641212}
+  m_AnchoredPosition: {x: 1171.3248, y: -0.015641212}
   m_SizeDelta: {x: 294.63965, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800678178
@@ -68493,7 +68464,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.13930485, y: 1}
-  m_AnchoredPosition: {x: 1256.5975, y: -0.015641212}
+  m_AnchoredPosition: {x: 1256.598, y: -0.015641212}
   m_SizeDelta: {x: 172.71997, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &943500654
@@ -72861,6 +72832,54 @@ Prefab:
     - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
       propertyPath: ShapeModule.radiusThickness
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
       propertyPath: ShapeModule.radiusThickness
@@ -106624,7 +106643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e5527606ae1148d8a95f8083398d0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: 0
 --- !u!1 &1392034770
 GameObject:
   m_ObjectHideFlags: 0

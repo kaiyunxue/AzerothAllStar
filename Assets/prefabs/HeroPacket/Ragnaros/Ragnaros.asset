@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 663722da8b88fb54a8496ec554740dae, type: 3}
+  m_Name: Ragnaros
+  m_EditorClassIdentifier: 
+  id: 0
+  icon: {fileID: 11400000, guid: c26ab02e5c9d79d4d814b46288b07787, type: 2}
+  heroPrefab: {fileID: 114262143011689580, guid: 7d69198bdef841144ac3d27d584535c0,
+    type: 2}
+  heroName: Ragnaros
+  race: Fire elemental
+  energy: Fire
+  attack: 3
+  spell: 5
+  summon: 2
+  defence: 2
+  move: 1
+  control: 2
+  instruction: Ragnaros, the Firelord, was the incredibly powerful Elemental Lord
+    of Fire. After being summoned to Azeroth by Sorcerer-Thane Thaurissan, he took
+    control of Blackrock Mountain and ruled there for more than two hundred years
+    over his minions from deep inside its fiery core. Banished back to the Firelands,
+    he aligned himself with Deathwing and Al'Akir in the effort to bring about the
+    Hour of Twilight. Ragnaros laid siege to the World Tree Nordrassil on Mount Hyjal,
+    trying to burn it[7] and unleashing his most powerful minions.
+  skillInstructions:
+  - {fileID: 11400000, guid: 224dd78924fbb4644a24fdea4131e3a2, type: 2}
+  - {fileID: 11400000, guid: 51fe9dc8544bc12479ce230eaeedc312, type: 2}
+  - {fileID: 11400000, guid: b83ebae76449abc4ca91e9463960943b, type: 2}
+  - {fileID: 11400000, guid: a0ff344e7cfc5934eb0db5040fd6b6fe, type: 2}
+  - {fileID: 11400000, guid: b58c92c9d421ffb4a8e307938a192825, type: 2}
+  - {fileID: 11400000, guid: 7b50253f6a4653946b5bc2abefeaecc3, type: 2}
+  - {fileID: 11400000, guid: c1ca146a13253bb4fb148499869b87b3, type: 2}
+  - {fileID: 11400000, guid: 7e0e3096a3d8abb44af11f2d6644662b, type: 2}
+  - {fileID: 11400000, guid: 3c9fc53faf54ae441a6e687c8185371e, type: 2}
+  - {fileID: 11400000, guid: 19583cac4d1a46d4d93fbe8ae6ebb1c6, type: 2}
+  - {fileID: 11400000, guid: a3c24ca4740d96d4a80d5399c2e47163, type: 2}
+  - {fileID: 11400000, guid: 22b910c53f9333b4e9b9ff2637412d83, type: 2}
+  - {fileID: 11400000, guid: 1c330fe763f8d884abd7b48d6b1d0b31, type: 2}
+  - {fileID: 11400000, guid: 657cb56cbdabe4047b7a9baab8149308, type: 2}
