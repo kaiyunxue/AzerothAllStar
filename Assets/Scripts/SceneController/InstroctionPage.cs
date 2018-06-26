@@ -4,11 +4,23 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class InstroctionPage : MonoBehaviour {
+    enum Page
+    {
+        heros,
+        hero,
+        map
+    }
+
+    Page currentPage;
     public GameObject herosPage;
     public GameObject heroInstruction;
     public GameObject heroButton;
     public GameObject heroSlash;
     public HeroPage heroPage;
+    private void Awake()
+    {
+        currentPage = Page.hero;
+    }
     public void Escape()
     {
         SceneManager.UnloadSceneAsync(5);
@@ -19,6 +31,7 @@ public class InstroctionPage : MonoBehaviour {
         heroInstruction.SetActive(false);
         heroButton.SetActive(false);
         heroSlash.SetActive(false);
+        currentPage = Page.heros;
     }
     public void ChooseHero(HeroPacket hero)
     {
@@ -27,5 +40,21 @@ public class InstroctionPage : MonoBehaviour {
         heroButton.SetActive(true);
         heroSlash.SetActive(true);
         herosPage.SetActive(false);
+        currentPage = Page.hero;
+    }
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.Escape))
+        {
+            switch(currentPage)
+            {
+                case Page.heros:
+                    Escape();
+                    break;
+                case Page.hero:
+                    Turn2ChooseHero();
+                    break;
+            }
+        }
     }
 }

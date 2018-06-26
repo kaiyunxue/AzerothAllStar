@@ -12,4 +12,11 @@ public class SkillInstructorRect : MonoBehaviour {
             instructor.Load(ins);
         }
     }
+    public void OnDisable()
+    {
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+    }
 }

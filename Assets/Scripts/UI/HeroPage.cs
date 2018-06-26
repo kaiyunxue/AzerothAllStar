@@ -9,6 +9,7 @@ public class HeroPage : MonoBehaviour {
     public Transform heroPage;
     public RectTransform contentRect;
     public HeroInstructor heroIstr;
+    Vector3 oriTransform;
     public void SetHero(HeroPacket hero)
     {
         this.hero = hero;
@@ -21,6 +22,7 @@ public class HeroPage : MonoBehaviour {
         contentRect.offsetMin = tmp;
         heroIstr.SetHero(hero);
         heroPage.SetParent(contentRect);
+        oriTransform = GetComponent<ScrollRect>().content.position;
     }
     public void ReturnMenu()
     {
@@ -33,5 +35,10 @@ public class HeroPage : MonoBehaviour {
         {
             ReturnMenu();
         }
+    }
+    private void OnDisable()
+    {
+        GetComponent<ScrollRect>().content.position = oriTransform;
+        heroPage.SetParent(GetComponent<ScrollRect>().viewport);
     }
 }

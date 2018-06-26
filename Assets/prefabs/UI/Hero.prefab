@@ -507,7 +507,7 @@ MonoBehaviour:
   spell: {fileID: 114108831066413164}
   summon: {fileID: 114386788969491120}
   move: {fileID: 114581271900157714}
-  control: {fileID: 114852609715737858}
+  control: {fileID: 114001215492111544}
   instruction: {fileID: 114499123693015368}
   skills: {fileID: 114244952740794428}
 --- !u!114 &114108831066413164
@@ -1010,7 +1010,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 08c2309ce820887498dd7468f925fbcc, type: 2}
+  m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1358,7 +1358,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1850020360079158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.421387, y: -30.49237, z: 0}
+  m_LocalPosition: {x: 8.421387, y: -8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224790945098006404}
@@ -1379,7 +1379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8.421387, y: -30.49237}
+  m_AnchoredPosition: {x: 8.421387, y: -8}
   m_SizeDelta: {x: 36, y: -23.988617}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224045812570355662
@@ -1427,7 +1427,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1473130482699084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.497756, y: 5.608668, z: 0}
+  m_LocalPosition: {x: 4.497756, y: 5.6086707, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224002222271073134}
@@ -1435,7 +1435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3116048, y: 0.17300001}
   m_AnchorMax: {x: 0.9566049, y: 0.34271464}
-  m_AnchoredPosition: {x: -0.3300171, y: -0.19999981}
+  m_AnchoredPosition: {x: -0.3300171, y: -0.19999695}
   m_SizeDelta: {x: 0.5, y: 1.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224251818170674142
