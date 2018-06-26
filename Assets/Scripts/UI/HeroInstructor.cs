@@ -21,7 +21,10 @@ public class HeroInstructor : MonoBehaviour {
     public Text instruction;
 
     public SkillInstructorRect skills;
-
+    public void SetHero(HeroPacket hero)
+    {
+        this.hero = hero;
+    }
     private void OnEnable()
     {
         heroName.text = hero.heroName;
