@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class InstroctionPage : MonoBehaviour {
+public class InstroctionPage : _SceneManager
+{
     enum Page
     {
         heros,
@@ -24,6 +25,7 @@ public class InstroctionPage : MonoBehaviour {
     public void Escape()
     {
         SceneManager.UnloadSceneAsync(5);
+        SceneManager.GetSceneAt(0).GetRootGameObjects()[0].GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
     }
     public void Turn2ChooseHero()
     {

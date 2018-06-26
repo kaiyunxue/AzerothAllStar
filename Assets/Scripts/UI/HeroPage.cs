@@ -18,7 +18,7 @@ public class HeroPage : MonoBehaviour {
     {
         int n = hero.skillInstructions.Length;
         Vector2 tmp = contentRect.offsetMin;
-        tmp.y = 30 - n * 310;
+        tmp.y = 30 - n * 315;
         contentRect.offsetMin = tmp;
         heroIstr.SetHero(hero);
         heroPage.SetParent(contentRect);

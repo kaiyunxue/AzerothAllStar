@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
-public class MainCanvas : MonoBehaviour {
+public class FightingSceneManager : _SceneManager
+{
     public bool isOpen = false;
     public GameObject canvas;
+
     // Update is called once per frame
     private void Start()
     {
@@ -52,5 +55,12 @@ public class MainCanvas : MonoBehaviour {
     public void Turn2Instruction()
     {
         SceneManager.LoadScene(5,LoadSceneMode.Additive);
+        canvas.SetActive(false);
+        this.enabled = false;
+    }
+    public void WhenTurnedBackFromInstruction()
+    {
+        canvas.SetActive(true);
+        this.enabled = true;
     }
 }
