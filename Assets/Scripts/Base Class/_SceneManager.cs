@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class _SceneManager : MonoBehaviour {
 
+//public enum Scene
+//{
+//    Attention,
+//    MainMenu,
+//    ChooseHero,
+//    Instructions,
+
+//}
+public abstract class _SceneManager : MonoBehaviour {
 }

@@ -60,6 +60,7 @@ public class FightingSceneManager : _SceneManager
     }
     public void WhenTurnedBackFromInstruction()
     {
+        Time.timeScale = 1;
         canvas.SetActive(true);
         this.enabled = true;
     }

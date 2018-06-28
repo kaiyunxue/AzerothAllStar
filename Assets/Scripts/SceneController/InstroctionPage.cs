@@ -24,8 +24,23 @@ public class InstroctionPage : _SceneManager
     }
     public void Escape()
     {
-        SceneManager.UnloadSceneAsync(5);
-        SceneManager.GetSceneAt(0).GetRootGameObjects()[0].GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
+        StartCoroutine(escape());
+    }
+    IEnumerator escape()
+    {
+        //SceneManager.GetSceneByName("firelandDemo").GetRootGameObjects()[0].GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
+        Scene s = SceneManager.GetActiveScene();
+        foreach (var go in s.GetRootGameObjects())
+        {
+            if(go.GetComponent<FightingSceneManager>() != null)
+            {
+                go.GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
+                break;
+            }
+        }
+        Time.timeScale = 1;
+        yield return new WaitForEndOfFrame();
+        yield return SceneManager.UnloadSceneAsync(5);
     }
     public void Turn2ChooseHero()
     {

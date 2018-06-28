@@ -12,8 +12,8 @@ public class ChoseHeroPage : MonoBehaviour {
     public GameObject loadingPage;
     public void ReturnBack()
     {
-        SceneManager.UnloadSceneAsync(4);
         returnEvent.Invoke();
+        SceneManager.UnloadSceneAsync(4);
     }
     public void ChoseFirstHero(HeroIcon icon)
     {
