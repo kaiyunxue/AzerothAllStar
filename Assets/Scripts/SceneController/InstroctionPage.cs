@@ -21,6 +21,7 @@ public class InstroctionPage : _SceneManager
     private void Awake()
     {
         currentPage = Page.hero;
+        Debug.Log(SceneManager.GetSceneByName("firelandDemo").GetRootGameObjects()[0].name);
     }
     public void Escape()
     {

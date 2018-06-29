@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scene/FightingScene/firelandDemo.unity
     guid: d08b9eb6e9ced64409575450def1c177
   - enabled: 1
-    path: Assets/Scene/MainCanvas.unity
-    guid: 33c87fbeda9c7524d85d97b59583d0dd
+    path: Assets/Scene/New Scene.unity
+    guid: e3ad9474c4c50bd40944d6e37a87ac18
   - enabled: 1
     path: Assets/Scene/ChoseHero.unity
     guid: acf7d9f94161f224aab226e997111c98

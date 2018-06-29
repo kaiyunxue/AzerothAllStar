@@ -42,4 +42,8 @@ public class ChoseHeroPage : MonoBehaviour {
         yield return new WaitForSeconds(3);
         yield return SceneManager.LoadSceneAsync(2);
     }
+    private void Awake()
+    {
+        Debug.Log(SceneManager.GetSceneByName("ChoseHero").GetRootGameObjects()[0].name);
+    }
 }
