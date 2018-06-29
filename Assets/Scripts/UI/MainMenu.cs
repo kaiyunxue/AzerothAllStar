@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenu : MonoBehaviour
+public class MainMenu : _SceneManager
 {
     public UnityEvent myEvent;
     public Component currentUI;
@@ -34,6 +35,16 @@ public class MainMenu : MonoBehaviour
         authorUI.In();
         currentUI = authorUI;
     }
+    public void WhenInstructionButtonClicked()
+    {
+        StartCoroutine(turn2Instruction());
+    }
+    IEnumerator turn2Instruction()
+    {
+        yield return SceneManager.LoadSceneAsync(ScenesName.Instruction, LoadSceneMode.Additive);
+        bar.gameObject.SetActive(false);
+        SceneManager.GetSceneByName(ScenesName.Instruction).GetRootGameObjects()[0].GetComponent<_SceneManager>().TurnFrom(m_Scene.MainMenu);
+    }
     public void In()
     {
         background.ZoomOut();
@@ -59,5 +70,15 @@ public class MainMenu : MonoBehaviour
     {
         yield return SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
         SceneManager.GetSceneByName("ChoseHero").GetRootGameObjects()[0].GetComponent<ChoseHeroPage>().returnEvent = myEvent;
+    }
+
+    public override void TurnFrom(m_Scene scene)
+    {
+        switch(scene)
+        {
+            case m_Scene.Instructions:
+                bar.gameObject.SetActive(true);
+                break;
+        }
     }
 }

@@ -25,7 +25,7 @@ public class ChoseHeroPage : MonoBehaviour {
     {
         if(Input.GetKeyUp(KeyCode.Escape))
         {
-            if(leftHero.texture == null)
+            if(leftHero.texture.name == "UIMask")
             {
                 SceneManager.UnloadSceneAsync(4);
                 returnEvent.Invoke();

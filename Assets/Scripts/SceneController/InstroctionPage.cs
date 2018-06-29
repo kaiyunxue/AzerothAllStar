@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -21,7 +22,6 @@ public class InstroctionPage : _SceneManager
     private void Awake()
     {
         currentPage = Page.hero;
-        Debug.Log(SceneManager.GetSceneByName("firelandDemo").GetRootGameObjects()[0].name);
     }
     public void Escape()
     {
@@ -33,13 +33,12 @@ public class InstroctionPage : _SceneManager
         Scene s = SceneManager.GetActiveScene();
         foreach (var go in s.GetRootGameObjects())
         {
-            if(go.GetComponent<FightingSceneManager>() != null)
+            if(go.GetComponent<_SceneManager>() != null)
             {
-                go.GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
+                go.GetComponent<_SceneManager>().TurnFrom(m_Scene.Instructions);
                 break;
             }
         }
-        Time.timeScale = 1;
         yield return new WaitForEndOfFrame();
         yield return SceneManager.UnloadSceneAsync(5);
     }
@@ -73,6 +72,35 @@ public class InstroctionPage : _SceneManager
                     Turn2ChooseHero();
                     break;
             }
+        }
+    }
+
+    public override void TurnFrom(m_Scene scene)
+    {
+        switch(scene)
+        {
+            case m_Scene.FightScene:
+                currentPage = Page.hero;
+                herosPage.SetActive(false);
+                heroInstruction.SetActive(true);
+                heroButton.SetActive(true);
+                heroSlash.SetActive(true);
+                break;
+                break;
+            case m_Scene.MainMenu:
+                currentPage = Page.heros;
+                herosPage.SetActive(true);
+                heroInstruction.SetActive(false);
+                heroButton.SetActive(false);
+                heroSlash.SetActive(false);
+                break;
+
+            case m_Scene.ChooseHero:
+
+                break;
+            default:
+                Debug.Log("Turn from a Wrong Scene");
+                break;
         }
     }
 }
