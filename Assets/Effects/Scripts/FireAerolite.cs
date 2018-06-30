@@ -48,7 +48,6 @@ public class FireAerolite : SkillItemsBehaviourController
     {
         if(!fallingSound.isPlaying)
             fallingSound.Play();
-        isCollideEarth = true;
         Debug.Log(collision.gameObject.name);
         fireball.SetActive(false);
         StartCoroutine(StampDisappear());

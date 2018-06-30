@@ -107,6 +107,22 @@ public class FireElementController : CreatureBehavuourController
         yield return new WaitUntil(isdie);
         StartCoroutine(Die());
     }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.layer != 10)
+    //    {
+    //        GetComponent<Rigidbody>().useGravity = false;
+    //        GetComponent<Collider>().isTrigger = true;
+    //    }
+    //}
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if (collision.gameObject.layer != 10)
+    //    {
+    //        GetComponent<Rigidbody>().useGravity = false;
+    //        GetComponent<Collider>().isTrigger = true;
+    //    }
+    //}
     public override IEnumerator Die()
     {
         RagnarosSubmergeAttack skill = ((Ragnaros)speller).skillManager.GetSkillByName("RagnarosSubmergeAttack") as RagnarosSubmergeAttack;
@@ -142,6 +158,7 @@ public class FireElementController : CreatureBehavuourController
     private void Update()
     {
         speed = speedCurve.Evaluate(state.Health / state.MaxHealth);
+        Ray ray = new Ray(transform.position, -transform.up);
     }
     public static FireElementController InstantiateByPool(FireElementController item, Vector3 worldPos, Quaternion worldRot, Transform parent, int layer, GameObject target)
     {

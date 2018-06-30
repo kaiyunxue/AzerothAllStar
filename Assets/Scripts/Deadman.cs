@@ -21,7 +21,11 @@ public class Deadman : MonoBehaviour {
 	void Update () {
         if (state.Health <= 0)
             state.Health = 0;
-	}
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.position -= new Vector3(0.1f, 0, 0);
+        }
+    }
 
     IEnumerator watchDog()
     {
