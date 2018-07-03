@@ -60,13 +60,20 @@ public class FireElementController : CreatureBehavuourController
         if (Vector3.Distance(gameObject.transform.position, target.transform.position) >= 1f)
         {
             yield return new WaitForEndOfFrame();
-            Vector3 v = target.transform.position;
-            v.y = gameObject.transform.position.y;
-            gameObject.transform.LookAt(v);
-            gameObject.transform.Rotate(new Vector3(0, 90, 0));
-            // CC.Move((Suf.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed);
-            transform.position += (target.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed;
-            //gameObject.transform.position += (Suf.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed;
+            if (Physics.Raycast(new Ray(transform.position, -transform.up), 0.9f))
+            {
+                Vector3 v = target.transform.position;
+                v.y = gameObject.transform.position.y;
+                gameObject.transform.LookAt(v);
+                gameObject.transform.Rotate(new Vector3(0, 90, 0));
+                // CC.Move((Suf.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed);
+                transform.position += (target.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed;
+                //gameObject.transform.position += (Suf.transform.position - gameObject.transform.position).normalized * Time.deltaTime * speed;
+            }
+            else
+            {
+                AC.CrossFade("Fly",0f);
+            }
             StartCoroutine(Walk());
         }
         else
@@ -107,22 +114,6 @@ public class FireElementController : CreatureBehavuourController
         yield return new WaitUntil(isdie);
         StartCoroutine(Die());
     }
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if(collision.gameObject.layer != 10)
-    //    {
-    //        GetComponent<Rigidbody>().useGravity = false;
-    //        GetComponent<Collider>().isTrigger = true;
-    //    }
-    //}
-    //private void OnCollisionStay(Collision collision)
-    //{
-    //    if (collision.gameObject.layer != 10)
-    //    {
-    //        GetComponent<Rigidbody>().useGravity = false;
-    //        GetComponent<Collider>().isTrigger = true;
-    //    }
-    //}
     public override IEnumerator Die()
     {
         RagnarosSubmergeAttack skill = ((Ragnaros)speller).skillManager.GetSkillByName("RagnarosSubmergeAttack") as RagnarosSubmergeAttack;

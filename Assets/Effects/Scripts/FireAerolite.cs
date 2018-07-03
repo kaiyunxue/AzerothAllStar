@@ -48,7 +48,6 @@ public class FireAerolite : SkillItemsBehaviourController
     {
         if(!fallingSound.isPlaying)
             fallingSound.Play();
-        Debug.Log(collision.gameObject.name);
         fireball.SetActive(false);
         StartCoroutine(StampDisappear());
         fireExplosion.transform.SetParent(GameController.instance.transform);

@@ -37,7 +37,6 @@ public class RagnarosFireStorm : HeroSkill, ISkill
     {
         if (IsReady())
         {
-            StartSkill(animator);
             animator.SetTrigger("FireStorm");
             return true;
         }

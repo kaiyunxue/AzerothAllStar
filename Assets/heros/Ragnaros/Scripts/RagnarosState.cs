@@ -9,7 +9,11 @@ public class RagnarosState : HeroState
     public void InitialState()
     {
         Health = MaxHealth;
-        Mana = mana;
+        Mana = 2;
+    }
+    private void Start()
+    {
+        InitialState();
     }
     protected override float SetHealth(float value)
     {

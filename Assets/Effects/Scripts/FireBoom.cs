@@ -29,6 +29,7 @@ public class FireBoom : SkillItemsBehaviourController
     {
         if(other.gameObject.layer == 9)
         {
+            Debug.Log(other.name);
             //damage.RunContent(other.GetComponent<State>());
             other.GetComponent<State>().TakeSkillContent(damage);
             GameController.Register.FindHeroByLayer(gameObject.layer).state.Mana++;
