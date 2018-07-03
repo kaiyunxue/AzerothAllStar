@@ -45,7 +45,7 @@ public class SkillsManager : MonoBehaviour , ISkillManager
         currentSkill = skill;
         if(skill == null)
         {
-            Debug.LogWarning("Skill unfound!!!Insert the skill script first!");
+            Debug.LogWarning( name + " unfound!!!Insert the skill script first!");
         }
         else
         {

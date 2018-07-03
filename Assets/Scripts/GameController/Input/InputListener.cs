@@ -14,7 +14,6 @@ public class InputListener : MonoBehaviour,IInputListener
 
     public Hashtable keyTime = new Hashtable();
     StringBuilder inputStringBuilder = new StringBuilder(5);
-    StringBuilder stringBuilder = new StringBuilder(5);
     IInputTranslator inputTranslator;
     float time1;
     float[] pressTime = new float[7];
@@ -84,7 +83,8 @@ public class InputListener : MonoBehaviour,IInputListener
 			if(Input.GetKeyDown(key))
 			{
 				inputKeys.Add (key);
-				return true;
+                inputTranslator.Translate(inputKeys, inputStringBuilder);
+                return true;
 			}
 		}
         foreach(KeyCode key in skillKeys)
@@ -100,7 +100,6 @@ public class InputListener : MonoBehaviour,IInputListener
         inputStringBuilder.Remove(0, inputStringBuilder.Length);
         return false;
     }
-    
     public static bool GetKey(KeyCode key)
     {
         return Input.GetKey(key);

@@ -22,20 +22,12 @@ public class KOFItem : MonoBehaviour
             {
                 GameController.Register.LeftHero.HeroRegister.Enroll(this);
             }
-            else
-            {
-                Debug.LogWarning("This is not a game scene");
-            }
         }
         if (gameObject.layer == 9)
         {
             if (GameController.instance != null)
             {
                 GameController.Register.RightHero.HeroRegister.Enroll(this);
-            }
-            else
-            {
-                Debug.LogWarning("This is not a game scene");
             }
         }
     }
