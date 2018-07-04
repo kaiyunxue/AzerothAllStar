@@ -57,7 +57,7 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
             StartCoroutine(HighFireBalls(animator));
         }
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

@@ -21,8 +21,9 @@ public class TrumpStamp : SkillItemsBehaviourController
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 9)
+        if (other.gameObject.layer == 9 && other.GetComponent<State>() != null)
         {
+            //Debug.Log(other.name);
             other.GetComponent<State>().TakeSkillContent(debuff);
             other.GetComponent<State>().TakeSkillContent(damage);
             if (other.GetComponent<Rigidbody>() != null)

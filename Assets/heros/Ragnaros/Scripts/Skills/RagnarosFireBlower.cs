@@ -20,7 +20,7 @@ public class RagnarosFireBlower : HeroSkill {
         StartCdColding();
         hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     public override bool IsReady()

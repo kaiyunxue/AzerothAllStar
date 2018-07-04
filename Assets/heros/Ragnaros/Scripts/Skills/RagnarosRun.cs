@@ -44,7 +44,7 @@ public class RagnarosRun : HeroSkill, ISkill
         }
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StopAllCoroutines();
         animator.SetBool("Run", false);

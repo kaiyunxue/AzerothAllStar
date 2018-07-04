@@ -17,7 +17,7 @@ public class RagnarosStomp : HeroSkill, ISkill
         StartCoroutine(Stomp());
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

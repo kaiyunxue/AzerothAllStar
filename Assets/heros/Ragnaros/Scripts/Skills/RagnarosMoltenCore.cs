@@ -83,7 +83,7 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         fire.Stop();
         yield return new WaitForSeconds(2f);
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

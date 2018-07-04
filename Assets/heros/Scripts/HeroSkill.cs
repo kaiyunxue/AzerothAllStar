@@ -27,6 +27,6 @@ public abstract class HeroSkill : Skill, ISkill
     }
 
     public abstract void StartSkill(Animator animator);
-    public abstract void StopSkill(Animator animator);
+    public abstract void StopSkill(Animator animator, bool isBreak = false);
     public abstract bool TryStartSkill(Animator animator);
 }

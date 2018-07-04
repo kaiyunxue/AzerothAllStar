@@ -16,7 +16,7 @@ public class RagnarosMoltenSeed : HeroSkill, ISkill
         StartBehave(animator);
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     void StartBehave(Animator animator)

@@ -22,7 +22,7 @@ public class RagnarosDefence : HeroSkill, ISkill
         else
             StartCoroutine(SkillUpdate(animator));
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

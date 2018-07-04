@@ -7,19 +7,39 @@ namespace ArthasDomain
 {
     public class Run : HeroSkill, ISkill
     {
+        public Vector3 speed;
         public override void StartSkill(Animator animator)
         {
-            throw new NotImplementedException();
+            animator.SetBool("Run", true);
+            StartCoroutine(skillBehave(animator));
+        }
+        IEnumerator skillBehave(Animator animator)
+        {
+            if(Input.GetKey(hero.inputListener.dirKeys[3]))
+            {
+                hero.transform.position += speed * Time.deltaTime;
+                yield return new WaitForEndOfFrame();
+                StartCoroutine(skillBehave(animator));
+            }
+            else
+            {
+                animator.SetBool("Run", false);
+                yield return null;
+            }
         }
 
-        public override void StopSkill(Animator animator)
+        public override void StopSkill(Animator animator, bool isBreak = false)
         {
-            throw new NotImplementedException();
         }
 
         public override bool TryStartSkill(Animator animator)
         {
-            throw new NotImplementedException();
+            if (!Lock)
+                return false;
+            if (!hero.inputListener.GetSkill(formula))
+                return false;
+            StartSkill(animator);
+            return true;
         }
     }
 }

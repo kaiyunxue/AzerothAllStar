@@ -17,7 +17,7 @@ public class RagnarosFireStorm : HeroSkill, ISkill
         hero.statusBox.cdBar.StartCooling(skillIcon, cd);
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     public override bool IsReady()

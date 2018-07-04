@@ -17,7 +17,7 @@ public class RagnarosFlyStand : HeroSkill, ISkill
     {
         StartCoroutine(SkillUpdate(animator));
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StopAllCoroutines();
     }

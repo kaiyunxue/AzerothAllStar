@@ -17,13 +17,50 @@ public class InputTranslator: IInputTranslator
             listenedKeys.Add(key);
         }
     }
-    public void Translate(List<KeyCode> keyStream, StringBuilder inputStringBuilder)
+    public void Translate(List<KeyCode> keyStream, StringBuilder inputStringBuilder, bool isLeft = true)
     {
-        foreach(KeyCode key in keyStream)
+        if(isLeft)
         {
-            if(listenedKeys.Contains(key))
+            foreach (KeyCode key in keyStream)
             {
-                inputStringBuilder.Append(key.ToString());
+                if (listenedKeys.Contains(key))
+                {
+                    inputStringBuilder.Append(key.ToString());
+                }
+            }
+        }
+        else
+        {
+            foreach (KeyCode key in keyStream)
+            {
+                if(key == listenedKeys[0])
+                {
+                    inputStringBuilder.Append("W");
+                }
+                else if(key == listenedKeys[1])
+                {
+                    inputStringBuilder.Append("S");
+                }
+                else if (key == listenedKeys[2])
+                {
+                    inputStringBuilder.Append("A");
+                }
+                else if (key == listenedKeys[3])
+                {
+                    inputStringBuilder.Append("D");
+                }
+                else if (key == listenedKeys[4])
+                {
+                    inputStringBuilder.Append("J");
+                }
+                else if (key == listenedKeys[5])
+                {
+                    inputStringBuilder.Append("K");
+                }
+                else if (key == listenedKeys[6])
+                {
+                    inputStringBuilder.Append("L");
+                }
             }
         }
     } 

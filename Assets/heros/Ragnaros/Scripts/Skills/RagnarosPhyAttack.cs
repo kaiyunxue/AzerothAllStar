@@ -28,7 +28,7 @@ public class RagnarosPhyAttack : HeroSkill, ISkill
             StartCoroutine(WatchDog(animator));
         }
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         if(isDoubleAttack)
         {

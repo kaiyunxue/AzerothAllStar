@@ -17,7 +17,7 @@ public class RagnarosStandAttack : HeroSkill, ISkill
         sulfuars.TurnOnPhyAttack();
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StartCdColding();
     }

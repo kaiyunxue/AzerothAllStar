@@ -6,6 +6,7 @@ using System.Text;
 
 public class InputListener : MonoBehaviour,IInputListener
 {
+    public bool isLeft;
     public float longPressTime;
     public float clearTime = 0.3f;
     public List<KeyCode> dirKeys = new List<KeyCode> ();
@@ -73,7 +74,6 @@ public class InputListener : MonoBehaviour,IInputListener
                 }
             }
         }
-
     }
     bool GetInput()
     {
@@ -83,7 +83,7 @@ public class InputListener : MonoBehaviour,IInputListener
 			if(Input.GetKeyDown(key))
 			{
 				inputKeys.Add (key);
-                inputTranslator.Translate(inputKeys, inputStringBuilder);
+                inputTranslator.Translate(inputKeys, inputStringBuilder,isLeft);
                 return true;
 			}
 		}
@@ -92,8 +92,7 @@ public class InputListener : MonoBehaviour,IInputListener
             if(Input.GetKeyDown(key))
             {
                 inputKeys.Add (key);
-                inputTranslator.Translate(inputKeys, inputStringBuilder);
-                inputKeys.Clear();
+                inputTranslator.Translate(inputKeys, inputStringBuilder, isLeft);
                 return true;
             }
         }
@@ -121,6 +120,7 @@ public class InputListener : MonoBehaviour,IInputListener
     {
         if(skillFormula == inputStringBuilder.ToString())
         {
+            inputKeys.Clear();
             return true;
         }
         else

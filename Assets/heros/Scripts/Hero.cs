@@ -9,6 +9,7 @@ public class Hero : KOFItem
     public ISkillManager skillManager;
     public StatusBox statusBox;
     public AudioController audioCtrler;
+    public InputListener inputListener;
     [SerializeField]
     protected HerosRegistrar heroRegister;
 
@@ -23,6 +24,10 @@ public class Hero : KOFItem
     protected override void Awake()
     {
         base.Awake();
+        if (gameObject.layer == 8)
+            inputListener = GameController.LeftInputListener;
+        else
+            inputListener = GameController.RightInputListener;
         animator = gameObject.GetComponent<Animator>();
         skillManager = gameObject.GetComponent<ISkillManager>();
         heroRegister = gameObject.GetComponent<HerosRegistrar>();

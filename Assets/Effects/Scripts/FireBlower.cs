@@ -12,9 +12,12 @@ public class FireBlower : SkillItemsBehaviourController
     {
         if (other.gameObject.layer == 9)
         {
-            var rig = other.GetComponent<Rigidbody>();
-            rig.AddForce(forceDir);
-            other.GetComponent<State>().TakeSkillContent(damage);
+            if(other.GetComponent<Rigidbody>() != null)
+            {
+                var rig = other.GetComponent<Rigidbody>();
+                rig.AddForce(forceDir);
+                other.GetComponent<State>().TakeSkillContent(damage);
+            }
         }
     }
     private void Update()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -57,11 +58,16 @@ public class SkillsManager : MonoBehaviour , ISkillManager
         ISkill skill = GetSkillByName(name);
         if(skill == null)
         {
-            Debug.LogWarning("Skill unfound!!!Insert the skill script first!");
+            Debug.LogWarning(name + "Skill unfound!!!Insert the skill script first!");
         }
         else
         {
             skill.StopSkill(animator);   
         }
+    }
+
+    public ISkill GetCurrentSkill()
+    {
+        return currentSkill;
     }
 }

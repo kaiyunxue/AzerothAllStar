@@ -36,7 +36,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
         }
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

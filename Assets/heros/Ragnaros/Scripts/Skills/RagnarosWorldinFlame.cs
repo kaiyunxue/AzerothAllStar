@@ -17,7 +17,7 @@ public class RagnarosWorldinFlame : HeroSkill, ISkill
         StartCoroutine(SkillBehave(1));
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 

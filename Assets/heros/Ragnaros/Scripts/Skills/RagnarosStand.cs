@@ -44,7 +44,7 @@ public class RagnarosStand : HeroSkill, ISkill
         rune.GetComponent<Projector>().material.SetFloat("_Cutoff", val);
         StartCoroutine(RuneDispare(time));
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StopAllCoroutines();
         Destroy(fireStand);

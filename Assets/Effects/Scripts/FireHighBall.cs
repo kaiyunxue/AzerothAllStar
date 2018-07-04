@@ -38,7 +38,7 @@ public class FireHighBall : SkillItemsBehaviourController
     }
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.layer != 8)
+        if (col.gameObject.layer != gameObject.layer && col.tag != "weapon")
         {
             light.SetActive(false);
             spellAudio.SetActive(false);

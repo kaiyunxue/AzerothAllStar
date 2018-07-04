@@ -17,7 +17,7 @@ public class RagnarosTrump : HeroSkill, ISkill
         StartCoroutine(isAttackGround(0));
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     public override bool IsReady()

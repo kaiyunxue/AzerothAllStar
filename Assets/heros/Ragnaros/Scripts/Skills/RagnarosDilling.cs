@@ -22,7 +22,7 @@ public class RagnarosDilling : HeroSkill, ISkill
         StartCoroutine(Dilling(animator));
         fire.Play();
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     IEnumerator Dilling(float time)

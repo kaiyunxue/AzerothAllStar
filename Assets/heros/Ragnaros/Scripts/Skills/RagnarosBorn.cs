@@ -43,7 +43,7 @@ public class RagnarosBorn : HeroSkill
         else
             StartCoroutine(RuneEnlarge(time += Time.deltaTime));
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StopAllCoroutines();
         fireCylinder.Stop();

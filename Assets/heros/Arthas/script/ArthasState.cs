@@ -18,6 +18,7 @@ public class ArthasState : HeroState
     public override void Stun(float time)
     {
         hero.animator.SetBool("Stun", true);
+        
         StartCoroutine(Stuning(time));
     }
     IEnumerator Stuning(float time)

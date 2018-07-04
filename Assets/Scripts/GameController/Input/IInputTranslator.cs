@@ -5,5 +5,5 @@ using UnityEngine;
 
 public interface IInputTranslator  
 {
-    void Translate(List<KeyCode> key, StringBuilder inputStringBuilder);
+    void Translate(List<KeyCode> key, StringBuilder inputStringBuilder, bool isLeft = true);
 }

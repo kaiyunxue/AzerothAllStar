@@ -41,7 +41,7 @@ public class RagnarosWalkBack : HeroSkill, ISkill
             animator.SetBool("Back", false);
         }
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
         StopAllCoroutines();
         animator.SetBool("Back", false);

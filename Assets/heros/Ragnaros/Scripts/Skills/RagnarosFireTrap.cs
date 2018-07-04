@@ -30,7 +30,7 @@ public class RagnarosFireTrap : HeroSkill, ISkill
         StartBehave();
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
 
     }

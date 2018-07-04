@@ -74,7 +74,7 @@ public class RagnarosSubmergeAttack : HeroSkill, ISkill
             return false;
     }
 
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     protected IEnumerator SkillBehave(Animator animator)

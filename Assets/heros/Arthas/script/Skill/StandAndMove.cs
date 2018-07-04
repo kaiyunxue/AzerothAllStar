@@ -17,7 +17,7 @@ namespace ArthasDomain
             currentCoroutine = StartCoroutine(SkillUpdate(hero.animator));
         }
 
-        public override void StopSkill(Animator animator)
+        public override void StopSkill(Animator animator, bool isBreak = false)
         {
 
         }
@@ -45,7 +45,7 @@ namespace ArthasDomain
             }
             if(isHasNextSkill)
             {
-                //StopAllCoroutines();
+                StopAllCoroutines();
             }
             else
             {

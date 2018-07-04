@@ -36,7 +36,7 @@ public class RagnarosFireLowBalls : HeroSkill, ISkill
             StartCoroutine(SkillUpdate(animator));
         }
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
     protected override IEnumerator SkillUpdate(Animator animator)

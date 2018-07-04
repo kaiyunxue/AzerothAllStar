@@ -17,7 +17,7 @@ public class RagnarosFireDebuff : HeroSkill, ISkill
         effectInstance.GetComponent<FireDebuff>().target = target;
         StartCoroutine(WaitTime());
     }
-    public override void StopSkill(Animator animator)
+    public override void StopSkill(Animator animator, bool isBreak = false)
     {
     }
 
