@@ -28,6 +28,10 @@ public class RagnarosFireHighBalls : HeroSkill, ISkill
                 fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero,gameObject.layer));
                 fireBallInstance.Add(KOFItem.InstantiateByPool(fireBall, leftHand.transform, hero,gameObject.layer));
             }
+            foreach(var f in fireBallInstance)
+            {
+                f.transform.localScale = Vector3.one;
+            }
             StartCoroutine(HighFireBalls(animator));
         }
     }

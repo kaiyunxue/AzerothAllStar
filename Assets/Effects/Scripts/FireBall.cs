@@ -44,6 +44,7 @@ public class FireBall : SkillItemsBehaviourController
     }
     protected override void OnEnable()
     {
+        transform.localScale = Vector3.one;
         light.SetActive(true);
         spellAudio.GetComponent<AudioSource>().volume = 0.1f;
         collisionAudio.GetComponent<AudioSource>().volume = 0.1f;
