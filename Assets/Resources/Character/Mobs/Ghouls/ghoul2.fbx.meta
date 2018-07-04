@@ -1,0 +1,236 @@
+fileFormatVersion: 2
+guid: 9406225030b44cf4ca5fcd11a3620fab
+timeCreated: 1485726068
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: ghoul
+    100002: ghoul 1
+    100004: //RootNode
+    100006: ghoul_bone_0
+    100008: ghoul_bone_1
+    100010: ghoul_bone_10
+    100012: ghoul_bone_11
+    100014: ghoul_bone_12
+    100016: ghoul_bone_13
+    100018: ghoul_bone_14
+    100020: ghoul_bone_15
+    100022: ghoul_bone_16
+    100024: ghoul_bone_17
+    100026: ghoul_bone_18
+    100028: ghoul_bone_19
+    100030: ghoul_bone_2
+    100032: ghoul_bone_20
+    100034: ghoul_bone_21
+    100036: ghoul_bone_22
+    100038: ghoul_bone_23
+    100040: ghoul_bone_24
+    100042: ghoul_bone_25
+    100044: ghoul_bone_26
+    100046: ghoul_bone_27
+    100048: ghoul_bone_28
+    100050: ghoul_bone_29
+    100052: ghoul_bone_3
+    100054: ghoul_bone_30
+    100056: ghoul_bone_31
+    100058: ghoul_bone_32
+    100060: ghoul_bone_33
+    100062: ghoul_bone_34
+    100064: ghoul_bone_35
+    100066: ghoul_bone_36
+    100068: ghoul_bone_37
+    100070: ghoul_bone_38
+    100072: ghoul_bone_39
+    100074: ghoul_bone_4
+    100076: ghoul_bone_40
+    100078: ghoul_bone_41
+    100080: ghoul_bone_42
+    100082: ghoul_bone_43
+    100084: ghoul_bone_44
+    100086: ghoul_bone_45
+    100088: ghoul_bone_46
+    100090: ghoul_bone_47
+    100092: ghoul_bone_48
+    100094: ghoul_bone_49
+    100096: ghoul_bone_5
+    100098: ghoul_bone_50
+    100100: ghoul_bone_51
+    100102: ghoul_bone_52
+    100104: ghoul_bone_53
+    100106: ghoul_bone_54
+    100108: ghoul_bone_55
+    100110: ghoul_bone_6
+    100112: ghoul_bone_7
+    100114: ghoul_bone_78
+    100116: ghoul_bone_8
+    100118: ghoul_bone_9
+    400000: ghoul
+    400002: ghoul 1
+    400004: //RootNode
+    400006: ghoul_bone_0
+    400008: ghoul_bone_1
+    400010: ghoul_bone_10
+    400012: ghoul_bone_11
+    400014: ghoul_bone_12
+    400016: ghoul_bone_13
+    400018: ghoul_bone_14
+    400020: ghoul_bone_15
+    400022: ghoul_bone_16
+    400024: ghoul_bone_17
+    400026: ghoul_bone_18
+    400028: ghoul_bone_19
+    400030: ghoul_bone_2
+    400032: ghoul_bone_20
+    400034: ghoul_bone_21
+    400036: ghoul_bone_22
+    400038: ghoul_bone_23
+    400040: ghoul_bone_24
+    400042: ghoul_bone_25
+    400044: ghoul_bone_26
+    400046: ghoul_bone_27
+    400048: ghoul_bone_28
+    400050: ghoul_bone_29
+    400052: ghoul_bone_3
+    400054: ghoul_bone_30
+    400056: ghoul_bone_31
+    400058: ghoul_bone_32
+    400060: ghoul_bone_33
+    400062: ghoul_bone_34
+    400064: ghoul_bone_35
+    400066: ghoul_bone_36
+    400068: ghoul_bone_37
+    400070: ghoul_bone_38
+    400072: ghoul_bone_39
+    400074: ghoul_bone_4
+    400076: ghoul_bone_40
+    400078: ghoul_bone_41
+    400080: ghoul_bone_42
+    400082: ghoul_bone_43
+    400084: ghoul_bone_44
+    400086: ghoul_bone_45
+    400088: ghoul_bone_46
+    400090: ghoul_bone_47
+    400092: ghoul_bone_48
+    400094: ghoul_bone_49
+    400096: ghoul_bone_5
+    400098: ghoul_bone_50
+    400100: ghoul_bone_51
+    400102: ghoul_bone_52
+    400104: ghoul_bone_53
+    400106: ghoul_bone_54
+    400108: ghoul_bone_55
+    400110: ghoul_bone_6
+    400112: ghoul_bone_7
+    400114: ghoul_bone_78
+    400116: ghoul_bone_8
+    400118: ghoul_bone_9
+    4300000: ghoul
+    7400000: Stand [0]
+    7400002: Stand [1]
+    7400004: Stand [2]
+    7400006: Walk [3]
+    7400008: Walk [4]
+    7400010: Run [5]
+    7400012: AttackUnarmed [6]
+    7400014: AttackUnarmed [7]
+    7400016: Death [8]
+    7400018: CombatWound [9]
+    7400020: CombatCritical [10]
+    7400022: ParryUnarmed [11]
+    7400024: Stun [13]
+    7400026: EmoteStunNoSheathe [12]
+    7400028: CombatWound [14]
+    7400030: LoadThrown [15]
+    7400032: ReadyThrown [16]
+    7400034: HoldThrown [17]
+    7400036: AttackThrown [18]
+    7400038: EmoteEat [20]
+    7400040: EmoteEatNoSheathe [21]
+    7400042: Cannibalize [19]
+    7400044: EmoteTalk [22]
+    7400046: Birth [23]
+    7400048: Submerged [24]
+    7400050: ChannelCastDirected [25]
+    7400052: ChannelCastOmni [26]
+    7400054: CustomSpell01 [27]
+    7400056: Drown [28]
+    7400058: ReadySpellDirected [30]
+    7400060: ReadySpellOmni [29]
+    7400062: SpellCastDirected [31]
+    7400064: SpellCastOmni [32]
+    7400066: Swim [33]
+    7400068: SwimIdle [34]
+    7400070: SwimLeft [35]
+    7400072: SwimRight [36]
+    7400074: Walkbackwards [37]
+    7400076: Drowned [38]
+    7400078: Jump [40]
+    7400080: Fall [39]
+    7400082: JumpEnd [41]
+    7400084: JumpLandRun [42]
+    7400086: JumpStart [43]
+    7400088: Submerge [44]
+    7400090: Mount [45]
+    7400092: ShuffleLeft [46]
+    7400094: ShuffleRight [47]
+    9500000: //RootNode
+    13700000: ghoul
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

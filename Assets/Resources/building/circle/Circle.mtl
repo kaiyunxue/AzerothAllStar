@@ -1,0 +1,12 @@
+#
+# mtl file for Circle.obj obj file
+#
+
+newmtl world/expansion06/doodads/titan/7ti_pillarcreation_eyeofamanthul02.m2_Geoset_001
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd Circle_7ti_pillarcreation_eyeofamanthul01.png

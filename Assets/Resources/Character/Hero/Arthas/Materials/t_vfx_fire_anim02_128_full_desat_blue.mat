@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: t_vfx_fire_anim02_128_full_desat_blue
+  m_Shader: {fileID: 4800000, guid: d42f8b2e947658c4896a7d6238a1ed6d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Cube:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortTex1:
+        m_Texture: {fileID: 2800000, guid: a6072def3653d034b886280cca3dd638, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortTex2:
+        m_Texture: {fileID: 2800000, guid: ec6e90c4a2d4a6d40988fa82ef84de93, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: aa1e0147e3beb5a45a922333e4a36405, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MotionTex1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MotionTex2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MotionTex3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MotionTex4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BlendMode1: 0
+    - _BlendMode2: 0
+    - _BlendMode3: 0
+    - _BlendMode4: 0
+    - _BumpAmt: 10
+    - _BumpScale: 1
+    - _Cutoff: 0.5
+    - _DetailNormalMapScale: 1
+    - _DistortParam1: 0.015
+    - _DistortParam2: 0.015
+    - _DistortParam3: 0.015
+    - _DistortParam4: 0.015
+    - _DstBlend: 0
+    - _EmissionScaleUI: 0
+    - _FPOW: 5
+    - _Glossiness: 0
+    - _InvFade: 1
+    - _IsMove1: 0
+    - _IsMove2: 0
+    - _IsMove3: 0
+    - _IsMove4: 0
+    - _IsRotate1: 0
+    - _IsRotate2: 0
+    - _IsRotate3: 0
+    - _IsRotate4: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _R0: 0.05
+    - _RefractiveStrength: 10
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _ZWrite: 1
+    m_Colors:
+    - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
+    - _ColorParam1: {r: 1, g: 0, b: 1, a: 1}
+    - _ColorParam2: {r: 1, g: 0, b: 1, a: 1}
+    - _ColorParam3: {r: 1, g: 0, b: 1, a: 1}
+    - _ColorParam4: {r: 1, g: 0, b: 1, a: 1}
+    - _DistortSpeed: {r: 1, g: 0.1, b: 1, a: 0.1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _MotionColor1: {r: 1, g: 1, b: 1, a: 0}
+    - _MotionColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _MotionColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _MotionColor4: {r: 1, g: 1, b: 1, a: 0}
+    - _MoveParam1: {r: 0, g: 0, b: 0, a: 0}
+    - _MoveParam2: {r: 0, g: 0, b: 0, a: 0}
+    - _MoveParam3: {r: 0, g: 0, b: 0, a: 0}
+    - _MoveParam4: {r: 0, g: 0, b: 0, a: 0}
+    - _ReflectColor: {r: 1, g: 1, b: 1, a: 0.5}
+    - _RotateParam1: {r: 0, g: 0, b: 0, a: 0}
+    - _RotateParam2: {r: 0, g: 0, b: 0, a: 0}
+    - _RotateParam3: {r: 0, g: 0, b: 0, a: 0}
+    - _RotateParam4: {r: 0, g: 0, b: 0, a: 0}
+    - _TintColor: {r: 0, g: 0.62758636, b: 1, a: 0.238}

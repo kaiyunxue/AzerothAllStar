@@ -1,0 +1,76 @@
+#
+# mtl file for bridge.obj obj file
+#
+
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_000
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_bigblade_gold.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_001
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_ce_hyjaldome1_gold.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_002
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_firelandsbridge_goldtrim.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_003
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_hyjal_metalrubble_gold.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_004
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_ce_trimglowgold.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_005
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_firelandsbridge_pillar.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_006
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_ce_hyjalfirecracks.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_007
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_firelandsbridge_pillar.png
+newmtl world/expansion03/doodads/firelands/bridgefx/firelands_bridgefx.m2_Geoset_002
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd bridge_firelandsbridge_goldtrim.png

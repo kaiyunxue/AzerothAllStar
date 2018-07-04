@@ -10,6 +10,7 @@ namespace ArthasDomain
         public Vector3 speed;
         public override void StartSkill(Animator animator)
         {
+            hero.skillManager.SetCurrentSkill(this);
             animator.SetBool("Run", true);
             StartCoroutine(skillBehave(animator));
         }
@@ -30,6 +31,11 @@ namespace ArthasDomain
 
         public override void StopSkill(Animator animator, bool isBreak = false)
         {
+            if(isBreak)
+            {
+                animator.SetBool("Run", false);
+                StopAllCoroutines();
+            }
         }
 
         public override bool TryStartSkill(Animator animator)

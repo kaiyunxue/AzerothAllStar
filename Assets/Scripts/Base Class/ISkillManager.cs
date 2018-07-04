@@ -8,6 +8,7 @@ public interface ISkillManager
     void StartSkill(Animator animator , string name);
     void StopSkill(Animator animator, string name);
     ISkill GetCurrentSkill();
+    void SetCurrentSkill(ISkill skill);
 }
 
 

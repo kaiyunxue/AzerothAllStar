@@ -47,7 +47,7 @@ public class FireWall : SkillItemsBehaviourController
     }
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 9)
+        if (other.gameObject.layer == 9 && other.GetComponent<State>() != null)
             other.GetComponent<State>().TakeSkillContent(damage);
     }
     public override int GetMaxInstance()

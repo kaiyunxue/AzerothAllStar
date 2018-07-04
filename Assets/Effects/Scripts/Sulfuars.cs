@@ -103,7 +103,7 @@ public class Sulfuars : SkillItemsBehaviourController
             colliderObject = other.gameObject;
             colliderName = other.name;
             StartCoroutine(WaitingthenDelete());
-            if(other.gameObject.layer == 9 && isPhyAttack)
+            if(other.gameObject.layer == 9 && other.tag != "weapon" && isPhyAttack)
             {
                 FlameDamageVal += 0.7f;
                 RagnarosDamage flameDamage = new RagnarosDamage(FlameDamageVal, DamageType.Fire, gameObject.layer);

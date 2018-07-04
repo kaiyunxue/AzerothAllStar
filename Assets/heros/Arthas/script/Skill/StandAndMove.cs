@@ -12,6 +12,7 @@ namespace ArthasDomain
         public Coroutine currentCoroutine;
         public override void StartSkill(Animator animator)
         {
+            hero.skillManager.SetCurrentSkill(this);
             if(currentCoroutine != null)
                 StopCoroutine(currentCoroutine);
             currentCoroutine = StartCoroutine(SkillUpdate(hero.animator));
@@ -19,7 +20,11 @@ namespace ArthasDomain
 
         public override void StopSkill(Animator animator, bool isBreak = false)
         {
-
+            if(isBreak)
+            {
+                Debug.Log("aaa");
+                StopCoroutine(currentCoroutine);
+            }
         }
 
         public override bool TryStartSkill(Animator animator)

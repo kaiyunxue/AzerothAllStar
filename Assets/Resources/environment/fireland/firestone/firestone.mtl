@@ -1,0 +1,124 @@
+#
+# mtl file for firestone.obj obj file
+#
+
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_000
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_001
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_002_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_003
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_004_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_005
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_006_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_007
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_008_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_009
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_010_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_011
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_012_Lum
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_013
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png
+newmtl world_expansion03_doodads_firelands_breakable_rock_platform_firelands_breakable_rock_platform_01.m2_Geoset_014
+illum 2
+Kd 0.000000 0.000000 0.000000
+Ka 0.250000 0.250000 0.250000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ns 0.000000
+map_Kd firestone_firelands_rock_platform_01.png

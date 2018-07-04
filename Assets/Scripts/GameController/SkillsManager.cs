@@ -7,7 +7,7 @@ using UnityEngine;
 public class SkillsManager : MonoBehaviour , ISkillManager
 {
     public GameObject skillsContainer;
-    public ISkill currentSkill;
+    private ISkill currentSkill;
     Dictionary<string,ISkill> skills = new Dictionary<string, ISkill>();
 
     void Awake()
@@ -43,7 +43,6 @@ public class SkillsManager : MonoBehaviour , ISkillManager
     public void StartSkill(Animator animator , string name)
     {
         ISkill skill = GetSkillByName(name);
-        currentSkill = skill;
         if(skill == null)
         {
             Debug.LogWarning( name + " unfound!!!Insert the skill script first!");
@@ -69,5 +68,10 @@ public class SkillsManager : MonoBehaviour , ISkillManager
     public ISkill GetCurrentSkill()
     {
         return currentSkill;
+    }
+
+    public void SetCurrentSkill(ISkill skill)
+    {
+        currentSkill = skill;
     }
 }

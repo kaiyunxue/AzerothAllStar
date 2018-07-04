@@ -18,7 +18,7 @@ public class RagnarosStatusBox : StatusBox {
             {
                 manas[i].transform.GetChild(0).gameObject.SetActive(true);
                 manas[i].transform.GetChild(1).gameObject.SetActive(true);
-                manas[i].transform.GetChild(2).gameObject.SetActive(true);
+                //manas[i].transform.GetChild(2).gameObject.SetActive(true);
                 Mana = m;
             }
         }
@@ -28,7 +28,7 @@ public class RagnarosStatusBox : StatusBox {
             {
                 manas[i].transform.GetChild(0).gameObject.SetActive(false);
                 manas[i].transform.GetChild(1).gameObject.SetActive(false);
-                manas[i].transform.GetChild(2).gameObject.SetActive(false);
+                //manas[i].transform.GetChild(2).gameObject.SetActive(false);
                 Mana = m;
             }
         }
