@@ -8,6 +8,7 @@ TagManager:
   - left
   - right
   - Heros
+  - weapon
   layers:
   - Default
   - TransparentFX
