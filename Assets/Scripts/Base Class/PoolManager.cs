@@ -49,7 +49,6 @@ public class PoolManager : MonoBehaviour {
         }
         else
         {
-            Debug.LogWarning("Instantiate A New Item in Pool Manager");
             T t = Instantiate(item);
             t.gameObject.SetActive(false);
             return t;

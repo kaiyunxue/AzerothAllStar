@@ -7,7 +7,7 @@ public class FlameOfFlameWorld : SkillItemsBehaviourController {
     public RagnarosDamage damage = new RagnarosDamage(150, DamageType.Fire, 8);
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.layer == 9)
+        if (other.gameObject.layer == 9 && other.GetComponent<State>()!= null)
         {
             //damage.RunContent(other.GetComponent<State>());
             other.GetComponent<State>().TakeSkillContent(damage);

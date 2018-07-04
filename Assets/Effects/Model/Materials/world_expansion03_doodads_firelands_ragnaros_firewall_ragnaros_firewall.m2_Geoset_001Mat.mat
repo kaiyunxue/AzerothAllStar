@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: world_expansion03_doodads_firelands_ragnaros_firewall_ragnaros_firewall.m2_Geoset_001Mat
   m_Shader: {fileID: 4800000, guid: 50609c7cf7955e44a80a9d58099d5657, type: 3}
-  m_ShaderKeywords: BlendAdd Clip_ON FrameBlend_OFF SoftParticles_OFF VertLight_OFF
+  m_ShaderKeywords: BlendAdd Clip_ON FrameBlend_OFF SoftParticles_ON VertLight4_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
