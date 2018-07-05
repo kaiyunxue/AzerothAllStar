@@ -12,7 +12,7 @@ public class AttentionPAge : MonoBehaviour {
     IEnumerator waitAndTurn()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(ScenesName.Murloc);
     }
 
 }

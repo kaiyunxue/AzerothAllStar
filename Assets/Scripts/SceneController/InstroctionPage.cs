@@ -31,6 +31,7 @@ public class InstroctionPage : _SceneManager
     {
         //SceneManager.GetSceneByName("firelandDemo").GetRootGameObjects()[0].GetComponent<FightingSceneManager>().WhenTurnedBackFromInstruction();
         Scene s = SceneManager.GetActiveScene();
+        Debug.Log(s.name);
         foreach (var go in s.GetRootGameObjects())
         {
             if(go.GetComponent<_SceneManager>() != null)
@@ -40,7 +41,7 @@ public class InstroctionPage : _SceneManager
             }
         }
         yield return new WaitForEndOfFrame();
-        yield return SceneManager.UnloadSceneAsync(5);
+        yield return SceneManager.UnloadSceneAsync(ScenesName.Instruction);
     }
     public void Turn2ChooseHero()
     {

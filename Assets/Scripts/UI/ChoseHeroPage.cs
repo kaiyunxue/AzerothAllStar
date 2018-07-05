@@ -27,7 +27,7 @@ public class ChoseHeroPage : MonoBehaviour {
         {
             if(leftHero.texture.name == "UIMask")
             {
-                SceneManager.UnloadSceneAsync(4);
+                SceneManager.UnloadSceneAsync(ScenesName.ChoseHero);
                 returnEvent.Invoke();
             }
         }
@@ -40,7 +40,7 @@ public class ChoseHeroPage : MonoBehaviour {
     {
         loadingPage.SetActive(true);
         yield return new WaitForSeconds(3);
-        yield return SceneManager.LoadSceneAsync(2);
+        yield return SceneManager.LoadSceneAsync(ScenesName.FightingScene);
     }
     private void Awake()
     {

@@ -68,7 +68,7 @@ public class MainMenu : _SceneManager
     }
     public IEnumerator loadChosingHero()
     {
-        yield return SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive);
+        yield return SceneManager.LoadSceneAsync(ScenesName.ChoseHero, LoadSceneMode.Additive);
         SceneManager.GetSceneByName("ChoseHero").GetRootGameObjects()[0].GetComponent<ChoseHeroPage>().returnEvent = myEvent;
     }
 
