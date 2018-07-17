@@ -27,7 +27,7 @@ public class FireBoom : SkillItemsBehaviourController
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == 9)
+        if(other.gameObject.layer == 9 && other.gameObject.GetComponent<State>() != null)
         {
             Debug.Log(other.name);
             //damage.RunContent(other.GetComponent<State>());

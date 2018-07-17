@@ -27,13 +27,6 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
             runeBoomInstance = KOFItem.InstantiateByPool(runeBoom, initialLocalPosition, Quaternion.Euler(90, 0, 0), GameController.instance.transform, gameObject.layer);
             StartCoroutine(Behave(animator));
         }
-        else if(hero.state.Stage == 3)
-        {
-            hero.audioCtrler.PlaySound(clip);
-            var instance = KOFItem.InstantiateByPool(fireBlower, GameController.instance.transform, gameObject.layer);
-            instance.damage = new RagnarosDamage(50, DamageType.Fire, gameObject.layer);
-            animator.SetBool("RuneBoob", false);
-        }
     }
 
     public override void StopSkill(Animator animator, bool isBreak = false)
@@ -44,7 +37,9 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
     {
         if (!Lock)
             return false;
-        if (hero.state.Stage == 0 && hero.state.Mana < manaCost)
+        if (hero.state.Stage != 0)
+            return false;
+        if (hero.state.Mana < manaCost)
             return false;
         if (!GameController.LeftInputListener.GetSkill(formula))
             return false;

@@ -21,16 +21,15 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         fire.Play();
         hero.audioCtrler.ForcePlaySound(word);
         pool.SetActive(false);
-        contTime = hero.state.Mana * 1.5f;
+        contTime = hero.state.Mana * 1f + 2;
         flameInstance = KOFItem.InstantiateByPool(titantFlame,hero.transform.localPosition , GameController.instance.transform, gameObject.layer);
         hero.state.Mana = 0;
         hero.state.Stage = 3;
         hero.transform.localScale *= 3;
         hero.transform.localPosition += new Vector3(0, 3, 0);
         StartCoroutine(SkillBehave());
-        StartCoroutine(WaitForBack(contTime));
-        hero.statusBox.cdBar.StartCoolingHighlight(skillIcon, contTime);
     }
+    
     IEnumerator MaterialChane(float time = 0)
     {
         foreach (var m in materialGO.GetComponent<Renderer>().materials)
@@ -55,9 +54,23 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
         if (time <= 3f)
             StartCoroutine(MaterialChaneBack(time));
     }
-    IEnumerator WaitForBack(float time)
+    private void FixedUpdate()
     {
-        yield return new WaitForSecondsRealtime(contTime);
+        Debug.Log(contTime);
+        if(hero.state.Stage == 3 && contTime > 0)
+        {
+            contTime += hero.state.Mana * 1f;
+            hero.state.Mana = 0;
+            contTime -= Time.fixedDeltaTime;
+        }
+        else if(hero.state.Stage == 3 && contTime <= 0)
+        {
+            StartCoroutine(WaitForBack());
+        }
+    }
+    IEnumerator WaitForBack()
+    {
+        hero.state.Stage = 0;
         skinFire.Stop();
         StartCoroutine(MaterialChaneBack());
         StartCdColding();
