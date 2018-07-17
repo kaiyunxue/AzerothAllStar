@@ -293,7 +293,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 651493741}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1906128, y: -66.209, z: 0}
+  m_LocalPosition: {x: 0.19740295, y: -65.62098, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1559787231}
@@ -330,21 +330,15 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'This is a FAN-MADE game by Kevin.X. All the models and most of the WOW
-    resources are from World of Warcraft. Some of the UI, sounds and effect resources
-    are from Assets Store. And this game will never be used in bussiness. Only my
-    original part of the project will be posted onto the GitHub.
-
-
-    Wish you enjoy the game!
-
-'
+  m_Text: "This is a FAN-MADE game developed by Kevin.X. \r\n\nThe models, UIs and
+    sounds are exported from World of Warcraft. The Blizzard owns the copyright of
+    all these resources.\r\n\nThis game will never be used in bussiness. \r\n"
 --- !u!222 &651493744
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -375,7 +369,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1426402470}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03553009, y: -30.306438, z: 0}
+  m_LocalPosition: {x: 0.039367676, y: -30.04632, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2105727850}
@@ -507,7 +501,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1559787227}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 357.5, y: 223.5, z: 0}
+  m_LocalPosition: {x: 354.5, y: 221.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2105727850}
@@ -606,7 +600,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2105727849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.46461487, y: 130.31204, z: 0}
+  m_LocalPosition: {x: 0.49006653, y: 129.12802, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1426402471}

@@ -281,7 +281,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256516332}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.420578, y: 30.350224, z: 0}
+  m_LocalPosition: {x: 67.794304, y: 35.450172, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1630770807}
@@ -340,7 +340,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: kaiyunxue0239@gmail.com
+          m_StringArgument: https://twitter.com/KaiyunXue
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -404,7 +404,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 350159228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 757749652}
@@ -482,7 +482,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 356614698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1129186746}
@@ -754,7 +754,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 561857266}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -14.697174, z: 0}
+  m_LocalPosition: {x: 0, y: -18.763763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1129186746}
@@ -830,7 +830,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 604705193}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -271, y: -169.5, z: 0}
+  m_LocalPosition: {x: -354.5, y: -221.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 946009893}
@@ -909,7 +909,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 637433079}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -89.09152, z: 0}
+  m_LocalPosition: {x: 0, y: -101.29129, z: 0}
   m_LocalScale: {x: 0.9999968, y: 0.9999965, z: 0.9999965}
   m_Children:
   - {fileID: 1728838432}
@@ -1035,7 +1035,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659601291}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 52.63611, y: -16.817041, z: 0}
+  m_LocalPosition: {x: 69.39613, y: -19.451061, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2045365566}
@@ -1313,7 +1313,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 757749651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -29.697174, z: 0}
+  m_LocalPosition: {x: 0, y: -33.763763, z: 0}
   m_LocalScale: {x: 0.9999968, y: 0.9999965, z: 0.9999965}
   m_Children:
   - {fileID: 350159229}
@@ -1429,7 +1429,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 762022078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.008583069, y: -58.029114, z: 0}
+  m_LocalPosition: {x: -0.011230469, y: -74.78848, z: 0}
   m_LocalScale: {x: 0.5934519, y: 0.5934521, z: 0.5934521}
   m_Children:
   - {fileID: 1811565026}
@@ -1495,7 +1495,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 796272717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1352627456}
@@ -1572,7 +1572,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802996687}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -271, y: 166.349, z: 0}
+  m_LocalPosition: {x: -354.5, y: 217.41302, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2003649678}
@@ -1655,8 +1655,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3a40dd49e4213ed4985137af45dcda30, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 2aabb5b7ae4c19f42a6ddedfd57ece65, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1693,7 +1693,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 819394059}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -14.697174, z: 0}
+  m_LocalPosition: {x: 0, y: -18.763763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 757749652}
@@ -1879,7 +1879,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 922283487}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 271, y: -169.5, z: 0}
+  m_LocalPosition: {x: 354.5, y: -221.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 946009893}
@@ -1956,7 +1956,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 936613059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -271, y: 166.349, z: 0}
+  m_LocalPosition: {x: -354.5, y: 217.41302, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1228846120}
@@ -2039,8 +2039,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 3a40dd49e4213ed4985137af45dcda30, type: 3}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 2aabb5b7ae4c19f42a6ddedfd57ece65, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2195,7 +2195,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983923838}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -230.54802, y: 136.02194, z: 0}
+  m_LocalPosition: {x: -302.199, y: 176.7012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2133111934}
@@ -2225,7 +2225,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 22ae9fb87ce204044af2e464fd3c90f6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 442bdb4dc32cf3747bbe4d6dc22e5520, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2414,7 +2414,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1129186745}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 29.697174, z: 0}
+  m_LocalPosition: {x: 0, y: 33.763763, z: 0}
   m_LocalScale: {x: 0.9999968, y: 0.9999965, z: 0.9999965}
   m_Children:
   - {fileID: 356614699}
@@ -2542,7 +2542,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1197398469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1712060653}
@@ -2686,16 +2686,16 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1206857669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.59999084, y: 35.800827, z: 0}
+  m_LocalPosition: {x: -0.5999756, y: 25.961845, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2133111934}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.028, y: 0.39000002}
-  m_AnchorMax: {x: 0.97200006, y: 0.8565192}
-  m_AnchoredPosition: {x: -0.6000004, y: -0.19999695}
-  m_SizeDelta: {x: -0.29999924, y: -2}
+  m_AnchorMin: {x: 0.028, y: 0.337}
+  m_AnchorMax: {x: 0.97200006, y: 0.7997334}
+  m_AnchoredPosition: {x: -0.6000004, y: 0}
+  m_SizeDelta: {x: -0.29999924, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1206857671
 MonoBehaviour:
@@ -2732,8 +2732,9 @@ MonoBehaviour:
   m_Text: 'Hi guys, I''m Kevin.X. I''m a international student studying  in US major
     in computer science. My dream is to become a game developer, especially a Blizzard
     game developer. And I''m also a crazy fan of Blizzard. I''ve been working on this
-    game project for half year, using my extra time. To design the gameplay, I used
-    some designs from World of Warcraft, Hearthstone and the Nintendo Smash for reference.
+    game project for half of the year, using my extra time. To design the gameplay,
+    I used some ideas of World of Warcraft, Hearthstone and the Nintendo Smash for
+    reference.
 
 
     This is only a fan-made game and it won''t be used in any commercial purpose.
@@ -2777,7 +2778,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228846119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.87821, y: -6.6744933, z: 0}
+  m_LocalPosition: {x: 44.298206, y: -8.806513, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 936613060}
@@ -3025,7 +3026,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1352627455}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 89.09152, z: 0}
+  m_LocalPosition: {x: 0, y: 101.29129, z: 0}
   m_LocalScale: {x: 0.9999968, y: 0.9999965, z: 0.9999965}
   m_Children:
   - {fileID: 1673034966}
@@ -3358,7 +3359,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Copy Email
+  m_Text: Copy Link
 --- !u!222 &1630770809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3431,7 +3432,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1673034965}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -14.697174, z: 0}
+  m_LocalPosition: {x: 0, y: -18.763763, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1352627456}
@@ -3508,7 +3509,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1712060652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -148.48587, z: 0}
+  m_LocalPosition: {x: 0, y: -168.81882, z: 0}
   m_LocalScale: {x: 0.9999968, y: 0.9999965, z: 0.9999965}
   m_Children:
   - {fileID: 1197398470}
@@ -3635,7 +3636,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728838431}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 637433080}
@@ -3855,7 +3856,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1811565025}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 148.48587, z: 0}
+  m_LocalPosition: {x: 0, y: 168.81882, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1890510316}
@@ -4047,7 +4048,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1890510315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3221054, y: -0.041101456, z: 0}
+  m_LocalPosition: {x: -0.37434387, y: -0.2461586, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1811565026}
@@ -4125,7 +4126,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1893732244}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0009765625, y: 54.452972, z: 0}
+  m_LocalPosition: {x: 0.0009765625, y: 71.158295, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2084074455}
@@ -4455,7 +4456,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974463113}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.32058, y: 17.257061, z: 0}
+  m_LocalPosition: {x: 67.694305, y: 20.171284, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1791465169}
@@ -4531,7 +4532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4576,7 +4577,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2003649677}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 33.87821, y: -6.6744933, z: 0}
+  m_LocalPosition: {x: 44.298206, y: -8.806513, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 802996688}
@@ -4650,7 +4651,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032789153}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.804718, y: -88.822296, z: 0}
+  m_LocalPosition: {x: -0.1000061, y: -122.660126, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 256516333}
@@ -4659,10 +4660,10 @@ RectTransform:
   m_Father: {fileID: 2133111934}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.017345773, y: 0}
-  m_AnchorMax: {x: 0.97200006, y: 0.39000002}
-  m_AnchoredPosition: {x: 3.3999596, y: 0.2599945}
-  m_SizeDelta: {x: -8.497002, y: 0.9}
+  m_AnchorMin: {x: 0.028, y: 0}
+  m_AnchorMax: {x: 0.97200006, y: 0.35016677}
+  m_AnchoredPosition: {x: -0.100040436, y: 0.7249985}
+  m_SizeDelta: {x: -1.5, y: 1.4499998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2032789155
 MonoBehaviour:
@@ -4696,7 +4697,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "If you want to contact me, here is my email and social:\n\nEmail: \tkaiyunxue0239@gmial.com\nLinkedIn:\thttps://www.linkedin.com/in/kaiyun-xue-89921313a/\n\nIf
+  m_Text: "If you want to contact me, here is my email and social:\n\nTwitter: \thttps://twitter.com/KaiyunXue\nLinkedIn:\thttps://www.linkedin.com/in/kaiyun-xue-89921313a/\n\nIf
     you are also a game developer, here is my GitHub:\nGitHub:https://github.com/kaiyunxue\n[Attention]
     This project in my repository has ignored the resources from Blizzard and other
     non-original resources.\n"
@@ -4813,7 +4814,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 80a35b8488a5a394f8e1067531b730fb, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4950,7 +4951,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2060868689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 271, y: 169.5, z: 0}
+  m_LocalPosition: {x: 354.5, y: 221.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 946009893}
@@ -5096,7 +5097,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2084074454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.23071289, y: 0.0009918213, z: 0}
+  m_LocalPosition: {x: -0.30163574, y: 0.0009918213, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 762022079}
@@ -5133,7 +5134,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2133111933}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7585907, y: 0.000015258789, z: 0}
+  m_LocalPosition: {x: 0.37606812, y: 0.000030517578, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1206857670}

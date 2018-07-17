@@ -77,7 +77,7 @@ public class RagnarosRuneBomb : HeroSkill, ISkill
                 StartCdColding();
                 hero.statusBox.cdBar.StartCooling(skillIcon, cd);
             }
-            StopAllCoroutines();
+            //StopAllCoroutines();
         }
         else
         {
