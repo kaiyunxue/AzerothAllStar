@@ -14,7 +14,7 @@ namespace ArthasDomain
 
         public override void StartSkill(Animator animator)
         {
-            weapon.TurnOnPhyAttack();
+            weapon.TurnOnPhyAttack(0.3f);
 
         }
 

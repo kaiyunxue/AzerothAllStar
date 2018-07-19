@@ -20,7 +20,7 @@ namespace ArthasDomain
 
         public override void StopSkill(Animator animator, bool isBreak = false)
         {
-            if(isBreak)
+            if(isBreak && currentCoroutine != null)
             {
                 Debug.Log("aaa");
                 StopCoroutine(currentCoroutine);

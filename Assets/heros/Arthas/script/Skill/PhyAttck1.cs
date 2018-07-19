@@ -11,7 +11,7 @@ namespace ArthasDomain
         Coroutine skillCoroutine;
         public override void StartSkill(Animator animator)
         {
-            weapon.TurnOnPhyAttack();
+            weapon.TurnOnPhyAttack(0.3f);
             StartCoroutine(waitSeconds(animator));
         }
         IEnumerator waitSeconds(Animator animator)
