@@ -56,7 +56,6 @@ public class RagnarosMoltenCore : HeroSkill, ISkill
     }
     private void FixedUpdate()
     {
-        Debug.Log(contTime);
         if(hero.state.Stage == 3 && contTime > 0)
         {
             contTime += hero.state.Mana * 1f;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RagnarosPhyAttack : HeroSkill, ISkill
+public class RagnarosPhyAttack : HeroSkill
 {
     public AudioClip die;
     bool isDoubleAttack;
