@@ -13,6 +13,8 @@ public class Hero : KOFItem
     [SerializeField]
     protected HerosRegistrar heroRegister;
 
+    public HatredCurveTemplate hatredTemplate;
+
     public State state;
     public HerosRegistrar HeroRegister
     {
@@ -24,6 +26,7 @@ public class Hero : KOFItem
     protected override void Awake()
     {
         base.Awake();
+        this.hatredCurve = hatredTemplate.heroCurve;
         if (gameObject.layer == 8)
             inputListener = GameController.LeftInputListener;
         else

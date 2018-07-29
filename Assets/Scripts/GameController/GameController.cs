@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
     public static GameController instance;
-    static Registrar register;
-    static GameObject battleZone;
-    static InputListener[] inputListener = new InputListener[2];
+    public static Registrar register;
+    public static GameObject battleZone;
+    public static InputListener[] inputListener = new InputListener[2];
 
     void Awake()
     {

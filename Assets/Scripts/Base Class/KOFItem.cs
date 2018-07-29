@@ -5,6 +5,7 @@ using UnityEngine;
 public class KOFItem : MonoBehaviour
 {
     public KOFItem speller;
+    public AnimationCurve hatredCurve;
     int[] kofID;
     public virtual int GetMaxInstance() 
     {

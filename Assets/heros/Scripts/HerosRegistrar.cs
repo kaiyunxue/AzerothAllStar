@@ -46,7 +46,7 @@ public class HerosRegistrar : MonoBehaviour {
 
     }
 
-    internal GameObject[] GetAllGameItems()
+    public GameObject[] GetAllGameItems()
     {
         List<GameObject> list = new List<GameObject>();
         foreach(List<GameObject> l in itemsRegistrar.Values)
