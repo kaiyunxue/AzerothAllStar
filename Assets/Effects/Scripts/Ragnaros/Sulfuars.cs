@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sulfuars : SkillItemsBehaviourController
+public class Sulfuars : Weapon
 {
     AudioSource audioSource;
     public ParticleSystem trail;

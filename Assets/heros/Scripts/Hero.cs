@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Hero : KOFItem
 {
-    public SkillItemsBehaviourController weapon;
+    public Weapon weapon;
     public Animator animator;
     public ISkillManager skillManager;
     public StatusBox statusBox;

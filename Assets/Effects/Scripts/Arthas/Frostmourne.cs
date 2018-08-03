@@ -4,9 +4,8 @@ using UnityEngine;
 
 namespace ArthasDomain
 {
-    public class Frostmourne : SkillItemsBehaviourController
+    public class Frostmourne : Weapon
     {
-        public GameObject soellPointer;
         AudioSource audioSource;
         private float phyDamageVal = 100;
         private bool isPhyAttack;

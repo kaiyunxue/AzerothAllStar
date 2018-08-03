@@ -5,7 +5,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class SpriteLine : SkillItemsBehaviourController
 {
-    Vector3 startPos;
+    Transform startPos;
     Vector3 endPos;
     public LineRenderer line;
     protected override void Awake()
@@ -16,9 +16,14 @@ public class SpriteLine : SkillItemsBehaviourController
     {
         base.OnEnable();
     }
-    public void SetLine(Vector3 startPos, Vector3 endPos)
+    public void SetLine(Transform startPos, Vector3 endPos)
     {
         this.startPos = startPos;
         this.endPos = endPos;
+    }
+    private void FixedUpdate()
+    {
+        line.SetPosition(0, startPos.position);
+        line.SetPosition(1, endPos);
     }
 }

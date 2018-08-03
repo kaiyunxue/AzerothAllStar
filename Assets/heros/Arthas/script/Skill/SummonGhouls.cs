@@ -59,7 +59,6 @@ namespace ArthasDomain
 
         {
             Vector3[] positions = new Vector3[n];
-            spriteLineInstances = new SpriteLine[n];
             float pAngle = 360 / n;
 
             for (int i = 0; i < n; i++)
@@ -70,19 +69,19 @@ namespace ArthasDomain
 
                 positions[i] = transform.position +  new Vector3(r * Mathf.Cos(angle / 180 * Mathf.PI), 0 , r * Mathf.Sin(angle / 180 * Mathf.PI));
 
-                spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, GameController.instance.transform, gameObject.layer);
-                Frostmourne f = hero.weapon as Frostmourne;
-                spriteLineInstances[i].SetLine(f.speller.transform.position, positions[i]);
-
             }
             return positions;
         }
         void StartSummonGhouls(Vector3[] positions)
         {
-            foreach(Vector3 v in positions)
+            int n = positions.Length;
+            spriteLineInstances = new SpriteLine[n];
+            for (int i = 0; i < n; i++)
             {
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                cube.transform.position = v;
+                cube.transform.position = positions[i];
+                spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, null, gameObject.layer);
+                spriteLineInstances[i].SetLine(hero.weapon.spellPoint.transform, positions[i]);
             }
         }
     }
