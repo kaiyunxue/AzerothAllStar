@@ -19,7 +19,7 @@ namespace ArthasDomain
         public override void StartSkill(Animator animator)
 
         {
-            StartSummonGhouls(GetSummonGhoulsPosition(3));
+            StartCoroutine( StartSummonGhouls(GetSummonGhoulsPosition(3), animator));
 
         }
 
@@ -28,9 +28,17 @@ namespace ArthasDomain
         public override void StopSkill(Animator animator, bool isBreak = false)
 
         {
+            if(isBreak)
+            {
 
-            throw new NotImplementedException();
-
+            }
+            else
+            {
+                foreach(var v in spriteLineInstances)
+                {
+                    KOFItem.DestoryByPool(v);
+                }
+            }
         }
 
 
@@ -72,17 +80,21 @@ namespace ArthasDomain
             }
             return positions;
         }
-        void StartSummonGhouls(Vector3[] positions)
+        IEnumerator StartSummonGhouls(Vector3[] positions, Animator animator)
         {
+            yield return new WaitForSeconds(0.5f);
             int n = positions.Length;
             spriteLineInstances = new SpriteLine[n];
             for (int i = 0; i < n; i++)
             {
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
                 cube.transform.position = positions[i];
-                spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, null, gameObject.layer);
+                cube.transform.SetParent(GameController.instance.transform, true);
+                spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, GameController.instance.transform, gameObject.layer);
                 spriteLineInstances[i].SetLine(hero.weapon.spellPoint.transform, positions[i]);
             }
+            yield return new WaitForSeconds(1.4f);
+            StopSkill(animator);
         }
     }
 }
