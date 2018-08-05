@@ -5,12 +5,12 @@ using UnityEngine;
 
 namespace ArthasDomain
 {
-
-
     [ExecuteInEditMode]
     public class SummonGhouls : HeroSkill
 
     {
+        public Ghoul ghoul;
+        public Ghoul[] ghoulInstance;
         public SpriteLine spriteLine;
         public SpriteLine[] spriteLineInstances;
         public float r;
@@ -84,12 +84,15 @@ namespace ArthasDomain
         {
             yield return new WaitForSeconds(0.5f);
             int n = positions.Length;
+            ghoulInstance = new Ghoul[n];
             spriteLineInstances = new SpriteLine[n];
             for (int i = 0; i < n; i++)
             {
-                GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                cube.transform.position = positions[i];
-                cube.transform.SetParent(GameController.instance.transform, true);
+                ghoulInstance[i] = KOFItem.InstantiateByPool(ghoul,GameController.instance.transform ,gameObject.layer);
+                ghoulInstance[i].transform.position = positions[i];
+                //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+                //cube.transform.position = positions[i];
+                //cube.transform.SetParent(GameController.instance.transform, true);
                 spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, GameController.instance.transform, gameObject.layer);
                 spriteLineInstances[i].SetLine(hero.weapon.spellPoint.transform, positions[i]);
             }

@@ -281,6 +281,8 @@ GameObject:
   - component: {fileID: 421930}
   - component: {fileID: 14344678}
   - component: {fileID: 12041888}
+  - component: {fileID: 114205963962416800}
+  - component: {fileID: 114928293821538912}
   m_Layer: 0
   m_Name: Ghoul
   m_TagString: Untagged
@@ -540,7 +542,6 @@ GameObject:
   m_Component:
   - component: {fileID: 489578}
   - component: {fileID: 9527744}
-  - component: {fileID: 11450904}
   m_Layer: 0
   m_Name: Ghoul
   m_TagString: Untagged
@@ -1093,7 +1094,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125026}
   m_LocalRotation: {x: 0, y: -0.5174987, z: 0, w: 0.85568404}
-  m_LocalPosition: {x: -3.14, y: 0.47, z: 1.82}
+  m_LocalPosition: {x: -3.14, y: 0.001, z: 1.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 493762}
@@ -1848,28 +1849,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11450904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 148172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea968e294c7284547925152e73a10874, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cc: {fileID: 14344678}
-  plane: {fileID: 145736}
-  Ghoul: {fileID: 125026}
-  target: {fileID: 100000, guid: 2e9e7213d8fd09d45a3b7edc75ee13b7, type: 3}
-  animator_ctrler: {fileID: 9527744}
-  time: 0
-  health: 0
-  dis: 0
-  speed: 0.12
-  targetposition: {x: 0, y: 0, z: 0}
-  IsBorn: 0
 --- !u!120 &12041888
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -2095,3 +2074,43 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 125026}
   m_IsPrefabParent: 1
+--- !u!114 &114205963962416800
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9c5edf62539ec4f998a8aa397915cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  mana: 0
+  MaxHealth: 0
+  MaxMana: 0
+  Defense: 0
+  Stage: 0
+--- !u!114 &114928293821538912
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e08a62688fda4a64ebda5f4bac3643c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  livingTime: 0
+  AttackDis: 0
+  target: {fileID: 0}
+  state: {fileID: 0}
+  template: {fileID: 11400000, guid: 27f07fbe7d79d3947a8e93323ec726cf, type: 2}

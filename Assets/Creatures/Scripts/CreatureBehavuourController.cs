@@ -39,4 +39,40 @@ public class CreatureBehavuourController : KOFItem
         yield return null;
         DestoryByPool(this);
     }
+    protected virtual KOFItem getMaxHatredObject()
+    {
+        HerosRegistrar enemyRegister = null;
+        if(gameObject.layer == 8)
+        {
+            enemyRegister = GameController.register.RightHero.HeroRegister;
+        }
+        else if(gameObject.layer == 9)
+        {
+            enemyRegister = GameController.register.LeftHero.HeroRegister;
+        }
+        else
+        {
+            Debug.LogError(gameObject.name + ": Can't find its layer");
+        }
+        float maxHatredVal = 0;
+        KOFItem target = null;
+        foreach(var v in enemyRegister.GetAllGameItems())
+        {
+            if(v.GetComponent<KOFItem>() == null)
+            {
+                Debug.LogError("代码写的不好，需要改------- 不是一个有效的kofitem");
+            }
+            else
+            {
+                float distance = Vector3.Distance(transform.position, v.transform.position);
+                float hatredVal = v.GetComponent<KOFItem>().hatredCurve.Evaluate(distance);
+                if(hatredVal > maxHatredVal)
+                {
+                    maxHatredVal = hatredVal;
+                    target = v.GetComponent<KOFItem>();
+                }
+            }
+        }
+        return target;
+    }
 }
