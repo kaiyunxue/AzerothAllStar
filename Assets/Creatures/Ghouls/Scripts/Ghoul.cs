@@ -20,11 +20,28 @@ public class Ghoul : CreatureBehavuourController {
     protected override void OnEnable()
     {
         base.OnEnable();
+    }
+    private void Start()
+    {
         SetTarget(getMaxHatredObject().gameObject);
+        StartCoroutine(startBehave());
+    }
+    IEnumerator startBehave()
+    {
+        yield return new WaitForSeconds(4f);
+        Debug.Log("go");
+        StartCoroutine(behaveUpdate());
+    }
+    IEnumerator behaveUpdate()
+    {
+        yield return new WaitForEndOfFrame();
+        StartCoroutine(behaveUpdate());
     }
     public override void SetTarget(GameObject target)
     {
         base.SetTarget(target);
-        transform.LookAt(target.transform);
+        Vector3 targetPos = target.transform.position;
+        targetPos.y = transform.position.y;
+        transform.LookAt(targetPos);
     }
 }
