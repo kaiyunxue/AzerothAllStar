@@ -25,11 +25,17 @@ public class Ghoul : CreatureBehavuourController {
     {
         SetTarget(getMaxHatredObject().gameObject);
         StartCoroutine(startBehave());
+        StartCoroutine(switchTarget());
+    }
+    IEnumerator switchTarget()
+    {
+        SetTarget(getMaxHatredObject().gameObject);
+        yield return new WaitForSeconds(1);
+        StartCoroutine(switchTarget());
     }
     IEnumerator startBehave()
     {
         yield return new WaitForSeconds(4f);
-        Debug.Log("go");
         StartCoroutine(behaveUpdate());
     }
     IEnumerator behaveUpdate()
