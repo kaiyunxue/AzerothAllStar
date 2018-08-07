@@ -66,6 +66,7 @@ public class CreatureBehavuourController : KOFItem
             {
                 float distance = Vector3.Distance(transform.position, v.transform.position);
                 float hatredVal = v.GetComponent<KOFItem>().hatredCurve.Evaluate(distance);
+                Debug.Log("name: " + v.name + " distance:" + distance + " hatred: " + hatredVal);
                 if(hatredVal > maxHatredVal)
                 {
                     maxHatredVal = hatredVal;

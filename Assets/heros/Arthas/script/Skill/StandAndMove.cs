@@ -22,7 +22,6 @@ namespace ArthasDomain
         {
             if(isBreak && currentCoroutine != null)
             {
-                Debug.Log("aaa");
                 StopCoroutine(currentCoroutine);
             }
         }

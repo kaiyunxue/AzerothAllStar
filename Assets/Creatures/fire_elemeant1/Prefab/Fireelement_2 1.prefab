@@ -2360,6 +2360,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   livingTime: 0
   AttackDis: 3
   target: {fileID: 0}
@@ -2370,6 +2376,7 @@ MonoBehaviour:
   speed: 1
   hand: {fileID: 4245934202858400}
   effect: {fileID: 1253543455790548}
+  template: {fileID: 11400000, guid: 27f07fbe7d79d3947a8e93323ec726cf, type: 2}
 --- !u!114 &114324379088336320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2596,6 +2603,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   target: {fileID: 0}
   livingTime: 0
   FlyDistanceForProjectiles: 30

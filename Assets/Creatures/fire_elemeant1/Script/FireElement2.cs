@@ -12,9 +12,11 @@ public class FireElement2 : CreatureBehavuourController
     public float speed;
     public Transform hand;
     public GameObject effect;
+    public HatredCurveTemplate template;
     protected override void OnEnable()
     {
         base.OnEnable();
+        hatredCurve = template.mobsCurve;
         Target = GameController.Register.RightHero.gameObject;
         AttackDis_Copy = AttackDis;
         effect.SetActive(false);
