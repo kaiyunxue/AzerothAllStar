@@ -91,6 +91,7 @@ public class PoolManager : MonoBehaviour {
     {
         instance = this;
         gameObject.name = "PoolManager";
+        
     }
     // Use this for initialization
     void Start ()
