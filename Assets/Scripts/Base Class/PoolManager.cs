@@ -7,6 +7,10 @@ public class PoolManager : MonoBehaviour {
     public static PoolManager instance;
 
     Dictionary<string, Stack<KOFItem>> objectPool = new Dictionary<string, Stack<KOFItem>>();
+    Dictionary<string, Stack<SkillItemsBehaviourController>> leftEffectPool;
+    Dictionary<string, Stack<CreatureBehavuourController>> leftModesPool;
+    Dictionary<string, Stack<SkillItemsBehaviourController>> rightEffectPool;
+    Dictionary<string, Stack<CreatureBehavuourController>> rightModesPool;
 
     public void PushToPool<T>(T item) where T: KOFItem
     {
