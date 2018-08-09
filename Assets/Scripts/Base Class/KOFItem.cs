@@ -38,7 +38,7 @@ public class KOFItem : MonoBehaviour
         {
             if (GameController.instance != null)
             {
-                GameController.Register.LeftHero.HeroRegister.Enroll(this);
+                GameController.Register.LeftHero.HeroRegister.Remove(this);
             }
             else
             {
@@ -49,7 +49,7 @@ public class KOFItem : MonoBehaviour
         {
             if (GameController.instance != null)
             {
-                GameController.Register.RightHero.HeroRegister.Enroll(this);
+                GameController.Register.RightHero.HeroRegister.Remove(this);
             }
             else
             {
@@ -147,6 +147,7 @@ public class KOFItem : MonoBehaviour
         else
         {
             item.gameObject.SetActive(false);
+            GameController.register.FindHeroByLayer(item.gameObject.layer).HeroRegister.Remove(item);
             PoolManager.instance.PushToPool(item);
         }
     }

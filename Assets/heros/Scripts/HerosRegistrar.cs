@@ -8,8 +8,10 @@ public class HerosRegistrar : MonoBehaviour {
     public void Remove<T>(T t) where T: KOFItem
     {
         List<GameObject> list;
-        itemsRegistrar.TryGetValue(t.GetType().FullName, out list);
-        list.Remove(t.gameObject);
+        if (itemsRegistrar.TryGetValue(t.GetType().FullName, out list))
+            list.Remove(t.gameObject);
+        else
+            Debug.LogWarning("Didn't enroll first");
     }
     public void Enroll<T>(T item) where T: KOFItem
     {
@@ -54,5 +56,12 @@ public class HerosRegistrar : MonoBehaviour {
             list.AddRange(l);
         }
         return list.ToArray();
+    }
+    private void Update()
+    {
+        foreach(var v in GetAllGameItems())
+        {
+            Debug.Log(v.name);
+        }
     }
 }

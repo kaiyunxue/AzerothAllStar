@@ -54,7 +54,9 @@ public class RagnarosMoltenSeed : HeroSkill, ISkill
     public override bool IsReady()
     {
         if (hero.GetComponent<HerosRegistrar>().SearchCompontent("FireTrap") == null)
+        {
             return false;
+        }
         if (hero.state.Stage != 0)
             return false;
         if (!Lock)
