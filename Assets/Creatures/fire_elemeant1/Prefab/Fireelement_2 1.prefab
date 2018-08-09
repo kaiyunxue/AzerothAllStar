@@ -2366,6 +2366,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  isNeedEnroll: 1
   livingTime: 0
   AttackDis: 3
   target: {fileID: 0}
@@ -2609,6 +2610,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  isNeedEnroll: 0
   target: {fileID: 0}
   livingTime: 0
   FlyDistanceForProjectiles: 30

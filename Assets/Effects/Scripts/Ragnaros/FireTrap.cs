@@ -14,8 +14,9 @@ public class FireTrap : SkillItemsBehaviourController
         damage = new RagnarosDamage(30, DamageType.Fire, gameObject.layer);
         flameIniPos = flame.transform.localPosition;
     }
-    protected new void OnEnable()
+    override protected void OnEnable()
     {
+        base.OnEnable();
         time_ = 0;
         fireWave.SetActive(false);
         flame.SetActive(false);

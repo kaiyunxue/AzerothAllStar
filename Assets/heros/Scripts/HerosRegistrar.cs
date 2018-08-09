@@ -11,7 +11,7 @@ public class HerosRegistrar : MonoBehaviour {
         if (itemsRegistrar.TryGetValue(t.GetType().FullName, out list))
             list.Remove(t.gameObject);
         else
-            Debug.LogWarning("Didn't enroll first");
+            Debug.LogErrorFormat(t.gameObject, "Didn't enroll before use.");
     }
     public void Enroll<T>(T item) where T: KOFItem
     {
@@ -59,9 +59,9 @@ public class HerosRegistrar : MonoBehaviour {
     }
     private void Update()
     {
-        foreach(var v in GetAllGameItems())
-        {
-            Debug.Log(v.name);
-        }
+        //foreach(var v in GetAllGameItems())
+        //{
+        //    Debug.Log(v.name);
+        //}
     }
 }

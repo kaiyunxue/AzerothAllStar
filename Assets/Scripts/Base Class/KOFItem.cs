@@ -7,6 +7,7 @@ public class KOFItem : MonoBehaviour
     public KOFItem speller;
     public AnimationCurve hatredCurve;
     int[] kofID;
+    public bool isNeedEnroll = true;
     public virtual int GetMaxInstance() 
     {
         return -1;
@@ -17,43 +18,51 @@ public class KOFItem : MonoBehaviour
     }
     protected virtual void OnEnable()
     {
-        if (gameObject.layer == 8)
+        if(isNeedEnroll)
         {
-            if (GameController.instance != null)
+
+            if (gameObject.layer == 8)
             {
-                GameController.Register.LeftHero.HeroRegister.Enroll(this);
+                if (GameController.instance != null)
+                {
+                    GameController.Register.LeftHero.HeroRegister.Enroll(this);
+                }
             }
-        }
-        if (gameObject.layer == 9)
-        {
-            if (GameController.instance != null)
+            if (gameObject.layer == 9)
             {
-                GameController.Register.RightHero.HeroRegister.Enroll(this);
+                if (GameController.instance != null)
+                {
+                    GameController.Register.RightHero.HeroRegister.Enroll(this);
+                }
             }
         }
     }
     protected void OnDisable()
     {
-        if (gameObject.layer == 8)
+        if(isNeedEnroll)
         {
-            if (GameController.instance != null)
+
+            if (gameObject.layer == 8)
             {
-                GameController.Register.LeftHero.HeroRegister.Remove(this);
+                if (GameController.instance != null)
+                {
+                    GameController.Register.LeftHero.HeroRegister.Remove(this);
+                }
+                else
+                {
+                    Debug.LogWarning("This is not a game scene");
+                }
             }
-            else
+            if (gameObject.layer == 9)
             {
-                Debug.LogWarning("This is not a game scene");
-            }
-        }
-        if (gameObject.layer == 9)
-        {
-            if (GameController.instance != null)
-            {
-                GameController.Register.RightHero.HeroRegister.Remove(this);
-            }
-            else
-            {
-                Debug.LogWarning("This is not a game scene");
+                if (GameController.instance != null)
+                {
+                    GameController.Register.RightHero.HeroRegister.Remove(this);
+                }
+                else
+                {
+                    Debug.LogWarning("This is not a game scene");
+                }
             }
         }
     }

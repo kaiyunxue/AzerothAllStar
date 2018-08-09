@@ -13,7 +13,7 @@ public class FireElement2 : CreatureBehavuourController
     public Transform hand;
     public GameObject effect;
     public HatredCurveTemplate template;
-    protected override void OnEnable()
+    override protected void OnEnable()
     {
         base.OnEnable();
         hatredCurve = template.mobsCurve;
