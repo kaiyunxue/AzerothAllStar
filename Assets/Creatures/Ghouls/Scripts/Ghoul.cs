@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ghoul : CreatureBehavuourController {
     public HatredCurveTemplate template;
+    public GameObject plate;
     protected override void Awake()
     {
         base.Awake();

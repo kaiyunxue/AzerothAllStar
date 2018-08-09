@@ -34,6 +34,24 @@ public class CreatureBehavuourController : KOFItem
         base.OnEnable();
         state.StateInit();
         StartCoroutine(Live());
+        StartCoroutine(FrontTest());
+    }
+    protected IEnumerator FrontTest()
+    {
+
+        foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,10000))
+        {
+            if (hit.collider.gameObject != gameObject && hit.collider.gameObject.layer == gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
+            {
+                Debug.Log("fff");
+                Vector3 dir = hit.collider.transform.position - transform.position;
+                dir = new Vector3(0, 0, 10);
+                Debug.Log(GetComponent<Rigidbody>());
+                GetComponent<Rigidbody>().AddForce(dir);
+            }
+        }
+        yield return new WaitForEndOfFrame();
+        StartCoroutine(FrontTest());
     }
     public virtual IEnumerator Die()
     {
