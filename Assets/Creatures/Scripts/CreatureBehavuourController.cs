@@ -39,11 +39,10 @@ public class CreatureBehavuourController : KOFItem
     protected IEnumerator FrontTest()
     {
 
-        foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,10000))
+        foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,1f))
         {
             if (hit.collider.gameObject != gameObject && hit.collider.gameObject.layer == gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
             {
-                Debug.Log("fff");
                 Vector3 dir = hit.collider.transform.position - transform.position;
                 dir = new Vector3(0, 0, 10);
                 Debug.Log(GetComponent<Rigidbody>());

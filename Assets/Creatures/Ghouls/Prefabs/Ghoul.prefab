@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 464290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,7 +23,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 493410}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38,7 +38,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 450808}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469880}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 455178}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_51
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 468324}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 468580}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_46
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 482244}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 465876}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_47
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 444098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 474794}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_44
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 493234}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 425236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 424514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_54
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   m_Component:
   - component: {fileID: 423056}
   - component: {fileID: 13766000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -234,7 +234,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 405502}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 430766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 489202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,8 @@ GameObject:
   - component: {fileID: 114928293821538912}
   - component: {fileID: 54808105527061890}
   - component: {fileID: 136160890582232938}
-  m_Layer: 0
+  - component: {fileID: 95309073992729750}
+  m_Layer: 9
   m_Name: Ghoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +299,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 495652}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +314,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 457756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +329,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469088}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_37
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +344,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 478444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +359,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 424624}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -373,7 +374,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 477574}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_49
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +389,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 481132}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -403,7 +404,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 485648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +419,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 405200}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +434,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 460158}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_42
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,7 +449,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400774}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -463,7 +464,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 488176}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_36
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -478,7 +479,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 417124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +494,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 437466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -508,7 +509,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 450400}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_48
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +526,7 @@ GameObject:
   - component: {fileID: 493762}
   - component: {fileID: 3314326}
   - component: {fileID: 2329836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -541,7 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 489578}
   - component: {fileID: 9527744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ghoul
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -556,7 +557,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 442520}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -571,7 +572,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 420582}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,7 +587,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 408248}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_43
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -601,7 +602,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 433890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +617,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469608}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +632,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 477648}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +647,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 434378}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +662,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 462536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,7 +677,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 422676}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_52
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +692,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 480860}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_45
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +707,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469748}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_40
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -721,7 +722,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 457878}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -736,7 +737,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 492872}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -751,7 +752,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 401236}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +767,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 413438}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -781,7 +782,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 469012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +797,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 400570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_53
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +812,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 445002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_55
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +827,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 401616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +842,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 415832}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_31
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -856,7 +857,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 437316}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_41
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +872,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 447836}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_50
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -886,7 +887,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 459182}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_39
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -901,7 +902,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 452570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -916,7 +917,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 438202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: northrendghoulspiked_bone_38
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1824,7 +1825,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 148172}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 314a8c65cc2756e41b468a96b18c2838, type: 3}
   m_Controller: {fileID: 9100000, guid: 50a0de833fbc5574487b1e57b504698b, type: 2}
   m_CullingMode: 1
@@ -1963,6 +1964,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &95309073992729750
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 125026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 314a8c65cc2756e41b468a96b18c2838, type: 3}
+  m_Controller: {fileID: 9100000, guid: 50a0de833fbc5574487b1e57b504698b, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114205963962416800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2004,7 +2022,7 @@ MonoBehaviour:
   target: {fileID: 0}
   state: {fileID: 0}
   template: {fileID: 11400000, guid: 27f07fbe7d79d3947a8e93323ec726cf, type: 2}
-  plate: {fileID: 0}
+  plate: {fileID: 145736}
 --- !u!136 &136160890582232938
 CapsuleCollider:
   m_ObjectHideFlags: 1

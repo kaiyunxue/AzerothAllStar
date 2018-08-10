@@ -727,6 +727,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a3d6919f354e194d87a79cf0f1f649f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isNeedEnroll: 0
   target: {fileID: 0}
   livingTime: 0
 --- !u!114 &114390072289567242
@@ -983,6 +991,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 562ae1dd58ef62b44adbec7f3131e0a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isNeedEnroll: 1
   target: {fileID: 0}
   livingTime: 5
 --- !u!114 &114899517449133282

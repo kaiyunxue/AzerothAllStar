@@ -21,12 +21,17 @@ public class Ghoul : CreatureBehavuourController {
     protected override void OnEnable()
     {
         base.OnEnable();
+        plate.SetActive(true);
     }
     private void Start()
     {
         SetTarget(getMaxHatredObject().gameObject);
         StartCoroutine(startBehave());
         StartCoroutine(switchTarget());
+    }
+    void plateDsapr()
+    {
+        plate.SetActive(false);
     }
     IEnumerator switchTarget()
     {
@@ -37,11 +42,30 @@ public class Ghoul : CreatureBehavuourController {
     IEnumerator startBehave()
     {
         yield return new WaitForSeconds(4f);
+        plateDsapr();
         StartCoroutine(behaveUpdate());
     }
     IEnumerator behaveUpdate()
     {
         yield return new WaitForEndOfFrame();
+        Ray ray = new Ray(transform.position, transform.forward);
+        bool isNearTarget = false; ;
+        foreach(var hit in Physics.RaycastAll(ray, 1))
+        {
+            if(hit.collider.gameObject == target)
+            {
+                GetComponent<Animator>().SetBool("Attack", true);
+                isNearTarget = true;
+                break;
+            }
+        }
+        if(!isNearTarget)
+        {
+            GetComponent<Animator>().SetBool("Attack", false);
+            Vector3 dir = target.transform.position - transform.position;
+            dir.y = 0;
+            transform.position += dir.normalized * Time.deltaTime;
+        }
         StartCoroutine(behaveUpdate());
     }
     public override void SetTarget(GameObject target)
