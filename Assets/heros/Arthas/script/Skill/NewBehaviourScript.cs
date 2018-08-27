@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkillTemplate : HeroSkill
+public class NewBehaviourScript : HeroSkill
 {
+    public Weapon weapon;
     protected override void Awake()
     {
         base.Awake();

@@ -4,16 +4,16 @@ using UnityEditor.ProjectWindowCallback;
 using System.IO;
 using UnityEditor;
 
-public class CreateNewSkill
+public class CreatNewSubScript
 {
-    [MenuItem("Assets/Create/My C# Script/New Skill", false, 80)]
-    public static void CreateNewSkillScript()
+    [MenuItem("Assets/Create/My C# Script", false, 80)]
+    public static void CreateNewSkill()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
-            ScriptableObject.CreateInstance<CreateScriptAssetAction>(),
+            ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
             GetSelectedPathOrFallback() + "/New Skill.cs",
             null,
-            "Assets/Editor/Template/SkillTemplate.cs");
+            "Assets/Editor/Template/SkillTemplate.txt");
     }
     public static string GetSelectedPathOrFallback()
     {
