@@ -4,14 +4,22 @@ using System.IO;
 
 public class CreateAssets : EditorWindow
 {
-
-    [MenuItem("Window/CreatAssets")]
+    [MenuItem("Window/CreatScripts")]
+    [MenuItem("Assets/Create/My C# Script/Advanced", false, 0)]
     static void Open()
     {
         GetWindow<CreateAssets>();
     }
+    public enum CreateScriptType
+    {
+        Skill,
+        Hero,
+        Mob,
+        SkillBullet
+    }
+    CreateScriptType scriptType;
 
-    public string scriptName, materialName;
+    public string scriptName;
     void OnGUI()
     {
         var options = new[] { GUILayout.Width(100), GUILayout.Height(20) };
@@ -22,27 +30,15 @@ public class CreateAssets : EditorWindow
         EditorGUILayout.LabelField("ScriptName", options);
         scriptName = EditorGUILayout.TextArea(scriptName);
         EditorGUILayout.EndHorizontal();
+        var opitions = new string[] { "Skill", "Hero", "Mob", "SkillBullet" };
+        int n = opitions.Length;
+        EditorGUILayout.Popup("ClassType", 0, opitions, GUIStyle.none);
 
 
         if (GUILayout.Button("Create"))
         {
-
             CreateScript(scriptName);
         }
-
-        GUILayout.Label("CreateMaterial");
-        EditorGUILayout.Space();
-        EditorGUILayout.BeginHorizontal();
-        EditorGUILayout.LabelField("materialName", options);
-        materialName = EditorGUILayout.TextArea(materialName);
-        EditorGUILayout.EndHorizontal();
-
-
-        if (GUILayout.Button("Create"))
-        {
-            CreateMaterial(materialName);
-        }
-
     }
     //  新建自定义脚本
     static void CreateScript(string scriptName)
@@ -69,7 +65,7 @@ public class CreateAssets : EditorWindow
         var icon = AssetPreview.GetMiniThumbnail(material);
 
         var endNameEditAction =
-            ScriptableObject.CreateInstance<DoCreateMaterialAsset>();
+            ScriptableObject.CreateInstance<DoCreateScriptAsset>();
 
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(instanceID,
             endNameEditAction, materialName + ".mat", icon, "");
