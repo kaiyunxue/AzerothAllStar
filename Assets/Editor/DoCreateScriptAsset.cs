@@ -16,10 +16,9 @@ public class DoCreateScriptAsset : EndNameEditAction
         className = className.Replace(" ", "");
 
 
-        text = "//Programer: " + "porgramerName" + "\n//code date:" + DateTime.Now.Date.ToShortDateString() + "\n"
+        text = "//Programer: " + "KevinX" + "\n//code date:" + DateTime.Now.Date.ToShortDateString() + "\n"
         + text.Replace("#SCRIPTNAME#", className);
 
-        text += "\n//自己添加Something！" + "\n";
 
         //utf8
         var encoding = new UTF8Encoding(true, false);

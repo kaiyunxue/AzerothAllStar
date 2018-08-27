@@ -6,7 +6,7 @@ using UnityEditor;
 
 public class CreatNewSubScript
 {
-    [MenuItem("Assets/Create/My C# Script", false, 80)]
+    [MenuItem("Assets/Create/My C# Script/new Skill", false, 80)]
     public static void CreateNewSkill()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
