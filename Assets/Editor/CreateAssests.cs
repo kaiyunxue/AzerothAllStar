@@ -42,11 +42,13 @@ public class CreateAssets : EditorWindow
                 CreatNewSubScript.CreateNewSkill(scriptName);
                 break;
             case 1:
-                CreatNewSubScript.CreatNewHero(scriptName);
+                CreatNewSubScript.CreateNewHero(scriptName);
                 break;
             case 2:
+                CreatNewSubScript.CreateNewMob(scriptName);
                 break;
             case 3:
+                CreatNewSubScript.CreateNewSkillBullet(scriptName);
                 break;
             default:
                 Debug.Log("Don't have this case");

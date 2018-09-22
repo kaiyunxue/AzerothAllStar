@@ -24,7 +24,7 @@ public class CreatNewSubScript
         "Assets/Editor/Template/SkillTemplate.txt");
     }
     [MenuItem("Assets/Create/My C# Script/new Hero", false, 80)]
-    public static void CreatNewHero()
+    public static void CreateNewHero()
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
         ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
@@ -32,7 +32,7 @@ public class CreatNewSubScript
          null,
         "Assets/Editor/Template/HeroTemplate.txt");
     }
-    public static void CreatNewHero(string name)
+    public static void CreateNewHero(string name)
     {
         ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
         ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
@@ -41,6 +41,42 @@ public class CreatNewSubScript
         "Assets/Editor/Template/HeroTemplate.txt");
     }
 
+    [MenuItem("Assets/Create/My C# Script/new Mob", false, 80)]
+    public static void CreateNewMob()
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/New Mob" +
+        ".cs",
+         null,
+        "Assets/Editor/Template/MobTemplate.txt");
+    }
+    public static void CreateNewMob(string name)
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/" + name + ".cs",
+         null,
+        "Assets/Editor/Template/MobTemplate.txt");
+    }
+
+    [MenuItem("Assets/Create/My C# Script/new Bullet", false, 80)]
+    public static void CreateNewSkillBullet()
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/New Skill Bullet.cs",
+         null,
+        "Assets/Editor/Template/SkillBulletTemplate.txt");
+    }
+    public static void CreateNewSkillBullet(string name)
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/" + name + ".cs",
+         null,
+        "Assets/Editor/Template/SkillBulletTemplate.txt");
+    }
 
 
 
