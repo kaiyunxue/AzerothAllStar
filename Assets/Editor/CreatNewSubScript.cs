@@ -15,6 +15,35 @@ public class CreatNewSubScript
             null,
             "Assets/Editor/Template/SkillTemplate.txt");
     }
+    public static void CreateNewSkill(string name)
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/" + name +".cs",
+        null,
+        "Assets/Editor/Template/SkillTemplate.txt");
+    }
+    [MenuItem("Assets/Create/My C# Script/new Hero", false, 80)]
+    public static void CreatNewHero()
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/New Hero.cs",
+         null,
+        "Assets/Editor/Template/HeroTemplate.txt");
+    }
+    public static void CreatNewHero(string name)
+    {
+        ProjectWindowUtil.StartNameEditingIfProjectWindowExists(0,
+        ScriptableObject.CreateInstance<DoCreateScriptAsset>(),
+        GetSelectedPathOrFallback() + "/" + name + ".cs",
+         null,
+        "Assets/Editor/Template/HeroTemplate.txt");
+    }
+
+
+
+
     public static string GetSelectedPathOrFallback()
     {
         string path = "Assets";
