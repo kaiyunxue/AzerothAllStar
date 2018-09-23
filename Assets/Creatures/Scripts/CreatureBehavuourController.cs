@@ -52,6 +52,14 @@ public class CreatureBehavuourController : KOFItem
         yield return new WaitForEndOfFrame();
         StartCoroutine(FrontTest());
     }
+
+    protected virtual IEnumerator switchTarget()
+    {
+        SetTarget(getMaxHatredObject().gameObject);
+        yield return new WaitForSeconds(1);
+        StartCoroutine(switchTarget());
+    }
+
     public virtual IEnumerator Die()
     {
         yield return null;
