@@ -33,12 +33,6 @@ public class Ghoul : CreatureBehavuourController {
     {
         plate.SetActive(false);
     }
-    IEnumerator switchTarget()
-    {
-        SetTarget(getMaxHatredObject().gameObject);
-        yield return new WaitForSeconds(1);
-        StartCoroutine(switchTarget());
-    }
     IEnumerator startBehave()
     {
         yield return new WaitForSeconds(4f);

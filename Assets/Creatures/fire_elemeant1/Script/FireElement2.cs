@@ -22,6 +22,10 @@ public class FireElement2 : CreatureBehavuourController
         effect.SetActive(false);
         StartCoroutine(StartBehave());
     }
+    private void Start()
+    {
+        StartCoroutine(switchTarget());
+    }
     IEnumerator StartBehave()
     {
         yield return new WaitForSeconds(1.3f);
