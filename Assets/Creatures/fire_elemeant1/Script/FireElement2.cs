@@ -6,7 +6,6 @@ using UnityEngine.Events;
 public class FireElement2 : CreatureBehavuourController
 {
     static int maxInstanceNum = 20;
-    public GameObject Target;
     public float AttackDis_Copy;
     public Animator AC;
     public float speed;
@@ -17,7 +16,6 @@ public class FireElement2 : CreatureBehavuourController
     {
         base.OnEnable();
         hatredCurve = template.mobsCurve;
-        Target = GameController.Register.RightHero.gameObject;
         AttackDis_Copy = AttackDis;
         effect.SetActive(false);
         StartCoroutine(StartBehave());
@@ -34,7 +32,7 @@ public class FireElement2 : CreatureBehavuourController
     public IEnumerator watchdog()
     {
         yield return null;
-        if (Vector3.Distance(Target.transform.position, transform.position) >= AttackDis_Copy)
+        if (Vector3.Distance(target.transform.position, transform.position) >= AttackDis_Copy)
         {
             AC.CrossFade("Run [11]", 0.1f);
             StartCoroutine(run(1.5f));
@@ -50,11 +48,11 @@ public class FireElement2 : CreatureBehavuourController
     IEnumerator run(float time)
     {
         yield return null;
-        if (time >= 0 && (Vector3.Distance(Target.transform.position, transform.position) >= AttackDis_Copy))
+        if (time >= 0 && (Vector3.Distance(target.transform.position, transform.position) >= AttackDis_Copy))
         {
             time -= Time.deltaTime;
-            gameObject.transform.position += (Target.transform.position - transform.position).normalized * Time.deltaTime * speed;
-            gameObject.transform.LookAt(new Vector3(Target.transform.position.x, transform.position.y, Target.transform.position.z));
+            gameObject.transform.position += (target.transform.position - transform.position).normalized * Time.deltaTime * speed;
+            gameObject.transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
             gameObject.transform.Rotate(0, 90, 0);
             StartCoroutine(run(time));
         }
@@ -70,19 +68,26 @@ public class FireElement2 : CreatureBehavuourController
     }
     private void LateUpdate()
     {
-        Vector3 t = Target.transform.position;
+        Vector3 t = target.transform.position;
         t.y = gameObject.transform.position.y;
         gameObject.transform.LookAt(t);
         gameObject.transform.Rotate(new Vector3(0, 90, 0));
         effect.transform.position = hand.transform.position;
         Vector3 a; 
-        a.x = Target.transform.position.x;
+        a.x = target.transform.position.x;
         a.y = effect.transform.position.y;
-        a.z = Target.transform.position.z;
+        a.z = target.transform.position.z;
         effect.transform.LookAt(a);
     }
     public override int GetMaxInstance()
     {
         return maxInstanceNum;
+    }
+    public override void SetTarget(GameObject target)
+    {
+        base.SetTarget(target);
+        //Vector3 targetPos = target.transform.position;
+        //targetPos.y = transform.position.y;
+        //transform.LookAt(targetPos);
     }
 }

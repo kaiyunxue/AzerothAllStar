@@ -17,10 +17,8 @@ namespace ArthasDomain
 
 
         public override void StartSkill(Animator animator)
-
         {
             StartCoroutine( StartSummonGhouls(GetSummonGhoulsPosition(3), animator));
-
         }
 
 
@@ -64,22 +62,18 @@ namespace ArthasDomain
 
         }
         Vector3[] GetSummonGhoulsPosition(int n)
-
         {
             Vector3[] positions = new Vector3[n];
             float pAngle = 360 / n;
 
             for (int i = 0; i < n; i++)
-
             {
-
                 float angle = pAngle / 2 + pAngle * i;
-
                 positions[i] = transform.position +  new Vector3(r * Mathf.Cos(angle / 180 * Mathf.PI), 0 , r * Mathf.Sin(angle / 180 * Mathf.PI));
-
             }
             return positions;
         }
+
         IEnumerator StartSummonGhouls(Vector3[] positions, Animator animator)
         {
             yield return new WaitForSeconds(0.5f);
@@ -90,9 +84,6 @@ namespace ArthasDomain
             {
                 ghoulInstance[i] = KOFItem.InstantiateByPool(ghoul,GameController.instance.transform ,gameObject.layer);
                 ghoulInstance[i].transform.position = positions[i];
-                //GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                //cube.transform.position = positions[i];
-                //cube.transform.SetParent(GameController.instance.transform, true);
                 spriteLineInstances[i] = KOFItem.InstantiateByPool(spriteLine, GameController.instance.transform, gameObject.layer);
                 spriteLineInstances[i].SetLine(hero.weapon.spellPoint.transform, positions[i]);
             }
