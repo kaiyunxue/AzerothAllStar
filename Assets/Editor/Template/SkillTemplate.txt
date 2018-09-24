@@ -7,10 +7,6 @@ namespace #NAMESPACE#
 {
 	public class #SCRIPTNAME# : HeroSkill
 	{
-		protected override void Awake()
-		{
-			base.Awake();
-		}
 		public override void StartSkill(Animator animator)
 		{
 			throw new NotImplementedException();
@@ -25,7 +21,7 @@ namespace #NAMESPACE#
 		{
 			if (IsReady())
             {
-                //animator.SetTrigger("#ANIMATION#");
+                //animator.SetTrigger("ANIMATIONAME");
                 //StartSkill(animator);
                 return true;
             }
@@ -44,6 +40,10 @@ namespace #NAMESPACE#
 		public override string GetFormula()
 		{
 			return base.GetFormula();
+		}		
+		protected override void Awake()
+		{
+			base.Awake();
 		}
 	}
 }

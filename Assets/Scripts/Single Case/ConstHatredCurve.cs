@@ -8,7 +8,6 @@ public class ConstHatredCurve : MonoBehaviour {
     HatredCurveTemplate template;
     private void Awake()
     {
-        Debug.Log(this.name + "Awake time : " + Time.time);
         instance = this;
     }
     public AnimationCurve GetTankCurve()

@@ -8,13 +8,20 @@ namespace ArthasDomain
     public class SummonZombie : HeroSkill
     {
         public Weapon weapon;
-        protected override void Awake()
-        {
-            base.Awake();
-        }
+        public Vector3 pos;
+        [SerializeField]
+        ZombieTank tank;
+        ZombieTank tankInstance;
         public override void StartSkill(Animator animator)
         {
-            throw new NotImplementedException();
+            StartCoroutine(startSkill(animator));
+        }
+
+        IEnumerator startSkill(Animator animator)
+        {
+            yield return new WaitForSeconds(0.5f);
+            tankInstance = KOFItem.InstantiateByPool(tank, GameController.instance.transform, gameObject.layer);
+            tankInstance.transform.localPosition = hero.transform.localPosition + pos;
         }
 
         public override void StopSkill(Animator animator, bool isBreak = false)
