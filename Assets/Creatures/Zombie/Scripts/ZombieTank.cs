@@ -11,7 +11,6 @@ public class ZombieTank : CreatureBehavuourController
     public GameObject plane;
     protected override void Awake()
     {
-        Debug.Log(this.name + "Awake time : " + Time.time);
         base.Awake();
         hatredCurve = ConstHatredCurve.instance.GetTankCurve();
     }

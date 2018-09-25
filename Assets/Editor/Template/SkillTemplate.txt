@@ -14,7 +14,14 @@ namespace #NAMESPACE#
 
 		public override void StopSkill(Animator animator, bool isBreak = false)
 		{
-			throw new NotImplementedException();
+			if(isBreak)
+            {
+
+            }
+            else
+            {
+
+            }
 		}
 
 		public override bool TryStartSkill(Animator animator)

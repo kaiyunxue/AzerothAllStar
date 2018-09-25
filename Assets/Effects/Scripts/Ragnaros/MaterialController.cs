@@ -4,10 +4,25 @@ using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
 public class MaterialController : MonoBehaviour {
-    Material[] material;
     private void Awake()
     {
-        var renderer = GetComponent<Renderer>();
-        material = renderer.materials;
+        foreach(var thisRenderer in gameObject.transform.GetComponentsInChildren<Renderer>())
+        {
+            Material[] materials = thisRenderer.materials;
+            int n = materials.Length;
+            for(int i = 0; i < n; i++)
+            {
+                materials[i] = GameObject.Instantiate(materials[i]);
+            }
+        }
+        foreach (var thisRenderer in gameObject.transform.GetComponentsInChildren<Renderer>())
+        {
+            Material[] materials = thisRenderer.materials;
+            int n = materials.Length;
+            for (int i = 0; i < n; i++)
+            {
+                materials[i] = GameObject.Instantiate(materials[i]);
+            }
+        }
     }
 }

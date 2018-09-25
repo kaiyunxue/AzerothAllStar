@@ -45,7 +45,7 @@ public class CreatureBehavuourController : KOFItem
             {
                 Vector3 dir = hit.collider.transform.position - transform.position;
                 dir = new Vector3(0, 0, 10);
-                Debug.Log(GetComponent<Rigidbody>());
+               // Debug.Log(GetComponent<Rigidbody>());
                 GetComponent<Rigidbody>().AddForce(dir);
             }
         }
