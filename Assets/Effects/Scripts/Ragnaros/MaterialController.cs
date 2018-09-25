@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Renderer))]
 public class MaterialController : MonoBehaviour {
+    public bool isChangeColor = false;
+    public Color color;
     private void Awake()
     {
         foreach(var thisRenderer in gameObject.transform.GetComponentsInChildren<Renderer>())
@@ -12,15 +13,12 @@ public class MaterialController : MonoBehaviour {
             int n = materials.Length;
             for(int i = 0; i < n; i++)
             {
-                materials[i] = GameObject.Instantiate(materials[i]);
-            }
-        }
-        foreach (var thisRenderer in gameObject.transform.GetComponentsInChildren<Renderer>())
-        {
-            Material[] materials = thisRenderer.materials;
-            int n = materials.Length;
-            for (int i = 0; i < n; i++)
-            {
+                if(isChangeColor)
+                {
+                    materials[i].SetColor("_TintColor", color);
+                    materials[i].SetColor("_Color", color);
+                    materials[i].SetColor("_RimColor", color);
+                }
                 materials[i] = GameObject.Instantiate(materials[i]);
             }
         }
