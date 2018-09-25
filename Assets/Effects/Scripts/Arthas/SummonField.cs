@@ -31,6 +31,6 @@ public class SummonField : SkillItemsBehaviourController
 
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 3;
     }
 }

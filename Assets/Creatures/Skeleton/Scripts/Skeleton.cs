@@ -78,7 +78,7 @@ public class Skeleton : CreatureBehavuourController
     }
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 100;
     }
 	protected override IEnumerator switchTarget()
     {

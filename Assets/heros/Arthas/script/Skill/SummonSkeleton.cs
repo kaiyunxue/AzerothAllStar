@@ -9,10 +9,29 @@ namespace AzerothDomain
 {
 	public class SummonSkeleton : HeroSkill
 	{
-		public override void StartSkill(Animator animator)
+        [SerializeField]
+        SummonField summonField;
+        SummonField fieldInstance;
+        [SerializeField]
+        Skeleton skeleton;
+        Skeleton[] skeletonInstances = new Skeleton[6]; 
+        public override void StartSkill(Animator animator)
 		{
-			throw new NotImplementedException();
+            summonField = KOFItem.InstantiateByPool(summonField, GameController.instance.transform, gameObject.layer);
+            summonField.transform.localPosition = hero.transform.localPosition;
+            StartCoroutine(startSkill(animator));
 		}
+        IEnumerator startSkill(Animator animator)
+        {
+            yield return new WaitForSeconds(1);
+            for(int i = 0; i < skeletonInstances.Length; i++)
+            {
+                Vector3 pos = new Vector3(UnityEngine.Random.Range(-1.5f, 1.5f), 0, UnityEngine.Random.Range(-1.5f, 1.5f));
+                skeletonInstances[i] = KOFItem.InstantiateByPool(skeleton, GameController.instance.transform, hero.gameObject.layer);
+                skeletonInstances[i].transform.position = hero.transform.position + pos;
+                yield return new WaitForSeconds(1);
+            }
+        }
 
 		public override void StopSkill(Animator animator, bool isBreak = false)
 		{
@@ -30,7 +49,7 @@ namespace AzerothDomain
 		{
 			if (IsReady())
             {
-                animator.SetTrigger("ANIMATIONAME");
+                animator.SetTrigger("Summon1");
                 StartSkill(animator);
                 return true;
             }

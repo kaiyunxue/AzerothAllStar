@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4236435002092914}
   - component: {fileID: 198581896420960834}
   - component: {fileID: 199316188890537288}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Smoke(Plane)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4641150380447744}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (Opt)Effect_15_LifeWell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4904147760458242}
-  m_Layer: 0
+  - component: {fileID: 114631192362228432}
+  m_Layer: 9
   m_Name: SummonField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +69,7 @@ GameObject:
   - component: {fileID: 4131079980374602}
   - component: {fileID: 198546855645321730}
   - component: {fileID: 199109930244143552}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_ParticleEmit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +86,7 @@ GameObject:
   - component: {fileID: 4996346010384800}
   - component: {fileID: 198197314573445688}
   - component: {fileID: 199861371254419124}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +101,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4233154355125508}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: (Opt)Effect_15_LifeWell2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +118,7 @@ GameObject:
   - component: {fileID: 4171698328770572}
   - component: {fileID: 198500471316270124}
   - component: {fileID: 199415611677216470}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +135,7 @@ GameObject:
   - component: {fileID: 4751978216923388}
   - component: {fileID: 198411114404988016}
   - component: {fileID: 199429103554516850}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Particle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,7 +152,7 @@ GameObject:
   - component: {fileID: 4951916689117128}
   - component: {fileID: 198756166350198502}
   - component: {fileID: 199001078553054152}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Smoke(Plane)_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +169,7 @@ GameObject:
   - component: {fileID: 4740740932490326}
   - component: {fileID: 198702838532347072}
   - component: {fileID: 199732803182365482}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Effect_15_Smoke(Plane)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,6 +315,27 @@ Transform:
   m_Father: {fileID: 4233154355125508}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114631192362228432
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1426900442147130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 437ceb3e813d103428f40f11c92b7998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speller: {fileID: 0}
+  hatredCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  isNeedEnroll: 1
+  target: {fileID: 0}
+  livingTime: 10
 --- !u!198 &198197314573445688
 ParticleSystem:
   m_ObjectHideFlags: 1
