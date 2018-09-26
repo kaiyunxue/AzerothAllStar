@@ -36,6 +36,6 @@ public class ForstWurm : SkillItemsBehaviourController
 
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 1;
     }
 }

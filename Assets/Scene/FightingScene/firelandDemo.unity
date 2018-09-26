@@ -81445,6 +81445,38 @@ Prefab:
       propertyPath: ShapeModule.radiusThickness
       value: 1.0000
       objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1.0000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2c32987c2bc01844a94adfb917dd677d, type: 2}
   m_IsPrefabParent: 0
@@ -94807,6 +94839,7 @@ GameObject:
   - component: {fileID: 1326216033}
   - component: {fileID: 1326216034}
   - component: {fileID: 1326216035}
+  - component: {fileID: 1326216036}
   m_Layer: 9
   m_Name: Skills
   m_TagString: Untagged
@@ -94852,6 +94885,7 @@ MonoBehaviour:
   - {fileID: 1326216033}
   - {fileID: 1326216034}
   - {fileID: 1326216035}
+  - {fileID: 1326216036}
 --- !u!114 &1326216026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95039,6 +95073,26 @@ MonoBehaviour:
   summonField: {fileID: 114631192362228432, guid: 22e9a183f7bf4ef46bdc91b9886537e2,
     type: 2}
   skeleton: {fileID: 114457782109823374, guid: d7c49c8614e53d74ea046e5d513d98d6, type: 2}
+--- !u!114 &1326216036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1326216023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5165b3aa00d9c664496956f38abd8179, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skillName: 
+  cd: 0
+  skillIcon: {fileID: 0}
+  manaCost: 0
+  formula: SASDJ
+  Priority: 0
+  summonField: {fileID: 114631192362228432, guid: 22e9a183f7bf4ef46bdc91b9886537e2,
+    type: 2}
+  wurm: {fileID: 114577336400352088, guid: 898dd2865aebc2342be1da902ad89301, type: 2}
 --- !u!1001 &1339357711
 Prefab:
   m_ObjectHideFlags: 0
@@ -114823,7 +114877,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4344121267931086, guid: 89c891f5f509ec14e8e62e53e5c63e75, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4344121267931086, guid: 89c891f5f509ec14e8e62e53e5c63e75, type: 2}
       propertyPath: m_LocalScale.x

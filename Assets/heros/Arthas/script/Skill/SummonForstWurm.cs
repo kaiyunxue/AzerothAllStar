@@ -19,7 +19,8 @@ namespace ArthasDomain
 		{
             summonField = KOFItem.InstantiateByPool(summonField, GameController.instance.transform, gameObject.layer);
             summonField.transform.localPosition = hero.transform.localPosition;
-            wurmInstance = KOFItem.InstantiateByPool(wurm, new Vector3(-15, 4, 0), GameController.instance.transform, gameObject.layer);
+            wurmInstance = KOFItem.InstantiateByPool(wurm, new Vector3(-30, 5.13f, 0),GameController.instance.transform, gameObject.layer);
+            wurmInstance.transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
 		public override void StopSkill(Animator animator, bool isBreak = false)
