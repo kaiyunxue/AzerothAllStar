@@ -10,13 +10,16 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
 {
     public float speed;
     [SerializeField]
-    GameObject trials;
+    GameObject explosion;
+    [SerializeField]
+    GameObject head;
+    [SerializeField]
+    ParticleSystem trail;
     Coroutine followCoroutine;
     Coroutine shootCoroutine;
     public void Follow(Transform aim)
     {
         followCoroutine = StartCoroutine(follow(aim));
-        trials.SetActive(false);
     }
     IEnumerator follow(Transform aim)
     {
@@ -26,8 +29,10 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     }
     public void Shoot(GameObject target)
     {
+        if (target.GetComponent<Hero>() != null)
+            target = target.GetComponent<Hero>().head.gameObject;
         this.target = target;
-        trials.SetActive(true);
+
         StopCoroutine(followCoroutine);
         shootCoroutine = StartCoroutine(shoot());
     }
@@ -38,6 +43,16 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
         yield return new WaitForEndOfFrame();
         shootCoroutine = StartCoroutine(shoot());
     }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<Weapon>() != null)
+            return;
+        if(shootCoroutine != null && other.gameObject.layer != gameObject.layer)
+        {
+            StopCoroutine(shootCoroutine);
+            StartCoroutine(DestorySelf());
+        }
+    }
     protected override void Awake()
     {
         base.Awake();
@@ -45,6 +60,8 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         base.OnEnable();
+        explosion.SetActive(false);
+        head.SetActive(true);
     }
     public override void SetTarget(GameObject target)
     {
@@ -52,7 +69,11 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     }
     protected override IEnumerator DestorySelf()
     {
-        return base.DestorySelf();
+        trail.Stop();
+        head.SetActive(false);
+        explosion.SetActive(true);
+        yield return new WaitForSeconds(5);
+        yield return base.DestorySelf();
     }
     public override IEnumerator Live()
     {
@@ -61,6 +82,6 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
 
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 30;
     }
 }

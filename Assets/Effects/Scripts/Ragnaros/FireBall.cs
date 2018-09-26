@@ -68,6 +68,7 @@ public class FireBall : SkillItemsBehaviourController
     }
     void OnTriggerEnter(Collider col)
     {
+        Debug.Log(col.name);
         if (col.gameObject.layer == 9 && col.gameObject.GetComponent<HeroState>() != null)
             {
             spellAudio.SetActive(false);

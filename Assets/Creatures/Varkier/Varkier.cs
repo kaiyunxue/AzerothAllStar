@@ -100,7 +100,7 @@ public class Varkier : CreatureBehavuourController
     }
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 20;
     }
 	protected override IEnumerator switchTarget()
     {
