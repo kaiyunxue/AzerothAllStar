@@ -12,8 +12,6 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     [SerializeField]
     GameObject explosion;
     [SerializeField]
-    GameObject head;
-    [SerializeField]
     ParticleSystem trail;
     Coroutine followCoroutine;
     Coroutine shootCoroutine;
@@ -61,7 +59,6 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     {
         base.OnEnable();
         explosion.SetActive(false);
-        head.SetActive(true);
     }
     public override void SetTarget(GameObject target)
     {
@@ -70,7 +67,6 @@ public class EffectBullet_0_Varkier : SkillItemsBehaviourController
     protected override IEnumerator DestorySelf()
     {
         trail.Stop();
-        head.SetActive(false);
         explosion.SetActive(true);
         yield return new WaitForSeconds(5);
         yield return base.DestorySelf();

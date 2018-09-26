@@ -1753,7 +1753,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1384752843378492}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.21, y: 3.84, z: 0}
+  m_LocalPosition: {x: -2.05, y: 2.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4053758822758522}
@@ -2394,6 +2394,8 @@ MonoBehaviour:
   spellDis: 3
   reviveDis: 0
   speed: 1
+  spellHand: {fileID: 4805562530842984}
+  bullet: {fileID: 114451322198133858, guid: 86a52f5bf1e485745bea4519c9a61ecc, type: 2}
 --- !u!137 &137649500592553618
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
