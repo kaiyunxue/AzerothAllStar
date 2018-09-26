@@ -8,6 +8,7 @@ using UnityEngine;
 
 public class ForstWurm : SkillItemsBehaviourController
 {
+    public Vector3 speed;
     protected override void Awake()
     {
         base.Awake();
@@ -15,6 +16,10 @@ public class ForstWurm : SkillItemsBehaviourController
     protected override void OnEnable()
     {
         base.OnEnable();
+    }
+    private void Update()
+    {
+        transform.position += speed * Time.deltaTime;
     }
     public override void SetTarget(GameObject target)
     {
