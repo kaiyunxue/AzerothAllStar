@@ -34,7 +34,7 @@ public class Skeleton : CreatureBehavuourController
         //do something
         Ray ray = new Ray(transform.position, transform.forward);
         bool isNearTarget = false; ;
-        foreach (var hit in Physics.RaycastAll(ray, 1))
+        foreach (var hit in Physics.RaycastAll(ray, 1.3f))
         {
             if (hit.collider.gameObject == target)
             {
