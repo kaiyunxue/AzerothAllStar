@@ -29,7 +29,7 @@ namespace AzerothDomain
                 Vector3 pos = new Vector3(UnityEngine.Random.Range(-1.5f, 1.5f), 0, UnityEngine.Random.Range(-1.5f, 1.5f));
                 skeletonInstances[i] = KOFItem.InstantiateByPool(skeleton, GameController.instance.transform, hero.gameObject.layer);
                 skeletonInstances[i].transform.position = hero.transform.position + pos;
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(0.57f);
             }
         }
 
