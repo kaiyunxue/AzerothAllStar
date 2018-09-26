@@ -51,21 +51,25 @@ public class Varkier : CreatureBehavuourController
         //Only a reference
         if (Vector3.Distance(transform.position, target.transform.position) <= spellDis)
         {
-            GetComponent<Animator>().SetBool("Spell", true);
+            GetComponent<Animator>().CrossFade("FlyCustomSpell06 [106]", 0.1f);
             if(!hasBullet)
             {
                 hasBullet = true;
                 bulletInstance = KOFItem.InstantiateByPool(bullet, GameController.instance.transform, gameObject.layer);
                 bulletInstance.Follow(this.spellHand);
-                yield return new WaitForSeconds(1.35f);
+                yield return new WaitForSeconds(1f);
+                GetComponent<Animator>().CrossFade("FlyCustomSpell07 [107]", 0.1f);
+                yield return new WaitForSeconds(0.5f);
                 bulletInstance.Shoot(this.target);
-                yield return new WaitForSeconds(1.04f);
+                yield return new WaitForSeconds(0.4f);
+                GetComponent<Animator>().CrossFade("Hover [101] 0", 0.1f);
+                yield return new WaitForSeconds(1);
                 hasBullet = false;
             }
         }
         else
         {
-            GetComponent<Animator>().SetBool("Spell", false);
+            GetComponent<Animator>().CrossFade("Hover [101]", 0.1f);
             Vector3 dir = target.transform.position - transform.position;
             transform.position += dir.normalized * Time.deltaTime * speed;
         }
