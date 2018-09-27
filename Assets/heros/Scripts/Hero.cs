@@ -16,6 +16,8 @@ public class Hero : KOFItem
 
     public HatredCurveTemplate hatredTemplate;
 
+    public FrontTest test;
+
     public State state;
     public HerosRegistrar HeroRegister
     {
@@ -27,6 +29,8 @@ public class Hero : KOFItem
     protected override void Awake()
     {
         base.Awake();
+        test = new FrontTest(this);
+        test.StartForntTest();
         this.hatredCurve = hatredTemplate.heroCurve;
         if (gameObject.layer == 8)
             inputListener = GameController.LeftInputListener;

@@ -8,10 +8,14 @@ public class CreatureBehavuourController : KOFItem
     public float AttackDis;
     public GameObject target;
     public State state;
+    protected int leftMob = 0;
+    protected int rightMob = 0;
+    public FrontTest test;
     protected override void Awake()
     {
         base.Awake();
         state = GetComponent<State>();
+        test = new FrontTest(this);
     }
     public void setlivingTime(float t)
     {
@@ -34,24 +38,30 @@ public class CreatureBehavuourController : KOFItem
         base.OnEnable();
         state.StateInit();
         StartCoroutine(Live());
-        StartCoroutine(FrontTest());
+        test.StartForntTest();
     }
-    protected IEnumerator FrontTest()
-    {
-
-        foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,1f))
-        {
-            if (hit.collider.gameObject != gameObject && hit.collider.gameObject.layer == gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
-            {
-                Vector3 dir = hit.collider.transform.position - transform.position;
-                dir = new Vector3(0, 0, 10);
-               // Debug.Log(GetComponent<Rigidbody>());
-                GetComponent<Rigidbody>().AddForce(dir);
-            }
-        }
-        yield return new WaitForEndOfFrame();
-        StartCoroutine(FrontTest());
-    }
+    //protected IEnumerator FrontTest()
+    //{
+    //    RaycastHit h;
+    //    if(Physics.Raycast(transform.position,transform.right, out h,1f))
+    //    {
+    //        if (h.collider.gameObject != gameObject && h.collider.gameObject.layer == gameObject.layer && (h.collider.GetComponent<CreatureBehavuourController>() != null || h.collider.GetComponent<Hero>() != null))
+    //        {
+                
+    //        }
+    //    }
+    //    foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,1f))
+    //    {
+    //        if (hit.collider.gameObject != gameObject && hit.collider.gameObject.layer == gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
+    //        {
+    //            Vector3 dir = hit.collider.transform.position - transform.position;
+    //           // Debug.Log(GetComponent<Rigidbody>());
+    //            GetComponent<Rigidbody>().AddForce(dir);
+    //        }
+    //    }
+    //    yield return new WaitForEndOfFrame();
+    //    StartCoroutine(FrontTest());
+    //}
 
     protected virtual IEnumerator switchTarget()
     {
