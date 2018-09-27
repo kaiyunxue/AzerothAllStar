@@ -53,7 +53,6 @@ public class FireElement2 : CreatureBehavuourController
             time -= Time.deltaTime;
             gameObject.transform.position += (target.transform.position - transform.position).normalized * Time.deltaTime * speed;
             gameObject.transform.LookAt(new Vector3(target.transform.position.x, transform.position.y, target.transform.position.z));
-            gameObject.transform.Rotate(0, 90, 0);
             StartCoroutine(run(time));
         }
         else
@@ -71,7 +70,6 @@ public class FireElement2 : CreatureBehavuourController
         Vector3 t = target.transform.position;
         t.y = gameObject.transform.position.y;
         gameObject.transform.LookAt(t);
-        gameObject.transform.Rotate(new Vector3(0, 90, 0));
         effect.transform.position = hand.transform.position;
         Vector3 a; 
         a.x = target.transform.position.x;

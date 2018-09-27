@@ -54,15 +54,16 @@ public class FrontTest
             if (hit.collider.gameObject != transform.gameObject && hit.collider.gameObject.layer == transform.gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
             {
                 int v = t.transform.position.z >= 0 ? 1 : -1;
-                Vector3 dir = new Vector3(0, 0, v);
+                float val = v;
                 int x = leftMobs - rightMobs;
                 if(x >= 0)
-                    dir = (Mathf.Log10(x + 1) + 10) * dir;
+                    val = (Mathf.Log10(x + 1) + 10) * val;
                 else
-                    dir = (Mathf.Log10(-x + 1) + 10) * dir;
+                    val = (Mathf.Log10(-x + 1) + 10) * val;
+                Vector3 dir = -t.transform.right;
                 //Vector3 dir = hit.collider.transform.position - transform.position;
                 //// Debug.Log(GetComponent<Rigidbody>());
-                transform.GetComponent<Rigidbody>().AddForce(dir);
+                transform.GetComponent<Rigidbody>().AddForce(val * dir);
             }
         }
         yield return new WaitForEndOfFrame();
