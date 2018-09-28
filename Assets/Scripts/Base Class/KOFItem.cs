@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KOFItem : MonoBehaviour
 {
+    [Header("KOFItemBasicVal")]
     public KOFItem speller;
     public AnimationCurve hatredCurve;
     int[] kofID;

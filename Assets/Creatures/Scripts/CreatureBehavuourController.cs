@@ -4,6 +4,7 @@ using UnityEngine;
 [RequireComponent(typeof(State))]
 public class CreatureBehavuourController : Creature
 {
+    [Header("CreatureBehavuourControllerVal")]
     public float livingTime;
     public float AttackDis;
     public GameObject target;

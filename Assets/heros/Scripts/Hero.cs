@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Hero : Creature
 {
+    [Header("HeroVal")]
     public Weapon weapon;
     public Transform head;
     public Animator animator;
