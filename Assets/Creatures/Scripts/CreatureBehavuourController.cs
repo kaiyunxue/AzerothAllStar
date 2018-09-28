@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(State))]
+[RequireComponent(typeof(CreaturesState))]
 public class CreatureBehavuourController : Creature
 {
     [Header("CreatureBehavuourControllerVal")]

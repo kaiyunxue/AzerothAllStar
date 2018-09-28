@@ -279,7 +279,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 421930}
-  - component: {fileID: 114205963962416800}
+  - component: {fileID: 114229191960377998}
   - component: {fileID: 114928293821538912}
   - component: {fileID: 54808105527061890}
   - component: {fileID: 136160890582232938}
@@ -290,7 +290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &125366
 GameObject:
   m_ObjectHideFlags: 1
@@ -2043,7 +2043,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114205963962416800
+--- !u!114 &114229191960377998
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2051,15 +2051,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 125026}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9c5edf62539ec4f998a8aa397915cf, type: 3}
+  m_Script: {fileID: 11500000, guid: dcfde14140e48c94989d889d7da8caa2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 300
   mana: 0
-  MaxHealth: 0
+  MaxHealth: 300
   MaxMana: 0
   Defense: 0
   Stage: 0
+  boxLocalPos: {x: 0, y: 0.5, z: 0.5}
 --- !u!114 &114928293821538912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2079,6 +2080,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isNeedEnroll: 1
+  isNeedAdjustCirclePosAndLocation: 0
+  localCirclePos: {x: 0, y: 0, z: 0}
+  circleScal: 1
   livingTime: 0
   AttackDis: 0
   target: {fileID: 0}
