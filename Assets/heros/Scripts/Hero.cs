@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Hero : KOFItem
+public class Hero : Creature
 {
     public Weapon weapon;
     public Transform head;

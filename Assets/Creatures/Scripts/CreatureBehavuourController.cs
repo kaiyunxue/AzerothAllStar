@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(State))]
-public class CreatureBehavuourController : KOFItem
+public class CreatureBehavuourController : Creature
 {
     public float livingTime;
     public float AttackDis;
