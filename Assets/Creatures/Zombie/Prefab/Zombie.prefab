@@ -2196,10 +2196,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 500
   mana: 0
-  MaxHealth: 0
+  MaxHealth: 1000
   MaxMana: 0
   Defense: 0
   Stage: 0
+  box: {fileID: 0}
   boxLocalPos: {x: 0, y: 2, z: 1}
 --- !u!114 &114254849365383846
 MonoBehaviour:
@@ -2224,9 +2225,10 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0, z: 0}
   circleScal: 1
   livingTime: 0
-  AttackDis: 0
+  attackDis: 0
   target: {fileID: 0}
   state: {fileID: 0}
+  isOnGround: 0
   plane: {fileID: 1660530065656560}
 --- !u!136 &136871375429158484
 CapsuleCollider:

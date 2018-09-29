@@ -79,7 +79,7 @@ public class ZombieTank : CreatureBehavuourController
     }
     public override int GetMaxInstance()
     {
-        return base.GetMaxInstance();
+        return 20;
     }
 	protected override IEnumerator switchTarget()
     {
