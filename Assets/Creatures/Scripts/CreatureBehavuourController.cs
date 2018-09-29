@@ -12,6 +12,7 @@ public class CreatureBehavuourController : Creature
     protected int leftMob = 0;
     protected int rightMob = 0;
     public FrontTest test;
+    public bool isOnGround;
     protected override void Awake()
     {
         base.Awake();
@@ -54,6 +55,21 @@ public class CreatureBehavuourController : Creature
             yield return new WaitForEndOfFrame();
             StartCoroutine(watchForDeath());
         }
+    }
+
+    protected virtual IEnumerator isOnSky(float height = 0.2f)
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        if (!Physics.Raycast(ray, height))
+        {
+            isOnGround = false;
+        }
+        else
+        {
+            isOnGround = true;
+        }
+        yield return new WaitForEndOfFrame();
+        StartCoroutine(isOnSky(height));
     }
     protected virtual IEnumerator switchTarget()
     {

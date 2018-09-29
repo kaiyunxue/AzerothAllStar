@@ -10,7 +10,6 @@ namespace ArthasDomain
 
         public override void StartSkill(Animator animator)
         {
-            Debug.Log(hero.skillManager.GetCurrentSkill().GetType().ToString());
             hero.skillManager.GetCurrentSkill().StopSkill(animator, true);
             hero.skillManager.SetCurrentSkill(this);
         }

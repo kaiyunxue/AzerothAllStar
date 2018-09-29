@@ -30,7 +30,7 @@ public class Ghoul : CreatureBehavuourController {
             attackBehave = null;
         }
 
-        yield return new WaitForSecondsRealtime(5);
+        yield return new WaitForSecondsRealtime(10);
         KOFItem.DestoryByPool(this);
 
     }
@@ -54,6 +54,7 @@ public class Ghoul : CreatureBehavuourController {
     IEnumerator startBehave()
     {
         yield return new WaitForSeconds(4.04f);
+        StartCoroutine(isOnSky());
         plateDsapr();
         updateBehave = StartCoroutine(behaveUpdate());
     }
@@ -96,7 +97,23 @@ public class Ghoul : CreatureBehavuourController {
     }
     IEnumerator behaveUpdate()
     {
-        Debug.Log(attackBehave);
+        GetComponent<Animator>().SetBool("OnSky", !isOnGround);
+        if (!isOnGround)
+        {
+            if (runBehave != null)
+            {
+                StopCoroutine(runBehave);
+                runBehave = null;
+            }
+            if (attackBehave != null)
+            {
+                StopCoroutine(attackBehave);
+                attackBehave = null;
+            }
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(behaveUpdate());
+            yield break;
+        }
         if(isNearTarget)
         {
             if(attackBehave == null)
@@ -128,7 +145,7 @@ public class Ghoul : CreatureBehavuourController {
         yield return new WaitForSeconds(0.4f);
         if (isNearTarget)
         {
-            target.GetComponent<State>().TakeSkillContent(new Damage(0));
+            target.GetComponent<State>().TakeSkillContent(new Damage(30));
         }
     }
     public override void SetTarget(GameObject target)

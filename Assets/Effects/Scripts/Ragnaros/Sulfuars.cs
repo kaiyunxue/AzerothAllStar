@@ -105,7 +105,7 @@ public class Sulfuars : Weapon
             StartCoroutine(WaitingthenDelete());
             if(other.gameObject.layer == 9 && other.tag != "weapon" && isPhyAttack)
             {
-                FlameDamageVal += 0.7f;
+                FlameDamageVal += 0.01f;
                 RagnarosDamage flameDamage = new RagnarosDamage(FlameDamageVal, DamageType.Fire, gameObject.layer);
                 Damage phyDamage = new Damage(PhyDamageVal, DamageType.Physical);
                 other.GetComponent<Rigidbody>().AddForce(-150,0,0);
