@@ -8,6 +8,11 @@ using UnityEngine;
 
 public class ZombieTank : CreatureBehavuourController
 {
+    Coroutine updateBehave;
+    Coroutine attackBehave;
+    Coroutine runBehave;
+    Coroutine watchBehave;
+    bool isNearTarget = false;
     public GameObject plane;
     protected override void Awake()
     {
@@ -18,11 +23,9 @@ public class ZombieTank : CreatureBehavuourController
     {
         base.OnEnable();
         plane.SetActive(true);
-    }
-	private void Start()
-    {
         SetTarget(getMaxHatredObject().gameObject);
-        StartCoroutine(startBehave());
+        StartCoroutine(watchDis());
+        updateBehave = StartCoroutine(startBehave());
         StartCoroutine(switchTarget());
     }
 
@@ -30,31 +33,100 @@ public class ZombieTank : CreatureBehavuourController
     {
         yield return new WaitForSeconds(5.5f); //the time the mob will wait for the birth animation;
         plane.SetActive(false);
-        StartCoroutine(behaveUpdate()); //update
+        StartCoroutine(isOnSky());
+        updateBehave = StartCoroutine(behaveUpdate());
     }
     IEnumerator behaveUpdate()
     {
+        GetComponent<Animator>().SetBool("OnSky", !isOnGround);
+        if (!isOnGround)
+        {
+            if (runBehave != null)
+            {
+                StopCoroutine(runBehave);
+                runBehave = null;
+            }
+            if (attackBehave != null)
+            {
+                StopCoroutine(attackBehave);
+                attackBehave = null;
+            }
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(behaveUpdate());
+            yield break;
+        }
+        if (isNearTarget)
+        {
+            if (attackBehave == null)
+            {
+                if (runBehave != null)
+                {
+                    StopCoroutine(runBehave);
+                    runBehave = null;
+                }
+                if (attackBehave == null)
+                    attackBehave = StartCoroutine(attack());
+            }
+        }
+        else
+        {
+            if (attackBehave != null)
+            {
+                StopCoroutine(attackBehave);
+                attackBehave = null;
+            }
+            if (runBehave == null)
+                runBehave = StartCoroutine(run());
+        }
         yield return new WaitForEndOfFrame();
-        //do something
+        updateBehave = StartCoroutine(behaveUpdate());
+    }
+
+
+    IEnumerator watchDis()
+    {
         Ray ray = new Ray(transform.position, transform.forward);
-        bool isNearTarget = false;
-        foreach (var hit in Physics.RaycastAll(ray, 1.3f))
+        foreach (var hit in Physics.RaycastAll(ray, attackDis))
         {
             if (hit.collider.gameObject == target)
             {
-                GetComponent<Animator>().SetBool("Attack", true);
                 isNearTarget = true;
-                break;
+                yield return new WaitForEndOfFrame();
+                watchBehave = StartCoroutine(watchDis());
+                yield break;
             }
         }
-        if (!isNearTarget)
+        isNearTarget = false;
+        yield return new WaitForEndOfFrame();
+        watchBehave = StartCoroutine(watchDis());
+    }
+    IEnumerator attack()
+    {
+        GetComponent<Animator>().CrossFade("AttackUnarmed [7]", 0.1f);
+        StartCoroutine(Attack());
+        yield return new WaitForSecondsRealtime(0.75f);
+
+        GetComponent<Animator>().CrossFade("Stand [1]", 0.1f);
+        yield return new WaitForSeconds(0.3f);
+        attackBehave = StartCoroutine(attack());
+        yield break;
+    }
+    IEnumerator run()
+    {
+        GetComponent<Animator>().CrossFade("Run [6]", 0f);
+        Vector3 dir = target.transform.position - transform.position;
+        dir.y = 0;
+        transform.position += dir.normalized * Time.deltaTime;
+        yield return new WaitForEndOfFrame();
+        runBehave = StartCoroutine(run());
+    }
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.4f);
+        if (isNearTarget)
         {
-            GetComponent<Animator>().SetBool("Attack", false);
-            Vector3 dir = target.transform.position - transform.position;
-            dir.y = 0;
-            transform.position += dir.normalized * Time.deltaTime / 5;
+            target.GetComponent<State>().TakeSkillContent(new Damage(30));
         }
-        StartCoroutine(behaveUpdate());
     }
 
 
@@ -73,10 +145,7 @@ public class ZombieTank : CreatureBehavuourController
         targetPos.y = transform.position.y;
         transform.LookAt(targetPos);
     }
-    protected override KOFItem getMaxHatredObject()
-    {
-        return base.getMaxHatredObject();
-    }
+
     public override int GetMaxInstance()
     {
         return 20;

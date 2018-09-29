@@ -27,7 +27,9 @@ public class #SCRIPTNAME# : CreatureBehavuourController
     {
         yield return new WaitForSeconds(4f); //the time the mob will wait for the birth animation;
 		//do something
+        StartCoroutine(isOnSky());//This is important
 
+        updateBehave = StartCoroutine(behaveUpdate());
         StartCoroutine(behaveUpdate()); //update
     }
     IEnumerator behaveUpdate()
@@ -38,27 +40,85 @@ public class #SCRIPTNAME# : CreatureBehavuourController
 
 		//Only a reference
 
-		//Ray ray = new Ray(transform.position, transform.forward);
-        //bool isNearTarget = false; ;
-        //foreach(var hit in Physics.RaycastAll(ray, 1))
+        //GetComponent<Animator>().SetBool("OnSky", !isOnGround);
+        //if (!isOnGround)
         //{
-        //    if(hit.collider.gameObject == target)
+        //    if (runBehave != null)
         //    {
-        //        GetComponent<Animator>().SetBool("Attack", true);
-        //        isNearTarget = true;
-        //        break;
+        //        StopCoroutine(runBehave);
+        //        runBehave = null;
+        //    }
+        //    if (attackBehave != null)
+        //    {
+        //        StopCoroutine(attackBehave);
+        //        attackBehave = null;
+        //    }
+        //    yield return new WaitForEndOfFrame();
+        //    StartCoroutine(behaveUpdate());
+        //    yield break;
+        //}
+        //if(isNearTarget)
+        //{
+        //    if(attackBehave == null)
+        //    {
+        //        if(runBehave != null)
+        //        {
+        //            StopCoroutine(runBehave);
+        //            runBehave = null;
+        //        }
+        //        if(attackBehave == null)
+        //            attackBehave = StartCoroutine(attack());
         //    }
         //}
-        //if(!isNearTarget)
+        //else
         //{
-        //    GetComponent<Animator>().SetBool("Attack", false);
-        //    Vector3 dir = target.transform.position - transform.position;
-        //    dir.y = 0;
-        //    transform.position += dir.normalized * Time.deltaTime;
+        //    if(attackBehave != null)
+        //    {
+        //        StopCoroutine(attackBehave);
+        //        attackBehave = null;
+        //    }
+        //    if(runBehave == null)
+        //        runBehave =  StartCoroutine(run());
         //}
         StartCoroutine(behaveUpdate());
     }
+	IEnumerator watchDis()
+    {
+        Ray ray = new Ray(transform.position, transform.forward);
+        foreach (var hit in Physics.RaycastAll(ray, attackDis))
+        {
+            if (hit.collider.gameObject == target)
+            {
+                isNearTarget = true;
+                yield return new WaitForEndOfFrame();
+                watchBehave = StartCoroutine(watchDis());
+                yield break;
+            }
+        }
+        isNearTarget = false;
+        yield return new WaitForEndOfFrame();
+        watchBehave = StartCoroutine(watchDis());
+    }
+	IEnumerator attack()
+    {
+        GetComponent<Animator>().CrossFade("AttackUnarmed [7]", 0.1f);
+        StartCoroutine(Attack());
+        yield return new WaitForSecondsRealtime(0.75f);
 
+        GetComponent<Animator>().CrossFade("Stand [1]", 0.1f);
+        yield return new WaitForSeconds(0.3f);
+        attackBehave = StartCoroutine(attack());
+        yield break;
+    }
+    IEnumerator run()
+    {
+        GetComponent<Animator>().CrossFade("Run [6]", 0f);
+        Vector3 dir = target.transform.position - transform.position;
+        dir.y = 0;
+        transform.position += dir.normalized * Time.deltaTime;
+        yield return new WaitForEndOfFrame();
+        runBehave = StartCoroutine(run());
+    }
 
 
 
