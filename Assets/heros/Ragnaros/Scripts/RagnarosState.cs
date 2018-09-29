@@ -50,4 +50,5 @@ public class RagnarosState : HeroState
         statusBox.ShowMana(val);
         return val;
     }
+
 }

@@ -1094,7 +1094,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125026}
   m_LocalRotation: {x: -0, y: -0.5174987, z: -0, w: 0.85568404}
-  m_LocalPosition: {x: -2.642, y: 0.001, z: 1.8200073}
+  m_LocalPosition: {x: 0.15, y: 0.001, z: 0.36}
   m_LocalScale: {x: 1.5466859, y: 1.5466859, z: 1.5466859}
   m_Children:
   - {fileID: 493762}
@@ -2060,6 +2060,7 @@ MonoBehaviour:
   MaxMana: 0
   Defense: 0
   Stage: 0
+  box: {fileID: 0}
   boxLocalPos: {x: 0, y: 0.5, z: 0.5}
 --- !u!114 &114928293821538912
 MonoBehaviour:
@@ -2084,7 +2085,7 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0, z: 0}
   circleScal: 1
   livingTime: 0
-  AttackDis: 0
+  attackDis: 1
   target: {fileID: 0}
   state: {fileID: 0}
   template: {fileID: 11400000, guid: 27f07fbe7d79d3947a8e93323ec726cf, type: 2}

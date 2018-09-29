@@ -16,7 +16,7 @@ public class FireElement2 : CreatureBehavuourController
     {
         base.OnEnable();
         hatredCurve = template.mobsCurve;
-        AttackDis_Copy = AttackDis;
+        AttackDis_Copy = attackDis;
         effect.SetActive(false);
         StartCoroutine(StartBehave());
     }

@@ -6,7 +6,7 @@ public class CreatureBehavuourController : Creature
 {
     [Header("CreatureBehavuourControllerVal")]
     public float livingTime;
-    public float AttackDis;
+    public float attackDis;
     public GameObject target;
     public CreaturesState state;
     protected int leftMob = 0;

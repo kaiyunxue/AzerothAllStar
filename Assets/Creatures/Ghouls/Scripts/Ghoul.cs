@@ -6,6 +6,7 @@ public class Ghoul : CreatureBehavuourController {
     public HatredCurveTemplate template;
     public GameObject plate;
     Coroutine currentBehave;
+    bool isNearTarget = false;
     protected override void Awake()
     {
         base.Awake();
@@ -37,32 +38,41 @@ public class Ghoul : CreatureBehavuourController {
     }
     IEnumerator startBehave()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(4.04f);
         plateDsapr();
-        StartCoroutine(behaveUpdate());
+        currentBehave = StartCoroutine(behaveUpdate());
     }
     IEnumerator behaveUpdate()
     {
-        yield return new WaitForEndOfFrame();
         Ray ray = new Ray(transform.position, transform.forward);
-        bool isNearTarget = false; ;
-        foreach(var hit in Physics.RaycastAll(ray, 1))
+        foreach(var hit in Physics.RaycastAll(ray, attackDis))
         {
             if(hit.collider.gameObject == target)
             {
-                GetComponent<Animator>().SetBool("Attack", true);
                 isNearTarget = true;
+                GetComponent<Animator>().CrossFade("AttackUnarmed [7]", 0.1f);
+                StartCoroutine(Attack());
+                yield return new WaitForSecondsRealtime(1.5f);
                 break;
             }
         }
         if(!isNearTarget)
         {
-            GetComponent<Animator>().SetBool("Attack", false);
+            GetComponent<Animator>().CrossFade("Run [6]", 0);
             Vector3 dir = target.transform.position - transform.position;
             dir.y = 0;
             transform.position += dir.normalized * Time.deltaTime;
         }
+        yield return new WaitForEndOfFrame();
         currentBehave = StartCoroutine(behaveUpdate());
+    }
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(0.4f);
+        if (isNearTarget)
+        {
+            target.GetComponent<State>().TakeSkillContent(new Damage(30));
+        }
     }
     public override void SetTarget(GameObject target)
     {

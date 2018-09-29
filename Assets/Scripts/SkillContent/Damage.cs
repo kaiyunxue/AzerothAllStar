@@ -14,6 +14,10 @@ public class Damage : SkillContent
         this.damage = damage;
         this.damageType = damageType;
     }
+    public Damage(float damage)
+    {
+        this.damage = damage;
+    }
 
     public float skillDamage
     {
