@@ -20,9 +20,16 @@ public class Ghoul : CreatureBehavuourController {
         GetComponent<Animator>().SetTrigger("Dead");
         StopCoroutine(updateBehave);
         if (runBehave != null)
+        {
             StopCoroutine(runBehave);
+            runBehave = null;
+        }
         if (attackBehave != null)
+        {
             StopCoroutine(attackBehave);
+            attackBehave = null;
+        }
+
         yield return new WaitForSecondsRealtime(5);
         KOFItem.DestoryByPool(this);
 
@@ -59,13 +66,13 @@ public class Ghoul : CreatureBehavuourController {
             {
                 isNearTarget = true;
                 yield return new WaitForEndOfFrame();
-                StartCoroutine(watchDis());
+                watchBehave = StartCoroutine(watchDis());
                 yield break;
             }
         }
         isNearTarget = false;
         yield return new WaitForEndOfFrame();
-        StartCoroutine(watchDis());
+        watchBehave = StartCoroutine(watchDis());
     }
     IEnumerator attack()
     {
@@ -89,12 +96,16 @@ public class Ghoul : CreatureBehavuourController {
     }
     IEnumerator behaveUpdate()
     {
+        Debug.Log(attackBehave);
         if(isNearTarget)
         {
             if(attackBehave == null)
             {
                 if(runBehave != null)
+                {
                     StopCoroutine(runBehave);
+                    runBehave = null;
+                }
                 if(attackBehave == null)
                     attackBehave = StartCoroutine(attack());
             }
@@ -102,8 +113,10 @@ public class Ghoul : CreatureBehavuourController {
         else
         {
             if(attackBehave != null)
+            {
                 StopCoroutine(attackBehave);
-            Debug.Log(attackBehave == null);
+                attackBehave = null;
+            }
             if(runBehave == null)
                 runBehave =  StartCoroutine(run());
         }
