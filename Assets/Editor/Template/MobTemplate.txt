@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class #SCRIPTNAME# : CreatureBehavuourController
 {
+    Coroutine updateBehave;
+    Coroutine attackBehave;
+    Coroutine runBehave;
+    Coroutine watchBehave;
     protected override void Awake()
     {
         base.Awake();
@@ -14,11 +18,9 @@ public class #SCRIPTNAME# : CreatureBehavuourController
     protected override void OnEnable()
     {
         base.OnEnable();
-    }
-	private void Start()
-    {
         SetTarget(getMaxHatredObject().gameObject);
-        StartCoroutine(startBehave());
+        StartCoroutine(watchDis());
+        updateBehave = StartCoroutine(startBehave());
         StartCoroutine(switchTarget());
     }
 	IEnumerator startBehave()
@@ -63,7 +65,20 @@ public class #SCRIPTNAME# : CreatureBehavuourController
 	//OVERRIDE FUNCTIONS
     public override IEnumerator Die()
     {
-        return base.Die();
+        GetComponent<Animator>().SetTrigger("Dead");
+        StopCoroutine(updateBehave);
+        if (runBehave != null)
+        {
+            StopCoroutine(runBehave);
+            runBehave = null;
+        }
+        if (attackBehave != null)
+        {
+            StopCoroutine(attackBehave);
+            attackBehave = null;
+        }
+        KOFItem.DestoryByPool(this);
+
     }
     protected override IEnumerator Live()
     {
