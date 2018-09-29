@@ -17,7 +17,6 @@ public class FireElementController : CreatureBehavuourController
     protected override void Awake()
     {
         base.Awake();
-        state = GetComponent<State>();
     }
     protected IEnumerator Behave()
     {
@@ -30,7 +29,6 @@ public class FireElementController : CreatureBehavuourController
     {
         base.OnEnable();
         renderer.enabled = true;
-        state = gameObject.GetComponent<State>();
         AC = gameObject.GetComponent<Animator>();
     }
     public override void SetTarget(GameObject target)

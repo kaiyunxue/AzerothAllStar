@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ghoul : CreatureBehavuourController {
     public HatredCurveTemplate template;
     public GameObject plate;
+    Coroutine currentBehave;
     protected override void Awake()
     {
         base.Awake();
@@ -12,7 +13,11 @@ public class Ghoul : CreatureBehavuourController {
     }
     public override IEnumerator Die()
     {
-        return base.Die();
+        GetComponent<Animator>().SetTrigger("Dead");
+        StopCoroutine(currentBehave);
+        yield return new WaitForSecondsRealtime(5);
+        KOFItem.DestoryByPool(this);
+
     }
     public override int GetMaxInstance()
     {
@@ -22,11 +27,8 @@ public class Ghoul : CreatureBehavuourController {
     {
         base.OnEnable();
         plate.SetActive(true);
-    }
-    private void Start()
-    {
         SetTarget(getMaxHatredObject().gameObject);
-        StartCoroutine(startBehave());
+        currentBehave = StartCoroutine(startBehave());
         StartCoroutine(switchTarget());
     }
     void plateDsapr()
@@ -60,7 +62,7 @@ public class Ghoul : CreatureBehavuourController {
             dir.y = 0;
             transform.position += dir.normalized * Time.deltaTime;
         }
-        StartCoroutine(behaveUpdate());
+        currentBehave = StartCoroutine(behaveUpdate());
     }
     public override void SetTarget(GameObject target)
     {

@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreaturesState : State {
+    [SerializeField]
     private MobStatusBox box;
     public Vector3 boxLocalPos = new Vector3(0,1,1);
     private void Awake()
     {
-        box = GetComponentInChildren<MobStatusBox>();
-        box = CreatureStatusUI.Instance.SetHealthBox();
-        box.transform.SetParent(transform);
-        box.transform.localPosition = boxLocalPos;
+        if(box == null)
+        {
+            box = CreatureStatusUI.Instance.SetHealthBox();
+            box.transform.SetParent(transform);
+            box.transform.localPosition = boxLocalPos;
+        }
+        else
+        {
+        }
     }
     protected override float SetHealth(float value)
     {

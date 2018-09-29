@@ -8,14 +8,14 @@ public class CreatureBehavuourController : Creature
     public float livingTime;
     public float AttackDis;
     public GameObject target;
-    public State state;
+    public CreaturesState state;
     protected int leftMob = 0;
     protected int rightMob = 0;
     public FrontTest test;
     protected override void Awake()
     {
         base.Awake();
-        state = GetComponent<State>();
+        state = GetComponent<CreaturesState>();
         test = new FrontTest(this);
     }
     public void setlivingTime(float t)
@@ -40,30 +40,21 @@ public class CreatureBehavuourController : Creature
         state.StateInit();
         StartCoroutine(Live());
         test.StartForntTest();
+        StartCoroutine(watchForDeath());
     }
-    //protected IEnumerator FrontTest()
-    //{
-    //    RaycastHit h;
-    //    if(Physics.Raycast(transform.position,transform.right, out h,1f))
-    //    {
-    //        if (h.collider.gameObject != gameObject && h.collider.gameObject.layer == gameObject.layer && (h.collider.GetComponent<CreatureBehavuourController>() != null || h.collider.GetComponent<Hero>() != null))
-    //        {
-                
-    //        }
-    //    }
-    //    foreach (var hit in Physics.RaycastAll(transform.position, transform.forward ,1f))
-    //    {
-    //        if (hit.collider.gameObject != gameObject && hit.collider.gameObject.layer == gameObject.layer && (hit.collider.GetComponent<CreatureBehavuourController>() != null || hit.collider.GetComponent<Hero>() != null))
-    //        {
-    //            Vector3 dir = hit.collider.transform.position - transform.position;
-    //           // Debug.Log(GetComponent<Rigidbody>());
-    //            GetComponent<Rigidbody>().AddForce(dir);
-    //        }
-    //    }
-    //    yield return new WaitForEndOfFrame();
-    //    StartCoroutine(FrontTest());
-    //}
-
+    public virtual IEnumerator watchForDeath()
+    {
+        if (state.Health <= 0)
+        {
+            StartCoroutine(Die());
+            yield return null;
+        }
+        else
+        {
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(watchForDeath());
+        }
+    }
     protected virtual IEnumerator switchTarget()
     {
         SetTarget(getMaxHatredObject().gameObject);
