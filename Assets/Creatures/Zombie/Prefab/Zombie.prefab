@@ -2085,7 +2085,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1385590566062418}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 234.503, y: 0.19, z: 470.14313}
+  m_LocalPosition: {x: 0, y: 0.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4883577150747058}
@@ -2225,7 +2225,7 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0, z: 0}
   circleScal: 1
   livingTime: 0
-  attackDis: 0
+  attackDis: 1
   target: {fileID: 0}
   state: {fileID: 0}
   isOnGround: 0

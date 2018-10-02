@@ -33,7 +33,7 @@ public class ZombieTank : CreatureBehavuourController
     {
         yield return new WaitForSeconds(5.5f); //the time the mob will wait for the birth animation;
         plane.SetActive(false);
-        StartCoroutine(isOnSky());
+        StartCoroutine(isOnSky(0.8f));
         updateBehave = StartCoroutine(behaveUpdate());
     }
     IEnumerator behaveUpdate()
@@ -102,18 +102,18 @@ public class ZombieTank : CreatureBehavuourController
     }
     IEnumerator attack()
     {
-        GetComponent<Animator>().CrossFade("AttackUnarmed [7]", 0.1f);
+        GetComponent<Animator>().CrossFade("Attack1H [2]", 0.1f);
         StartCoroutine(Attack());
-        yield return new WaitForSecondsRealtime(0.75f);
+        yield return new WaitForSecondsRealtime(1.5f);
 
-        GetComponent<Animator>().CrossFade("Stand [1]", 0.1f);
-        yield return new WaitForSeconds(0.3f);
+        GetComponent<Animator>().CrossFade("Stand [90]", 0.1f);
+        yield return new WaitForSeconds(1.1f);
         attackBehave = StartCoroutine(attack());
         yield break;
     }
     IEnumerator run()
     {
-        GetComponent<Animator>().CrossFade("Run [6]", 0f);
+        GetComponent<Animator>().CrossFade("Walk [24]", 0f);
         Vector3 dir = target.transform.position - transform.position;
         dir.y = 0;
         transform.position += dir.normalized * Time.deltaTime;
@@ -122,7 +122,7 @@ public class ZombieTank : CreatureBehavuourController
     }
     IEnumerator Attack()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.8f);
         if (isNearTarget)
         {
             target.GetComponent<State>().TakeSkillContent(new Damage(30));
