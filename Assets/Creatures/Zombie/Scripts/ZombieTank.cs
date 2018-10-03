@@ -132,7 +132,21 @@ public class ZombieTank : CreatureBehavuourController
 
     public override IEnumerator Die()
     {
-        return base.Die();
+        GetComponent<Animator>().SetTrigger("Die");
+        StopCoroutine(updateBehave);
+        if (runBehave != null)
+        {
+            StopCoroutine(runBehave);
+            runBehave = null;
+        }
+        if (attackBehave != null)
+        {
+            StopCoroutine(attackBehave);
+            attackBehave = null;
+        }
+
+        yield return new WaitForSecondsRealtime(10);
+        KOFItem.DestoryByPool(this);
     }
     protected override IEnumerator Live()
     {
