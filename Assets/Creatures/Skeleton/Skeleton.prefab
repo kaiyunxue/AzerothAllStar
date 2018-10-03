@@ -1827,7 +1827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   mana: 0
-  MaxHealth: 150
+  MaxHealth: 100
   MaxMana: 0
   Defense: 0
   Stage: 0
@@ -1856,11 +1856,10 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0.1, z: 0}
   circleScal: 0.6
   livingTime: 0
-  attackDis: 0.7
+  attackDis: 1
   target: {fileID: 0}
   state: {fileID: 0}
   isOnGround: 0
-  template: {fileID: 0}
 --- !u!136 &136636306854959552
 CapsuleCollider:
   m_ObjectHideFlags: 1

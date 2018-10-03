@@ -125,7 +125,7 @@ public class #SCRIPTNAME# : CreatureBehavuourController
 	//OVERRIDE FUNCTIONS
     public override IEnumerator Die()
     {
-        GetComponent<Animator>().SetTrigger("Dead");
+        GetComponent<Animator>().SetTrigger("Die");
         StopCoroutine(updateBehave);
         if (runBehave != null)
         {

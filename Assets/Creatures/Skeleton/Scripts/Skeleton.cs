@@ -20,7 +20,7 @@ public class Skeleton : CreatureBehavuourController
     }
     public override IEnumerator Die()
     {
-        GetComponent<Animator>().SetTrigger("Dead");
+        GetComponent<Animator>().SetTrigger("Die");
         StopCoroutine(updateBehave);
         if (runBehave != null)
         {
@@ -142,7 +142,7 @@ public class Skeleton : CreatureBehavuourController
         yield return new WaitForSeconds(0.8f);
         if (isNearTarget)
         {
-            target.GetComponent<State>().TakeSkillContent(new Damage(30));
+            target.GetComponent<State>().TakeSkillContent(new Damage(25));
         }
     }
     public override void SetTarget(GameObject target)
@@ -151,5 +151,25 @@ public class Skeleton : CreatureBehavuourController
         Vector3 targetPos = target.transform.position;
         targetPos.y = transform.position.y;
         transform.LookAt(targetPos);
+    }
+    protected override IEnumerator Live()
+    {
+        return base.Live();
+    }
+    protected override KOFItem getMaxHatredObject()
+    {
+        return base.getMaxHatredObject();
+    }
+    protected override IEnumerator isOnSky(float height = 0.2F)
+    {
+        return base.isOnSky(height);
+    }
+    protected override IEnumerator switchTarget()
+    {
+        return base.switchTarget();
+    }
+    public override IEnumerator watchForDeath()
+    {
+        return base.watchForDeath();
     }
 }
