@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ghoul : CreatureBehavuourController {
-    public HatredCurveTemplate template;
     public GameObject plate;
     Coroutine updateBehave;
     Coroutine attackBehave;
@@ -13,7 +12,7 @@ public class Ghoul : CreatureBehavuourController {
     protected override void Awake()
     {
         base.Awake();
-        hatredCurve = template.mobsCurve;
+        hatredCurve = ConstHatredCurve.instance.GetTankCurve();
     }
     public override IEnumerator Die()
     {

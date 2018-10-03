@@ -8,80 +8,148 @@ using UnityEngine;
 
 public class Skeleton : CreatureBehavuourController
 {
+    Coroutine updateBehave;
+    Coroutine attackBehave;
+    Coroutine runBehave;
+    Coroutine watchBehave;
+    bool isNearTarget = false;
     protected override void Awake()
     {
         base.Awake();
-        hatredCurve = ConstHatredCurve.instance.GetMobCurve();
+        hatredCurve = ConstHatredCurve.instance.GetTankCurve();
+    }
+    public override IEnumerator Die()
+    {
+        GetComponent<Animator>().SetTrigger("Dead");
+        StopCoroutine(updateBehave);
+        if (runBehave != null)
+        {
+            StopCoroutine(runBehave);
+            runBehave = null;
+        }
+        if (attackBehave != null)
+        {
+            StopCoroutine(attackBehave);
+            attackBehave = null;
+        }
+
+        yield return new WaitForSecondsRealtime(10);
+        KOFItem.DestoryByPool(this);
+
+    }
+    public override int GetMaxInstance()
+    {
+        return 10;
     }
     protected override void OnEnable()
     {
         base.OnEnable();
-    }
-	private void Start()
-    {
         SetTarget(getMaxHatredObject().gameObject);
-        StartCoroutine(startBehave());
+        StartCoroutine(watchDis());
+        updateBehave = StartCoroutine(startBehave());
         StartCoroutine(switchTarget());
     }
-	IEnumerator startBehave()
+    IEnumerator startBehave()
     {
-        yield return new WaitForSeconds(0.2f); //the time the mob will wait for the birth animation;
-        StartCoroutine(behaveUpdate()); //update
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(isOnSky());
+        updateBehave = StartCoroutine(behaveUpdate());
     }
-    IEnumerator behaveUpdate()
+    IEnumerator watchDis()
     {
-        yield return new WaitForEndOfFrame();
-        //do something
         Ray ray = new Ray(transform.position, transform.forward);
-        bool isNearTarget = false; ;
-        foreach (var hit in Physics.RaycastAll(ray, 1.3f))
+        foreach (var hit in Physics.RaycastAll(ray, attackDis))
         {
             if (hit.collider.gameObject == target)
             {
-                GetComponent<Animator>().SetBool("Attack", true);
                 isNearTarget = true;
-                break;
+                yield return new WaitForEndOfFrame();
+                watchBehave = StartCoroutine(watchDis());
+                yield break;
             }
         }
-        if (!isNearTarget)
+        isNearTarget = false;
+        yield return new WaitForEndOfFrame();
+        watchBehave = StartCoroutine(watchDis());
+    }
+    IEnumerator attack()
+    {
+        GetComponent<Animator>().CrossFade("Attack1H [1]", 0.1f);
+        StartCoroutine(Attack());
+        yield return new WaitForSecondsRealtime(1f);
+
+        GetComponent<Animator>().CrossFade("Stand [88] 0", 0.1f);
+        yield return new WaitForSeconds(1f);
+        attackBehave = StartCoroutine(attack());
+        yield break;
+    }
+    IEnumerator run()
+    {
+        GetComponent<Animator>().CrossFade("Walk [24]", 0f);
+        Vector3 dir = target.transform.position - transform.position;
+        dir.y = 0;
+        transform.position += dir.normalized * Time.deltaTime;
+        yield return new WaitForEndOfFrame();
+        runBehave = StartCoroutine(run());
+    }
+    IEnumerator behaveUpdate()
+    {
+        GetComponent<Animator>().SetBool("OnSky", !isOnGround);
+        if (!isOnGround)
         {
-            GetComponent<Animator>().SetBool("Attack", false);
-            Vector3 dir = target.transform.position - transform.position;
-            dir.y = 0;
-            transform.position += dir.normalized * Time.deltaTime * 0.4f;
+            if (runBehave != null)
+            {
+                StopCoroutine(runBehave);
+                runBehave = null;
+            }
+            if (attackBehave != null)
+            {
+                StopCoroutine(attackBehave);
+                attackBehave = null;
+            }
+            yield return new WaitForEndOfFrame();
+            StartCoroutine(behaveUpdate());
+            yield break;
         }
-        StartCoroutine(behaveUpdate());
+        if (isNearTarget)
+        {
+            if (attackBehave == null)
+            {
+                if (runBehave != null)
+                {
+                    StopCoroutine(runBehave);
+                    runBehave = null;
+                }
+                if (attackBehave == null)
+                    attackBehave = StartCoroutine(attack());
+            }
+        }
+        else
+        {
+            if (attackBehave != null)
+            {
+                StopCoroutine(attackBehave);
+                attackBehave = null;
+            }
+            if (runBehave == null)
+                runBehave = StartCoroutine(run());
+        }
+        yield return new WaitForEndOfFrame();
+        updateBehave = StartCoroutine(behaveUpdate());
     }
-
-
-
-
-	//OVERRIDE FUNCTIONS
-    public override IEnumerator Die()
+    IEnumerator Attack()
     {
-        return base.Die();
-    }
-    protected override IEnumerator Live()
-    {
-        return base.Live();
+        yield return new WaitForSeconds(0.8f);
+        if (isNearTarget)
+        {
+            target.GetComponent<State>().TakeSkillContent(new Damage(30));
+        }
     }
     public override void SetTarget(GameObject target)
     {
         base.SetTarget(target);
-		Vector3 targetPos = target.transform.position;
+        Vector3 targetPos = target.transform.position;
         targetPos.y = transform.position.y;
         transform.LookAt(targetPos);
-    }
-    protected override KOFItem getMaxHatredObject()
-    {
-        return base.getMaxHatredObject();
-    }
-    public override int GetMaxInstance()
-    {
-        return 100;
-    }
-	protected override IEnumerator switchTarget()
-    {
-        return base.switchTarget();
     }
 }
