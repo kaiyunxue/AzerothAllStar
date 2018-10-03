@@ -691,9 +691,9 @@ GameObject:
   - component: {fileID: 4896761332144400}
   - component: {fileID: 95510423844659326}
   - component: {fileID: 114457782109823374}
-  - component: {fileID: 114513975854959348}
   - component: {fileID: 136636306854959552}
   - component: {fileID: 54735508546146638}
+  - component: {fileID: 114392379400619606}
   m_Layer: 9
   m_Name: Skeleton
   m_TagString: Untagged
@@ -1814,6 +1814,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isChangeColor: 1
   color: {r: 0, g: 0.46206903, b: 1, a: 1}
+--- !u!114 &114392379400619606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1662527291433146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfde14140e48c94989d889d7da8caa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  mana: 0
+  MaxHealth: 150
+  MaxMana: 0
+  Defense: 0
+  Stage: 0
+  box: {fileID: 0}
+  boxLocalPos: {x: 0, y: 1, z: 1}
 --- !u!114 &114457782109823374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1833,27 +1852,14 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isNeedEnroll: 1
+  isNeedAdjustCirclePosAndLocation: 1
+  localCirclePos: {x: 0, y: 0.3, z: 0}
+  circleScal: 0.6
   livingTime: 0
-  AttackDis: 0
+  attackDis: 0
   target: {fileID: 0}
   state: {fileID: 0}
---- !u!114 &114513975854959348
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1662527291433146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9c5edf62539ec4f998a8aa397915cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  mana: 0
-  MaxHealth: 0
-  MaxMana: 0
-  Defense: 0
-  Stage: 0
+  isOnGround: 0
 --- !u!136 &136636306854959552
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -163,4 +163,12 @@ public class #SCRIPTNAME# : CreatureBehavuourController
     {
         return base.switchTarget();
     }
+	    protected override IEnumerator isOnSky(float height = 0.2F)
+    {
+        return base.isOnSky(height);
+    }
+    public override IEnumerator watchForDeath()
+    {
+        return base.watchForDeath();
+    }
 }

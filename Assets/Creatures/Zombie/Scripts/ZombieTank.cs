@@ -36,6 +36,14 @@ public class ZombieTank : CreatureBehavuourController
         StartCoroutine(isOnSky(0.8f));
         updateBehave = StartCoroutine(behaveUpdate());
     }
+    protected override IEnumerator isOnSky(float height = 0.2F)
+    {
+        return base.isOnSky(height);
+    }
+    public override IEnumerator watchForDeath()
+    {
+        return base.watchForDeath();
+    }
     IEnumerator behaveUpdate()
     {
         GetComponent<Animator>().SetBool("OnSky", !isOnGround);
