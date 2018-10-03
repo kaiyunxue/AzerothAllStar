@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 4423440007505734}
   - component: {fileID: 95746144947016272}
   - component: {fileID: 114059558106280254}
-  - component: {fileID: 114047890706296234}
+  - component: {fileID: 114391275071039232}
   m_Layer: 9
   m_Name: Varkier
   m_TagString: Untagged
@@ -2351,23 +2351,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114047890706296234
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1384752843378492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad9c5edf62539ec4f998a8aa397915cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  mana: 0
-  MaxHealth: 0
-  MaxMana: 0
-  Defense: 0
-  Stage: 0
 --- !u!114 &114059558106280254
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2387,15 +2370,40 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   isNeedEnroll: 1
+  isNeedAdjustCirclePosAndLocation: 0
+  localCirclePos: {x: 0, y: 0, z: 0}
+  circleScal: 1
   livingTime: 0
-  AttackDis: 0
+  attackDis: 0
   target: {fileID: 0}
   state: {fileID: 0}
+  isOnGround: 0
   spellDis: 3
   reviveDis: 0
   speed: 1
   spellHand: {fileID: 4805562530842984}
   bullet: {fileID: 114451322198133858, guid: 86a52f5bf1e485745bea4519c9a61ecc, type: 2}
+--- !u!114 &114391275071039232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1384752843378492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcfde14140e48c94989d889d7da8caa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  mana: 0
+  MaxHealth: 100
+  MaxMana: 0
+  Defense: 0
+  Stage: 0
+  speed: 0
+  attack: 0
+  box: {fileID: 0}
+  boxLocalPos: {x: 0, y: 1, z: 1}
 --- !u!137 &137649500592553618
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -88,7 +88,7 @@ public class Skeleton : CreatureBehavuourController
         GetComponent<Animator>().CrossFade("Walk [24]", 0f);
         Vector3 dir = target.transform.position - transform.position;
         dir.y = 0;
-        transform.position += dir.normalized * Time.deltaTime;
+        transform.position += dir.normalized * Time.deltaTime * state.speed;
         yield return new WaitForEndOfFrame();
         runBehave = StartCoroutine(run());
     }
@@ -142,7 +142,7 @@ public class Skeleton : CreatureBehavuourController
         yield return new WaitForSeconds(0.8f);
         if (isNearTarget)
         {
-            target.GetComponent<State>().TakeSkillContent(new Damage(25));
+            target.GetComponent<State>().TakeSkillContent(new Damage(10));
         }
     }
     public override void SetTarget(GameObject target)

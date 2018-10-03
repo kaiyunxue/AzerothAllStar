@@ -2060,6 +2060,8 @@ MonoBehaviour:
   MaxMana: 0
   Defense: 0
   Stage: 0
+  speed: 1
+  attack: 0
   box: {fileID: 0}
   boxLocalPos: {x: 0, y: 0.5, z: 0.5}
 --- !u!114 &114928293821538912
@@ -2085,10 +2087,10 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0, z: 0}
   circleScal: 1
   livingTime: 0
-  attackDis: 1
+  attackDis: 1.3
   target: {fileID: 0}
   state: {fileID: 0}
-  template: {fileID: 11400000, guid: 27f07fbe7d79d3947a8e93323ec726cf, type: 2}
+  isOnGround: 0
   plate: {fileID: 145736}
 --- !u!136 &136160890582232938
 CapsuleCollider:

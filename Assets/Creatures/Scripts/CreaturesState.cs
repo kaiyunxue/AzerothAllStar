@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreaturesState : State {
+    public float speed;
+    public float attack;
     [SerializeField]
     private MobStatusBox box;
     public Vector3 boxLocalPos = new Vector3(0,1,1);

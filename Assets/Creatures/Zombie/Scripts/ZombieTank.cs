@@ -124,7 +124,7 @@ public class ZombieTank : CreatureBehavuourController
         GetComponent<Animator>().CrossFade("Walk [24]", 0f);
         Vector3 dir = target.transform.position - transform.position;
         dir.y = 0;
-        transform.position += dir.normalized * Time.deltaTime;
+        transform.position += dir.normalized * Time.deltaTime * state.speed;
         yield return new WaitForEndOfFrame();
         runBehave = StartCoroutine(run());
     }

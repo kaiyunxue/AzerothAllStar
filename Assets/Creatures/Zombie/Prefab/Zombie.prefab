@@ -2200,6 +2200,8 @@ MonoBehaviour:
   MaxMana: 0
   Defense: 0
   Stage: 0
+  speed: 0.3
+  attack: 0
   box: {fileID: 0}
   boxLocalPos: {x: 0, y: 2, z: 1}
 --- !u!114 &114254849365383846
@@ -2225,7 +2227,7 @@ MonoBehaviour:
   localCirclePos: {x: 0, y: 0, z: 0}
   circleScal: 1
   livingTime: 0
-  attackDis: 1
+  attackDis: 1.5
   target: {fileID: 0}
   state: {fileID: 0}
   isOnGround: 0

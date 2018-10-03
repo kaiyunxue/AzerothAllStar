@@ -57,9 +57,9 @@ public class FrontTest
                 float val = v;
                 int x = leftMobs - rightMobs;
                 if(x >= 0)
-                    val = (Mathf.Log10(x + 1) + 15) * val;
+                    val = (Mathf.Log10(x + 1) + 10) * val;
                 else
-                    val = (Mathf.Log10(-x + 1) + 15) * val;
+                    val = (Mathf.Log10(-x + 1) + 10) * val;
                 Vector3 dir = -t.transform.right;
                 //Vector3 dir = hit.collider.transform.position - transform.position;
                 //// Debug.Log(GetComponent<Rigidbody>());
