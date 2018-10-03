@@ -1832,7 +1832,7 @@ MonoBehaviour:
   Defense: 0
   Stage: 0
   box: {fileID: 0}
-  boxLocalPos: {x: 0, y: 1, z: 1}
+  boxLocalPos: {x: 0, y: 1.7, z: 1.3}
 --- !u!114 &114457782109823374
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1853,13 +1853,14 @@ MonoBehaviour:
     m_RotationOrder: 4
   isNeedEnroll: 1
   isNeedAdjustCirclePosAndLocation: 1
-  localCirclePos: {x: 0, y: 0.3, z: 0}
+  localCirclePos: {x: 0, y: 0.1, z: 0}
   circleScal: 0.6
   livingTime: 0
-  attackDis: 0
+  attackDis: 0.7
   target: {fileID: 0}
   state: {fileID: 0}
   isOnGround: 0
+  template: {fileID: 0}
 --- !u!136 &136636306854959552
 CapsuleCollider:
   m_ObjectHideFlags: 1
